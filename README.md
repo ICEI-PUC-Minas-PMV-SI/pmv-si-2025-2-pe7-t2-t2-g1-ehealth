@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# DEPRESSÃO EM ESTUDANTES UNIVERSITÁRIOS
 
 `CURSO: Sistemas de Informação`
 
@@ -6,7 +6,7 @@
 
 `SEMESTRE: 7º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto tem como objetivo investigar a depressão em estudantes universitários a partir da análise de dados reais, utilizando técnicas de aprendizado de máquina para identificar fatores de risco, prever a probabilidade de ocorrência e apoiar estratégias de intervenção precoce. Para isso, será utilizado o *Student Depression Dataset*, que reúne variáveis como idade, gênero, desempenho acadêmico, hábitos de sono, pressão acadêmica e satisfação com os estudos. A proposta é aplicar e comparar diferentes algoritmos de classificação avaliando seu desempenho por métricas com foco em reduzir falsos negativos e priorizar explicabilidade dos resultados. O estudo busca contribuir para o campo acadêmico e social, fornecendo subsídios para que instituições educacionais desenvolvam estratégias de apoio psicológico e acadêmico mais eficazes.
 
 ## Integrantes
 
