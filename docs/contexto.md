@@ -168,7 +168,43 @@ Nesta etapa, o grupo deverá produzir um vídeo de 5 a 8 minutos apresentando o 
 
 # Referências
 
+ICEI-PUC-MINAS. Modelo do Canvas Analítico. Disponível em: https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf
+. Acesso em: 10 ago. 2025.
+
+ZHANG, Z.; CAI, Z.; MENG, Q. Negative life events, sleep quality and depression in university students. Sci Rep 15, 21193 (2025). Disponível em: https://doi.org/10.1038/s41598-025-08635-6
+. Acesso em: 23 ago. 2025.
+
+TERRELL, K. R.; STANTON, B. R.; HAMADI, H. Y.; MERTEN, J. W.; QUINN, N. Exploring life stressors, depression, and coping strategies in college students. J Am Coll Health, 72(3):923-932, abr. 2024. Disponível em: https://pubmed.ncbi.nlm.nih.gov/35427463/
+. Acesso em: 22 ago. 2025.
+
+NIU, C.; JIANG, Y.; LI, Y. et al. A network analysis of the heterogeneity and associated risk and protective factors of depression and anxiety among college students. Sci Rep 15, 6699 (2025). Disponível em: https://doi.org/10.1038/s41598-025-91025-9
+. Acesso em: 22 ago. 2025.
+
+LI, L.; WANG, P.; LI, S.; LIU, Q.; YU, F.; GUO, Z.; JIA, S.; WANG, X. Canonical correlation analysis of depression and anxiety symptoms among college students and their relationship with physical activity. Sci Rep, 13(1):11516, 17 jul. 2023. Disponível em: https://pubmed.ncbi.nlm.nih.gov/37460562/
+. Acesso em: 23 ago. 2025.
+
+ELBARAZI, A.; TIKAMDAS, R. Association between university student junk food consumption and mental health. Nutr Health, 30(4):861-867, dez. 2024. Disponível em: https://pubmed.ncbi.nlm.nih.gov/36691314/
+. Acesso em: 21 ago. 2025.
+
+ROLDÁN-ESPÍNOLA, L.; RIERA-SERRA, P.; ROCA, M.; GARCÍA-TORO, M.; CORONADO-SIMSIC, V.; CASTRO, A.; NAVARRA-VENTURA, G.; VILAGUT, G.; ALAYO, I.; BALLESTER, L.; BLASCO, M. J.; ALMENARA, J.; CEBRIÀ, A. I.; ECHEBURÚA, E.; GABILONDO, A.; LAGARES, C.; PIQUERAS, J. A.; SOTO-SANZ, V.; MORTIER, P.; KESSLER, R. C.; ALONSO, J.; FORTEZA-REY, I.; GILI, M. Depression and lifestyle among university students: A one-year follow-up study. The European Journal of Psychiatry, 38(3):100250, 2024. Disponível em: https://doi.org/10.1016/j.ejpsy.2024.100250
+. Acesso em: 21 ago. 2025.
+
+
+<!--
+
+> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
+> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
+> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
+> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
+> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
+> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+> - [Questão de pesquisa](https://www.enago.com.br/academy/how-to-develop-good-research-question-types-examples/)
+> - [Problema de pesquisa](https://blog.even3.com.br/problema-de-pesquisa/)
+> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+
+
 Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.
 
 > **Links Úteis**:
-> - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
+> - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886) -->
