@@ -103,7 +103,7 @@ Por fim, a literatura recente enfatiza viés e equidade. Revisões e estudos de 
 - Página oficial no Kaggle: <https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset>
 
 **Descrição**
-Conjunto de dados tabular, **auto-reportado**, voltado a analisar e prever depressão em estudantes a partir de **demografia, variáveis acadêmicas/profissionais, hábitos de vida e estressores**. Amostras incluem diversas cidades (muitas entradas da Índia, p. ex. Visakhapatnam, Pune, Jaipur, Varanasi). O alvo é um rótulo binário **Depression** (p. ex., *Yes/No* ou 0/1). Versões amplamente usadas em análises públicas reportam **~27,9 mil linhas e 18 colunas**.
+Conjunto de dados tabular, auto-reportado, voltado a analisar e prever depressão em estudantes a partir de demografia, variáveis acadêmicas/profissionais, hábitos de vida e estressores. Amostras incluem diversas cidades (muitas entradas da Índia, p. ex. Visakhapatnam, Pune, Jaipur, Varanasi). O alvo é um rótulo binário Depression (p. ex., *Yes/No* ou 0/1). Versões amplamente usadas em análises públicas reportam ~27,9 mil linhas e 18 colunas.
 
 **Atributos (exemplos recorrentes)**
 - `id` (inteiro)
