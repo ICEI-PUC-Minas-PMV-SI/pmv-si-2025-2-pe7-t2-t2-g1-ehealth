@@ -89,7 +89,6 @@ Em **coortes universitárias** de países em desenvolvimento, abordagens de *ens
 
 Sobre o *ground truth*, o **PHQ‑9** é comumente utilizado. A validação seminal reportou que o *cut‑off* **≥ 10** apresenta **sensibilidade e especificidade de ~88%** para episódio depressivo maior, embora o ponto de corte ideal possa variar por população e finalidade (triagem vs. diagnóstico) [4]. Assim, recomenda‑se **calibração local** e avaliação de **calibração** (p. ex., curvas de confiabilidade) ao aplicar modelos a novas amostras estudantis.
 
-Há avanços também em **fenotipagem digital** (sensoriamento passivo de smartphones/vestíveis), com *boosting* leve (LightGBM) e outros métodos detectando sintomas depressivos sem questionários diretos [8, 9]. Embora esses estudos usem entradas diferentes das **auto‑declarações tabulares** do nosso dataset, eles reforçam **padrões preditivos** envolvendo **sono, mobilidade/rotina e carga de atividades**, convergentes com variáveis auto‑reportadas.
 
 Por fim, a literatura recente enfatiza **viés e equidade**. Revisões e estudos de caso mostram que modelos para depressão podem **degradar desempenho em subgrupos** se o treinamento não for representativo; recomenda‑se testar métricas de paridade, usar **reponderação**, **amostragem estratificada** e relatar resultados por subgrupo, além de empregar métodos de **interpretabilidade** (SHAP/LIME) [5–7]. Em ambientes educacionais, isso é crítico devido a **diferenças socioeconômicas e culturais** entre estudantes.
 
