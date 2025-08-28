@@ -87,9 +87,7 @@ A aplicação de aprendizado de máquina (AM) à saúde mental de estudantes mos
 
 Em universidades de países em desenvolvimento, abordagens de ensemble stacking com variáveis acadêmicas, de estresse/pressão, sono e satisfação alcançaram desempenho competitivo para detecção precoce de depressão [3]. Esses achados dialogam diretamente com os campos do nosso dataset (p. ex., *Academic Pressure*, *Financial Stress*, *Sleep Duration*, *Study Satisfaction*).
 
-
-
-Por fim, a literatura recente enfatiza viés e equidade. Revisões e estudos de caso mostram que modelos para depressão podem degradar desempenho em subgrupos se o treinamento não for representativo; recomenda‑se testar métricas de paridade, usar reponderação, amostragem estratificada e relatar resultados por subgrupo, além de empregar métodos de interpretabilidade (SHAP/LIME) [5–7]. Em ambientes educacionais, isso é crítico devido a diferenças socioeconômicas e culturais entre estudantes.
+Por fim, a literatura recente enfatiza viés e equidade. Modelos de aprendizado de máquina podem ser úteis para prever depressão, principalmente em estágios iniciais desta. Revisões e estudos de caso mostram que modelos para depressão podem degradar desempenho em subgrupos se o treinamento não for representativo. Portanto, recomenda-se refinar os modelos e a alimentar com o máximo de variáveis e dados possíveis, mantendo uma melhora constante nas pesquisas e a mitigação de dados enviesados.
 
 **Resumo:** há base empírica para empregar aprendizado de máquina na previsão/detecção de depressão em estudantes, sobretudo com atributos acadêmicos e de estilo de vida.
 
