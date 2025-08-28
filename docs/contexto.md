@@ -171,23 +171,35 @@ Nesta etapa, o grupo deverá produzir um vídeo de 5 a 8 minutos apresentando o 
 ICEI-PUC-MINAS. Modelo do Canvas Analítico. Disponível em: https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf
 . Acesso em: 10 ago. 2025.
 
-ZHANG, Z.; CAI, Z.; MENG, Q. Negative life events, sleep quality and depression in university students. Sci Rep 15, 21193 (2025). Disponível em: https://doi.org/10.1038/s41598-025-08635-6
-. Acesso em: 23 ago. 2025.
+SCHAAB, B. L.; et al. How do machine learning models perform in the detection and prediction of depression, anxiety, and stress among undergraduate university students? Systematic Review, 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/
+. Acesso em: 29 ago. 2025.
 
-TERRELL, K. R.; STANTON, B. R.; HAMADI, H. Y.; MERTEN, J. W.; QUINN, N. Exploring life stressors, depression, and coping strategies in college students. J Am Coll Health, 72(3):923-932, abr. 2024. Disponível em: https://pubmed.ncbi.nlm.nih.gov/35427463/
-. Acesso em: 22 ago. 2025.
+BABA, A.; et al. Prediction of mental health problem using annual student health survey data: machine learning approach. JMIR Mental Health, 2023. Disponível em: https://mental.jmir.org/2023/1/e42420
+. Acesso em: 29 ago. 2025.
 
-NIU, C.; JIANG, Y.; LI, Y. et al. A network analysis of the heterogeneity and associated risk and protective factors of depression and anxiety among college students. Sci Rep 15, 6699 (2025). Disponível em: https://doi.org/10.1038/s41598-025-91025-9
-. Acesso em: 22 ago. 2025.
+VERGARAY, A. D.; et al. Predicting the depression in university students using machine learning (Ensemble Stacking). Data in Brief, 2023. Disponível em: https://www.sciencedirect.com/science/article/pii/S2352914823001417
+. Acesso em: 29 ago. 2025.
 
-LI, L.; WANG, P.; LI, S.; LIU, Q.; YU, F.; GUO, Z.; JIA, S.; WANG, X. Canonical correlation analysis of depression and anxiety symptoms among college students and their relationship with physical activity. Sci Rep, 13(1):11516, 17 jul. 2023. Disponível em: https://pubmed.ncbi.nlm.nih.gov/37460562/
-. Acesso em: 23 ago. 2025.
+KROENKE, K.; SPITZER, R. L.; WILLIAMS, J. B. W. The PHQ-9: validity of a brief depression severity measure. Journal of General Internal Medicine, v. 16, n. 9, p. 606–613, 2001. Disponível em: https://pubmed.ncbi.nlm.nih.gov/11556941/
+. Acesso em: 29 ago. 2025.
 
-ELBARAZI, A.; TIKAMDAS, R. Association between university student junk food consumption and mental health. Nutr Health, 30(4):861-867, dez. 2024. Disponível em: https://pubmed.ncbi.nlm.nih.gov/36691314/
-. Acesso em: 21 ago. 2025.
+OLAWADE, D. B.; et al. Enhancing mental health with artificial intelligence. Journal of Medicine in AI, 2024. Disponível em: https://www.sciencedirect.com/science/article/pii/S2949916X24000525
+. Acesso em: 29 ago. 2025.
 
-ROLDÁN-ESPÍNOLA, L.; RIERA-SERRA, P.; ROCA, M.; GARCÍA-TORO, M.; CORONADO-SIMSIC, V.; CASTRO, A.; NAVARRA-VENTURA, G.; VILAGUT, G.; ALAYO, I.; BALLESTER, L.; BLASCO, M. J.; ALMENARA, J.; CEBRIÀ, A. I.; ECHEBURÚA, E.; GABILONDO, A.; LAGARES, C.; PIQUERAS, J. A.; SOTO-SANZ, V.; MORTIER, P.; KESSLER, R. C.; ALONSO, J.; FORTEZA-REY, I.; GILI, M. Depression and lifestyle among university students: A one-year follow-up study. The European Journal of Psychiatry, 38(3):100250, 2024. Disponível em: https://doi.org/10.1016/j.ejpsy.2024.100250
-. Acesso em: 21 ago. 2025.
+DANG, V. N.; et al. Fairness and bias correction in machine learning for depression: a systematic study. 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC10991528/
+. Acesso em: 29 ago. 2025.
+
+JIANG, Z.; et al. Evaluating and mitigating unfairness in multimodal remote mental health assessment. 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11268595/
+. Acesso em: 29 ago. 2025.
+
+CHOI, A.; et al. Digital phenotyping for stress, anxiety, and mild depression using smartphones. JMIR mHealth and uHealth, 2024. Disponível em: https://mhealth.jmir.org/2024/1/e40689
+. Acesso em: 29 ago. 2025.
+
+BORELLI, J. L.; et al. Detection of depressive symptoms in college students using passive sensing and LightGBM. JMIR Formative Research, 2025. Disponível em: https://formative.jmir.org/2025/1/e67964
+. Acesso em: 29 ago. 2025.
+
+SHAMIM, A. Student Depression Dataset. Kaggle, 2023. Disponível em: https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
+. Acesso em: 29 ago. 2025.
 
 
 <!--
