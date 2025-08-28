@@ -81,51 +81,78 @@ O objetivo aqui não é definir clientes específicos ou papéis exatos dentro d
 > - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
 > - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
-## Estado da arte
+# Estado da arte
 
-Nesta seção, descreva abordagens da literatura que tratam problemas semelhantes ao seu. Seu objetivo é documentar métodos, dados, métricas e resultados.
+A aplicação de aprendizado de máquina (AM) à **saúde mental de estudantes** tem mostrado desempenho promissor em tarefas de triagem e previsão de risco. Uma **revisão sistemática focada em universitários** encontrou bons resultados com modelos como **Random Forest, SVM, XGBoost e redes neurais**, desde que haja validação adequada e atenção à generalização entre contextos institucionais e culturais [1]. Em estudo longitudinal com **inquérito anual de saúde estudantil**, modelos como **gradient boosting** e **florestas aleatórias** previram problemas de saúde mental em janelas de **até 1 ano** à frente [2].
 
-### O que levantar (mínimo 5 trabalhos)
-Para **cada estudo encontrado** aderente à temática do grupo, registre de forma objetiva:
-* Problema e contexto: que problema o trabalho buscou resolver e em qual domínio/cenário foi aplicado.
-* Dados (dataset): origem, tamanho, período, variáveis/atributos, pré-processamentos relevantes (faltantes, balanceamento, normalização).
-* Abordagem/algoritmos: algoritmos utilizados e parâmetros principais (quando informados).
-* Métricas de avaliação: quais e por quê (ex.: Acurácia, F1, AUC, RMSE, MAE, etc.).
-* Resultados: principais números, comparações internas, limitações citadas e conclusões.
+Em **coortes universitárias** de países em desenvolvimento, abordagens de *ensemble stacking* com variáveis **acadêmicas, de estresse/pressão, sono e satisfação** alcançaram desempenho competitivo para **detecção precoce de depressão** [3]. Esses achados dialogam diretamente com os campos do nosso dataset (p. ex., *Academic Pressure*, *Financial Stress*, *Sleep Duration*, *Study Satisfaction*).
 
-* Texto-síntese crítico (2–4 parágrafos) respondendo:
-- O que os estudos concordam? Onde divergem?
-- Quais lacunas permanecem (dados, métricas, cenários, limitações técnicas/éticas)?
-- Como seu projeto se alinha aos estudos identificados?
+Sobre o *ground truth*, o **PHQ‑9** é comumente utilizado. A validação seminal reportou que o *cut‑off* **≥ 10** apresenta **sensibilidade e especificidade de ~88%** para episódio depressivo maior, embora o ponto de corte ideal possa variar por população e finalidade (triagem vs. diagnóstico) [4]. Assim, recomenda‑se **calibração local** e avaliação de **calibração** (p. ex., curvas de confiabilidade) ao aplicar modelos a novas amostras estudantis.
 
-**Dica:** Prefira artigos dos últimos 5 anos ou referências clássicas indispensáveis.
+Há avanços também em **fenotipagem digital** (sensoriamento passivo de smartphones/vestíveis), com *boosting* leve (LightGBM) e outros métodos detectando sintomas depressivos sem questionários diretos [8, 9]. Embora esses estudos usem entradas diferentes das **auto‑declarações tabulares** do nosso dataset, eles reforçam **padrões preditivos** envolvendo **sono, mobilidade/rotina e carga de atividades**, convergentes com variáveis auto‑reportadas.
 
-### Ferramentas inteligentes permitidas
-Você pode utilizar: Perplexity, SciSpace, Elicit, Research Rabbit, Litmaps.
-Use-as para descoberta, organização e triagem de literatura. 
+Por fim, a literatura recente enfatiza **viés e equidade**. Revisões e estudos de caso mostram que modelos para depressão podem **degradar desempenho em subgrupos** se o treinamento não for representativo; recomenda‑se testar métricas de paridade, usar **reponderação**, **amostragem estratificada** e relatar resultados por subgrupo, além de empregar métodos de **interpretabilidade** (SHAP/LIME) [5–7]. Em ambientes educacionais, isso é crítico devido a **diferenças socioeconômicas e culturais** entre estudantes.
 
-**Atenção:** 
-* Sempre acesse a fonte original (PDF/artigo) antes de citar; verifique números e conclusões.
-* Registre DOI/URL oficial e dados bibliográficos completos.
-* Evite “alucinações” das ferramentas: desconfie de referências sem DOI ou que você não consiga localizar oficialmente.
-* Use as ferramentas inteligentes para mapear redes de citação (Research Rabbit), mapas de tópicos (Litmaps), filtrar por período e gerar resumos iniciais (Perplexity/SciSpace/Elicit).
-* Leia os trabalhos mais promissores e descarte estudos fora de escopo.
+**Resumo:** há base empírica para empregar AM na **previsão/detecção de depressão em estudantes**, sobretudo com atributos acadêmicos e de estilo de vida. Contudo, **reprodutibilidade**, **drift temporal**, **viés** e **calibração** devem ser tratados explicitamente no desenho do estudo e na validação externa.
 
-> **Links Úteis**:
-> - [Google Scholar](https://scholar.google.com/)
-> - [IEEE Xplore](https://ieeexplore.ieee.org/Xplore/home.jsp)
-> - [Science Direct](https://www.sciencedirect.com/)
-> - [ACM Digital Library](https://dl.acm.org/)
+---
 
-# Descrição do _dataset_ selecionado
+# Descrição do dataset selecionado
 
-Nesta seção, apresente uma visão clara e objetiva do dataset selecionado, incluindo:
-* Identificação e origem – Nome, link de acesso, fonte (instituição, repositório, API etc.) e licença de uso.
-* Visão geral – Total de registros e atributos, período coberto e breve contextualização.
-* Atributos – Tabela com nome, descrição, tipo, unidade de medida (se aplicável) e exemplos de valores.
-* Qualidade dos dados – Presença de valores faltantes, inconsistências, duplicatas ou outliers.
+**Student Depression Dataset (Kaggle — por Adil Shamim)**
 
-**Dica:** Seja objetivo, mas inclua detalhes suficientes para que outra pessoa possa entender e reutilizar o conjunto de dados sem buscar informações extras.
+**Links de acesso ao dataset**
+- Página oficial no Kaggle: <https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset>
+
+**Descrição**
+Conjunto de dados tabular, **auto-reportado**, voltado a analisar e prever depressão em estudantes a partir de **demografia, variáveis acadêmicas/profissionais, hábitos de vida e estressores**. Amostras incluem diversas cidades (muitas entradas da Índia, p. ex. Visakhapatnam, Pune, Jaipur, Varanasi). O alvo é um rótulo binário **Depression** (p. ex., *Yes/No* ou 0/1). Versões amplamente usadas em análises públicas reportam **~27,9 mil linhas e 18 colunas**.
+
+**Atributos (exemplos recorrentes)**
+- `id` (inteiro)
+- `Gender` (categoria)
+- `Age` (inteiro)
+- `City` (texto)
+- `Working Professional or Student` / `Profession` (categoria)
+- **Acadêmico/Trabalho:** `Academic Pressure` (escala), `Work Pressure` (escala), `CGPA` (numérico), `Study Satisfaction` (escala), `Job Satisfaction` (escala), `Work/Study Hours` (inteiro)
+- **Hábitos/Histórico:** `Sleep Duration` (categorias como “Less than 5h”, “6–7h”, “7–8h”), `Dietary Habits` (Healthy/Moderate/Unhealthy), `Degree` (curso), `Financial Stress` (escala), `Family History of Mental Illness` (Sim/Não), **`Have you ever had suicidal thoughts?`** (Sim/Não)
+- **Alvo:** `Depression` (binário)
+
+**Tamanho e período**
+- Tamanho: **≈ 27.901 amostras, 18 atributos** (algumas versões “limpas” variam levemente).
+- Caráter **transversal** (sem carimbo de data por registro). Trate como *cross-sectional*.
+
+**Valores faltantes e qualidade dos dados**
+Relatos comunitários indicam CSV com **todas as colunas presentes** e, em várias cargas, **contagens *non-null* completas**; outras versões “limpas” variam levemente em linhas/tipos. Boas práticas recomendadas:
+1. Padronizar categorias (p. ex., `Sleep Duration`, `Dietary Habits`);
+2. Converter escalas para numérico coerente;
+3. Verificar desbalanceamento do alvo e aplicar *class weights* ou *resampling* quando necessário.
+
+**Observações de modelagem**
+Em tarefas binárias com esse CSV, **GBM/XGBoost e Random Forest** tendem a performar bem; *feature importance* costuma destacar **ideação suicida, pressão acadêmica e estresse financeiro** como preditores de alto ganho — compatível com a literatura sobre sono, estresse e desempenho. Use validação estratificada e explique o modelo (SHAP/LIME) para suporte à decisão.
+
+---
+
+## Referências (seleção)
+
+[1] Schaab, B. L., et al. (2024). *How do machine learning models perform in the detection and prediction of depression, anxiety, and stress among undergraduate university students?* Systematic Review. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/
+
+[2] Baba, A., et al. (2023). *Prediction of Mental Health Problem Using Annual Student Health Survey Data: Machine Learning Approach.* JMIR Mental Health. Disponível em: https://mental.jmir.org/2023/1/e42420
+
+[3] Vergaray, A. D., et al. (2023). *Predicting the depression in university students using machine learning (Ensemble Stacking).* Data in Brief / Elsevier. Disponível em: https://www.sciencedirect.com/science/article/pii/S2352914823001417
+
+[4] Kroenke, K., Spitzer, R. L., Williams, J. B. W. (2001). *The PHQ‑9: Validity of a Brief Depression Severity Measure.* J Gen Intern Med, 16(9), 606–613. Disponível em: https://pubmed.ncbi.nlm.nih.gov/11556941/
+
+[5] Olawade, D. B., et al. (2024). *Enhancing mental health with Artificial Intelligence.* Journal of Medicine in AI. (Discussão sobre viés/fairness.) Disponível em: https://www.sciencedirect.com/science/article/pii/S2949916X24000525
+
+[6] Dang, V. N., et al. (2024). *Fairness and bias correction in machine learning for depression: A systematic study.* Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC10991528/
+
+[7] Jiang, Z., et al. (2024). *Evaluating and mitigating unfairness in multimodal remote mental health assessment.* Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11268595/
+
+[8] Choi, A., et al. (2024). *Digital Phenotyping for Stress, Anxiety, and Mild Depression Using Smartphones.* JMIR mHealth and uHealth. Disponível em: https://mhealth.jmir.org/2024/1/e40689
+
+[9] Borelli, J. L., et al. (2025). *Detection of Depressive Symptoms in College Students Using Passive Sensing and LightGBM.* JMIR Formative Research. Disponível em: https://formative.jmir.org/2025/1/e67964
+
+**Dataset de interesse:** Kaggle — *Student Depression Dataset* (Adil Shamim). https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
 
 # Canvas analítico
 
