@@ -6,7 +6,7 @@ A depressão entre estudantes é um fenômeno crescente e preocupante em context
 
 O conjunto de dados utilizado neste estudo reúne informações demográficas, acadêmicas, de estilo de vida e de histórico familiar que podem auxiliar na compreensão das condições que influenciam o desenvolvimento da depressão em estudantes. No entanto, a grande quantidade e a diversidade de variáveis tornam difícil para professores, psicólogos e gestores escolares interpretarem de forma clara quais fatores exercem maior impacto sobre a saúde mental.
 
-Dessa forma, o problema central desta investigação é: como analisar, de forma sistemática, os fatores presentes nos dados para identificar tendências, padrões e preditores relacionados à depressão entre estudantes, possibilitando uma compreensão mais profunda desse fenômeno e contribuindo para estratégias de prevenção e intervenção precoce?
+Dessa forma, o problema central desta investigação é: como analisar, de forma sistemática, os fatores presentes nos dados para identificar tendências, padrões e preditores relacionados à depressão entre estudantes, possibilitando uma compreensão mais profunda desse fenômeno e contribuindo para estratégias de prevenção e intervenção precoce? 
 
 O contexto de aplicação envolve o uso deste dataset em pesquisas acadêmicas e projetos em ciência de dados, com potencial para apoiar tanto a formulação de políticas institucionais voltadas ao cuidado da saúde mental quanto o desenvolvimento de ferramentas que auxiliem profissionais da educação e da psicologia no acompanhamento de estudantes em risco.
 
