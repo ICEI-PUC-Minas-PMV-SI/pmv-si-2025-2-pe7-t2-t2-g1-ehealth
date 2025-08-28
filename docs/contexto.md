@@ -6,19 +6,25 @@ A depressão entre estudantes é um fenômeno crescente e preocupante em context
 
 O conjunto de dados utilizado neste estudo reúne informações demográficas, acadêmicas, de estilo de vida e de histórico familiar que podem auxiliar na compreensão das condições que influenciam o desenvolvimento da depressão em estudantes. No entanto, a grande quantidade e a diversidade de variáveis tornam difícil para professores, psicólogos e gestores escolares interpretarem de forma clara quais fatores exercem maior impacto sobre a saúde mental.
 
-Dessa forma, o problema central desta investigação é: como analisar, de forma sistemática, os fatores presentes nos dados para identificar tendências, padrões e preditores relacionados à depressão entre estudantes, possibilitando uma compreensão mais profunda desse fenômeno e contribuindo para estratégias de prevenção e intervenção precoce? 
+Dessa forma, o problema central desta investigação é: como analisar, de forma sistemática, os fatores presentes nos dados para identificar tendências, padrões e preditores relacionados à depressão entre estudantes, possibilitando uma compreensão mais profunda desse fenômeno e contribuindo para estratégias de prevenção e intervenção precoce?
 
 O contexto de aplicação envolve o uso deste dataset em pesquisas acadêmicas e projetos em ciência de dados, com potencial para apoiar tanto a formulação de políticas institucionais voltadas ao cuidado da saúde mental quanto o desenvolvimento de ferramentas que auxiliem profissionais da educação e da psicologia no acompanhamento de estudantes em risco.
 
 ## Questão de pesquisa
 
-Quais fatores acadêmicos, demográficos, de estilo de vida e histórico familiar mais influenciam a ocorrência de depressão entre estudantes, e de que forma a análise desse conjunto de dados pode auxiliar na identificação precoce de alunos em risco? 
+Quais fatores acadêmicos, demográficos, de estilo de vida e histórico familiar mais influenciam a ocorrência de depressão entre estudantes, e de que forma a análise desse conjunto de dados pode auxiliar na identificação precoce de alunos em risco?
 
 ## Objetivos preliminares
 
-Nesta seção, você deve apresentar os objetivos preliminares do trabalho, deixando claro que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema descrito anteriormente.
+O objetivo geral deste trabalho é analisar e prever a presença de sintomas de depressão em estudantes universitários a partir do Student Depression Dataset, identificando fatores acadêmicos, demográficos e de estilo de vida que influenciam o problema. Essa formulação expressa de forma clara e delimitada a intenção central da pesquisa, que é compreender de maneira quantitativa e sistemática os elementos associados à saúde mental estudantil.
 
-Além do objetivo geral, é importante definir pelo menos dois objetivos específicos, que direcionem a investigação de acordo com o foco que o grupo pretende adotar. Esses objetivos específicos podem envolver: 
+Para alcançar esse objetivo mais amplo, foram definidos alguns objetivos específicos que direcionam a investigação. Em primeiro lugar, pretende-se descrever o perfil dos estudantes, apresentando características demográficas, acadêmicas e de hábitos de vida disponíveis no conjunto de dados. Em seguida, busca-se investigar as correlações entre variáveis relevantes como duração do sono, pressão acadêmica e satisfação com os estudos e o status de depressão informado pelos participantes.
+
+Além disso, será necessário aplicar algoritmos de aprendizado de máquina supervisionado, como Regressão Logística, Random Forest e XGBoost, de modo a avaliar a capacidade preditiva do conjunto de dados. Após essa etapa, pretende-se comparar o desempenho dos diferentes modelos, utilizando métricas apropriadas como acurácia, F1-Score e AUC-ROC, para verificar qual abordagem se mostra mais eficaz. Por fim, busca-se identificar e interpretar os fatores de maior relevância nas predições, valendo-se de técnicas de interpretabilidade como SHAP ou LIME, de modo a oferecer não apenas resultados numéricos, mas também explicações compreensíveis sobre os padrões encontrados.
+
+<!-- Nesta seção, você deve apresentar os objetivos preliminares do trabalho, deixando claro que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema descrito anteriormente.
+
+Além do objetivo geral, é importante definir pelo menos dois objetivos específicos, que direcionem a investigação de acordo com o foco que o grupo pretende adotar. Esses objetivos específicos podem envolver:
 * Explorar um determinado tipo de modelagem ou técnica de aprendizado de máquina;
 * Comparar diferentes abordagens para resolver o mesmo problema;
 * Aplicar o modelo em um cenário real ou simulado;
@@ -29,12 +35,20 @@ Objetivo específico 1: Predizer a tendência de alta, estabilidade ou queda de 
 Objetivo específico 2: Estimar o valor exato da ação ao final do período analisado.
 
 **Importante:** À medida que a pesquisa/experimentação avança, os objetivos podem ser ajustados ou refinados. Mantenha essa seção atualizada no repositório para refletir o andamento e as novas decisões do projeto.
- 
+
 > **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/) -->
 
 ## Justificativa
 
+O presente projeto busca analisar o Student Depression Dataset, que reúne informações demográficas, acadêmicas, de estilo de vida e de saúde mental autorrelatada, para identificar padrões e fatores de risco associados à depressão. A escolha dos objetivos específicos está alinhada a esse propósito: descrever o perfil dos estudantes, investigar correlações entre variáveis críticas (como sono, pressão acadêmica e satisfação pessoal) e aplicar algoritmos de aprendizado de máquina para avaliar a viabilidade de prever o status de depressão. A justificativa para aprofundar a investigação nesses pontos é que tais variáveis foram apontadas em estudos recentes como preditores consistentes de sintomas depressivos (ZHANG et al., 2024; JISHA et al., 2024). Assim, compreender como esses fatores interagem no dataset é um passo essencial para propor soluções mais assertivas.
+
+A relevância do estudo vai além do contexto acadêmico. Do ponto de vista profissional, os resultados podem subsidiar equipes pedagógicas e psicopedagógicas na formulação de programas de prevenção, campanhas de conscientização e estratégias de acolhimento estudantil. Do ponto de vista científico, contribui para a literatura sobre uso de inteligência artificial aplicada à saúde mental, em uma área onde ainda há lacunas relacionadas à generalização de modelos e à explicabilidade das previsões.
+
+O impacto social também é significativo. Estimativas da Organização Mundial da Saúde (OMS, 2020) mostram que a depressão é uma das principais causas de incapacidade em jovens de 15 a 29 anos, e que estudantes com sintomas depressivos apresentam até duas vezes mais risco de evasão acadêmica. Além disso, problemas de saúde mental têm reflexos econômicos: a OMS calcula que transtornos como depressão e ansiedade custam à economia mundial cerca de 1 trilhão de dólares por ano em perda de produtividade. No ambiente universitário, esse impacto se traduz em queda de desempenho, desistências e sobrecarga nos serviços de saúde estudantil.
+
+Por fim, a base do trabalho está sustentada em um dataset público disponível no Kaggle, o Student Depression Dataset, que oferece dados anonimizados de centenas de estudantes. Aliado à literatura científica recente, esse material fornece subsídios concretos para investigar o problema, garantindo que o estudo seja conduzido com robustez metodológica, relevância prática e impacto social.
+<!--
 Nesta seção, apresente a importância e a motivação para trabalhar com o conjunto de dados escolhido. Explique por que esse dataset é relevante e como ele se conecta ao problema identificado anteriormente.
 
 Indique:
@@ -48,7 +62,7 @@ Indique:
 * Construa um texto coeso que conecte o problema, os objetivos e a relevância do trabalho.
 
 > **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/) -->
 
 ## Público-Alvo
 
