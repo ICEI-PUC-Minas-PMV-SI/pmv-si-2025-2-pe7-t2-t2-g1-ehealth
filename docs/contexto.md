@@ -83,16 +83,15 @@ O objetivo aqui não é definir clientes específicos ou papéis exatos dentro d
 
 # Estado da arte
 
-A aplicação de aprendizado de máquina (AM) à **saúde mental de estudantes** tem mostrado desempenho promissor em tarefas de triagem e previsão de risco. Uma **revisão sistemática focada em universitários** encontrou bons resultados com modelos como **Random Forest, SVM, XGBoost e redes neurais**, desde que haja validação adequada e atenção à generalização entre contextos institucionais e culturais [1]. Em estudo longitudinal com **inquérito anual de saúde estudantil**, modelos como **gradient boosting** e **florestas aleatórias** previram problemas de saúde mental em janelas de **até 1 ano** à frente [2].
+A aplicação de aprendizado de máquina (AM) à saúde mental de estudantes mostra desempenho prometedor em tarefas de triagem e previsão de risco. Uma revisão sistemática focada em universitários achou bons resultados com modelos como Random Forest, SVM, XGBoost e redes neurais, desde que haja validação adequada e atenção à generalização entre contextos institucionais e culturais [1]. Em estudo longitudinal com inquérito anual de saúde estudantil, modelos como gradient boosting e florestas aleatórias previram problemas de saúde mental em janelas de até 1 ano à frente [2].
 
-Em **coortes universitárias** de países em desenvolvimento, abordagens de *ensemble stacking* com variáveis **acadêmicas, de estresse/pressão, sono e satisfação** alcançaram desempenho competitivo para **detecção precoce de depressão** [3]. Esses achados dialogam diretamente com os campos do nosso dataset (p. ex., *Academic Pressure*, *Financial Stress*, *Sleep Duration*, *Study Satisfaction*).
-
-Sobre o *ground truth*, o **PHQ‑9** é comumente utilizado. A validação seminal reportou que o *cut‑off* **≥ 10** apresenta **sensibilidade e especificidade de ~88%** para episódio depressivo maior, embora o ponto de corte ideal possa variar por população e finalidade (triagem vs. diagnóstico) [4]. Assim, recomenda‑se **calibração local** e avaliação de **calibração** (p. ex., curvas de confiabilidade) ao aplicar modelos a novas amostras estudantis.
+Em universidades de países em desenvolvimento, abordagens de ensemble stacking com variáveis acadêmicas, de estresse/pressão, sono e satisfação alcançaram desempenho competitivo para detecção precoce de depressão [3]. Esses achados dialogam diretamente com os campos do nosso dataset (p. ex., *Academic Pressure*, *Financial Stress*, *Sleep Duration*, *Study Satisfaction*).
 
 
-Por fim, a literatura recente enfatiza **viés e equidade**. Revisões e estudos de caso mostram que modelos para depressão podem **degradar desempenho em subgrupos** se o treinamento não for representativo; recomenda‑se testar métricas de paridade, usar **reponderação**, **amostragem estratificada** e relatar resultados por subgrupo, além de empregar métodos de **interpretabilidade** (SHAP/LIME) [5–7]. Em ambientes educacionais, isso é crítico devido a **diferenças socioeconômicas e culturais** entre estudantes.
 
-**Resumo:** há base empírica para empregar AM na **previsão/detecção de depressão em estudantes**, sobretudo com atributos acadêmicos e de estilo de vida. Contudo, **reprodutibilidade**, **drift temporal**, **viés** e **calibração** devem ser tratados explicitamente no desenho do estudo e na validação externa.
+Por fim, a literatura recente enfatiza viés e equidade. Revisões e estudos de caso mostram que modelos para depressão podem degradar desempenho em subgrupos se o treinamento não for representativo; recomenda‑se testar métricas de paridade, usar reponderação, amostragem estratificada e relatar resultados por subgrupo, além de empregar métodos de interpretabilidade (SHAP/LIME) [5–7]. Em ambientes educacionais, isso é crítico devido a diferenças socioeconômicas e culturais entre estudantes.
+
+**Resumo:** há base empírica para empregar aprendizado de máquina na previsão/detecção de depressão em estudantes, sobretudo com atributos acadêmicos e de estilo de vida.
 
 ---
 
