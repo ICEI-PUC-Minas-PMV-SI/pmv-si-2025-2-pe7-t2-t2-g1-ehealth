@@ -116,20 +116,20 @@ Conjunto de dados tabular, auto-reportado, voltado a analisar e prever depressã
 
 **Tamanho e período**
 - Tamanho: **≈ 27.901 amostras, 18 atributos** (algumas versões “limpas” variam levemente).
-- Caráter **transversal** (sem carimbo de data por registro). Trate como *cross-sectional*.
+
 
 **Valores faltantes e qualidade dos dados**
-Relatos comunitários indicam CSV com **todas as colunas presentes** e, em várias cargas, **contagens *non-null* completas**; outras versões “limpas” variam levemente em linhas/tipos. Boas práticas recomendadas:
+- Relatos comunitários indicam CSV com todas as colunas presentes e, em várias cargas,  contagens *non-null* completas; outras versões “limpas” variam levemente em linhas/tipos. Boas práticas recomendadas:
 1. Padronizar categorias (p. ex., `Sleep Duration`, `Dietary Habits`);
 2. Converter escalas para numérico coerente;
-3. Verificar desbalanceamento do alvo e aplicar *class weights* ou *resampling* quando necessário.
+3. Verificar desbalanceamento do alvo e aplicar class weights quando necessário.
 
 **Observações de modelagem**
 Em tarefas binárias com esse CSV, **GBM/XGBoost e Random Forest** tendem a performar bem; *feature importance* costuma destacar **ideação suicida, pressão acadêmica e estresse financeiro** como preditores de alto ganho — compatível com a literatura sobre sono, estresse e desempenho. Use validação estratificada e explique o modelo (SHAP/LIME) para suporte à decisão.
 
 ---
 
-## Referências (seleção)
+## Referências
 
 [1] Schaab, B. L., et al. (2024). *How do machine learning models perform in the detection and prediction of depression, anxiety, and stress among undergraduate university students?* Systematic Review. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/
 
