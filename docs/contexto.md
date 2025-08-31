@@ -305,38 +305,33 @@ Nesta etapa, o grupo deverá produzir um vídeo de 5 a 8 minutos apresentando o 
 
 # Referências
 
-ICEI-PUC-MINAS. Modelo do Canvas Analítico. Disponível em: https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf
-. Acesso em: 10 ago. 2025.
-
-SCHAAB, B. L.; et al. How do machine learning models perform in the detection and prediction of depression, anxiety, and stress among undergraduate university students? Systematic Review, 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/
-. Acesso em: 29 ago. 2025.
-
-BABA, A.; et al. Prediction of mental health problem using annual student health survey data: machine learning approach. JMIR Mental Health, 2023. Disponível em: https://mental.jmir.org/2023/1/e42420
-. Acesso em: 29 ago. 2025.
-
-VERGARAY, A. D.; et al. Predicting the depression in university students using machine learning (Ensemble Stacking). Data in Brief, 2023. Disponível em: https://www.sciencedirect.com/science/article/pii/S2352914823001417
-. Acesso em: 29 ago. 2025.
-
-KROENKE, K.; SPITZER, R. L.; WILLIAMS, J. B. W. The PHQ-9: validity of a brief depression severity measure. Journal of General Internal Medicine, v. 16, n. 9, p. 606–613, 2001. Disponível em: https://pubmed.ncbi.nlm.nih.gov/11556941/
-. Acesso em: 29 ago. 2025.
-
-OLAWADE, D. B.; et al. Enhancing mental health with artificial intelligence. Journal of Medicine in AI, 2024. Disponível em: https://www.sciencedirect.com/science/article/pii/S2949916X24000525
-. Acesso em: 29 ago. 2025.
-
-DANG, V. N.; et al. Fairness and bias correction in machine learning for depression: a systematic study. 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC10991528/
-. Acesso em: 29 ago. 2025.
-
-JIANG, Z.; et al. Evaluating and mitigating unfairness in multimodal remote mental health assessment. 2024. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11268595/
-. Acesso em: 29 ago. 2025.
-
-CHOI, A.; et al. Digital phenotyping for stress, anxiety, and mild depression using smartphones. JMIR mHealth and uHealth, 2024. Disponível em: https://mhealth.jmir.org/2024/1/e40689
-. Acesso em: 29 ago. 2025.
-
-BORELLI, J. L.; et al. Detection of depressive symptoms in college students using passive sensing and LightGBM. JMIR Formative Research, 2025. Disponível em: https://formative.jmir.org/2025/1/e67964
-. Acesso em: 29 ago. 2025.
-
-SHAMIM, A. Student Depression Dataset. Kaggle, 2023. Disponível em: https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
-. Acesso em: 29 ago. 2025.
+BABA, A.; et al. Prediction of mental health problem using annual student health survey data: machine learning approach. *JMIR Mental Health*, 2023. Disponível em: [https://mental.jmir.org/2023/1/e42420](https://mental.jmir.org/2023/1/e42420). Acesso em: 29 ago. 2025.
+ 
+BORELLI, J. L.; et al. Detection of depressive symptoms in college students using passive sensing and LightGBM. *JMIR Formative Research*, 2025. Disponível em: [https://formative.jmir.org/2025/1/e67964](https://formative.jmir.org/2025/1/e67964). Acesso em: 29 ago. 2025.
+ 
+CHOI, A.; et al. Digital phenotyping for stress, anxiety, and mild depression using smartphones. *JMIR mHealth and uHealth*, 2024. Disponível em: [https://mhealth.jmir.org/2024/1/e40689](https://mhealth.jmir.org/2024/1/e40689). Acesso em: 29 ago. 2025.
+ 
+DANG, V. N.; et al. Fairness and bias correction in machine learning for depression: a systematic study. 2024. Disponível em: [https://pmc.ncbi.nlm.nih.gov/articles/PMC10991528/](https://pmc.ncbi.nlm.nih.gov/articles/PMC10991528/). Acesso em: 29 ago. 2025.
+ 
+FACELI, Katti; LORENA, Ana Carolina; GAMA, João; CARVALHO, André Carlos Ponce de Leon Ferreira de. *Inteligência artificial: uma abordagem de aprendizado de máquina*. 2. ed. Rio de Janeiro: LTC, 2021. ISBN 978-85-216-3749-3.
+ 
+ICEI-PUC-MINAS. Modelo do Canvas Analítico. Disponível em: [https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf](https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf). Acesso em: 10 ago. 2025.
+ 
+JIANG, Z.; et al. Evaluating and mitigating unfairness in multimodal remote mental health assessment. 2024. Disponível em: [https://pmc.ncbi.nlm.nih.gov/articles/PMC11268595/](https://pmc.ncbi.nlm.nih.gov/articles/PMC11268595/). Acesso em: 29 ago. 2025.
+ 
+KROENKE, K.; SPITZER, R. L.; WILLIAMS, J. B. W. The PHQ-9: validity of a brief depression severity measure. *Journal of General Internal Medicine*, v. 16, n. 9, p. 606–613, 2001. Disponível em: [https://pubmed.ncbi.nlm.nih.gov/11556941/](https://pubmed.ncbi.nlm.nih.gov/11556941/). Acesso em: 29 ago. 2025.
+ 
+LARSON, Ron; FARBER, Elizabeth. *Estatística aplicada*. 6. ed. São Paulo: Pearson Education do Brasil, 2016. ISBN 9788543004778.
+ 
+OLAWADE, D. B.; et al. Enhancing mental health with artificial intelligence. *Journal of Medicine in AI*, 2024. Disponível em: [https://www.sciencedirect.com/science/article/pii/S2949916X24000525](https://www.sciencedirect.com/science/article/pii/S2949916X24000525). Acesso em: 29 ago. 2025.
+ 
+SCHAAB, B. L.; et al. How do machine learning models perform in the detection and prediction of depression, anxiety, and stress among undergraduate university students? *Systematic Review*, 2024. Disponível em: [https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/](https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/). Acesso em: 29 ago. 2025.
+ 
+SGRECCIA, Elio. *Manual de bioética: volume 1: fundamentos e ética biomédica*. São Paulo: Edições Loyola, 1996. 686 p. ISBN 8515012855.
+ 
+SHAMIM, A. *Student Depression Dataset*. Kaggle, 2023. Disponível em: [https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset](https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset). Acesso em: 29 ago. 2025.
+ 
+VERGARAY, A. D.; et al. Predicting the depression in university students using machine learning (Ensemble Stacking). *Data in Brief*, 2023. Disponível em: [https://www.sciencedirect.com/science/article/pii/S2352914823001417](https://www.sciencedirect.com/science/article/pii/S2352914823001417). Acesso em: 29 ago. 2025.
 
 
 <!--
