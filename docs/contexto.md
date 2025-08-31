@@ -66,21 +66,13 @@ Indique:
 
 ## Público-Alvo
 
-Nesta seção, descreva quem poderá se beneficiar com a sua investigação, apresentando os diferentes perfis de pessoas ou grupos impactados.
+O projeto tem como público alvo, inicialmente, instituições de ensino que enfrentam diariamente o desafio de lidar com estudantes em diferentes contextos pessoais e emocionais. 
+Instituições que contam com profissionais que visam dar suporte psicológico e pedagógico a seus alunos, apesar de terem domínio técnico sobre a atuação profissional para diagnóstico e tratamento, muitas vezes não dispõem de ferramentas para coletar dados e identificar alunos que podem se beneficiar de atendimento psicológico. Ao terem acesso a análises baseadas em dados, poderão ser planejadas atuações visando identificar e tratar de forma mais eficaz alunos em situação de risco.
 
-O objetivo aqui não é definir clientes específicos ou papéis exatos dentro da aplicação, mas sim compreender o perfil dos usuários e partes interessadas. Para isso, considere:
-* Conhecimentos prévios relacionados ao domínio do problema e ao uso de tecnologia;
-* Nível de familiaridade com recursos digitais e possíveis barreiras de uso;
-* Contexto profissional e hierárquico, quando aplicável (ex.: nível de decisão, responsabilidades, área de atuação);
-* Necessidades e expectativas que podem ser atendidas pelo projeto.
+Também são público-alvo os pesquisadores e acadêmicos das áreas de Ciência de Dados, Psicologia e Educação. Um grupo que possui mais familiaridade com métodos quantitativos e qualitativo, tecnologias e dados, podendo se beneficiar do projeto como material para estudo e desenvolvimento de metodologias sobre o tema. 
 
-**Dica:** Seja objetivo e baseie suas descrições em informações reais ou plausíveis para o contexto escolhido. Isso ajudará a manter o foco no desenvolvimento de soluções relevantes e aplicáveis.
+Por fim, os próprios estudantes são beneficiados, pois são públicos que esperamos ajudar socialmente. As informações extraídas dos dados podem orientar ações que promovam melhor qualidade de vida e amparo profissional. 
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
 
 # Estado da arte
 
