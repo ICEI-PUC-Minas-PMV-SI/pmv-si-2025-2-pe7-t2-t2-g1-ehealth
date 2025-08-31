@@ -94,38 +94,183 @@ Por fim, a literatura recente enfatiza viés e equidade. Modelos de aprendizado 
 
 ---
 
-# Descrição do dataset selecionado
+# Descrição do _dataset_ selecionado
 
-**Student Depression Dataset (Kaggle — por Adil Shamim)**
+## Conjunto de dados sobre depressão estudantil
 
-**Links de acesso ao dataset**
-- Página oficial no Kaggle: <https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset>
+Arquivo de tabela no formato CSV contendo 18 colunas e 27.901 registros
 
-**Descrição**
-Conjunto de dados tabular, auto-reportado, voltado a analisar e prever depressão em estudantes a partir de demografia, variáveis acadêmicas/profissionais, hábitos de vida e estressores. Amostras incluem diversas cidades (muitas entradas da Índia, p. ex. Visakhapatnam, Pune, Jaipur, Varanasi). O alvo é um rótulo binário Depression (p. ex., *Yes/No* ou 0/1). Versões amplamente usadas em análises públicas reportam ~27,9 mil linhas e 18 colunas.
+Tamanho do arquivo: 2,9MB
 
-**Atributos (exemplos recorrentes)**
-- `id` (inteiro)
-- `Gender` (categoria)
-- `Age` (inteiro)
-- `City` (texto)
-- `Working Professional or Student` / `Profession` (categoria)
-- **Acadêmico/Trabalho:** `Academic Pressure` (escala), `Work Pressure` (escala), `CGPA` (numérico), `Study Satisfaction` (escala), `Job Satisfaction` (escala), `Work/Study Hours` (inteiro)
-- **Hábitos/Histórico:** `Sleep Duration` (categorias como “Less than 5h”, “6–7h”, “7–8h”), `Dietary Habits` (Healthy/Moderate/Unhealthy), `Degree` (curso), `Financial Stress` (escala), `Family History of Mental Illness` (Sim/Não), **`Have you ever had suicidal thoughts?`** (Sim/Não)
-- **Alvo:** `Depression` (binário)
+Disponivel em: https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
 
-**Tamanho e período**
-- Tamanho: **≈ 27.901 amostras, 18 atributos** (algumas versões “limpas” variam levemente).
+Este conjunto de dados contém informações abrangentes sobre a saúde mental dos estudantes e fatores relacionados. Ele foi desenvolvido para analisar tendências e preditores de depressão entre estudantes. Os dados incluem detalhes demográficos, pressões acadêmicas e profissionais, hábitos de vida e indicadores específicos de saúde mental. 
 
+### Atributos e descrições dos campos
 
-**Valores faltantes e qualidade dos dados**
-- Relatos comunitários indicam CSV com todas as colunas presentes e, em várias cargas,  contagens *non-null* completas; outras versões “limpas” variam levemente em linhas/tipos. Boas práticas recomendadas:
-1. Padronizar categorias (p. ex., `Sleep Duration`, `Dietary Habits`);
-2. Converter escalas para numérico coerente;
-3. Verificar desbalanceamento do alvo e aplicar class weights quando necessário.
+*  id
 
-**Observações de modelagem**
-Em tarefas binárias com esse CSV, **GBM/XGBoost e Random Forest** tendem a performar bem; *feature importance* costuma destacar **ideação suicida, pressão acadêmica e estresse financeiro** como preditores de alto ganho — compatível com a literatura sobre sono, estresse e desempenho. Use validação estratificada e explique o modelo (SHAP/LIME) para suporte à decisão.
+    * Tipo: inteiro
+
+    * Descrição: Um identificador em numero inteiro exclusivo atribuído a cada registro de aluno no conjunto de dados.
+
+* Gender
+
+    * Nosso idioma: Gênero
+
+    * Tipo: String
+
+    * Descrição: O gênero do aluno (ex.: masculino, feminino, outro). Isso ajuda a analisar tendências específicas de gênero na saúde mental.
+
+* Age
+
+    * Nosso idioma: Idade
+
+    * Tipo: Inteiro
+
+    * Descrição: Idade do aluno em anos.
+
+* City
+
+    * Nosso idioma: Cidade
+
+    * Tipo: String
+
+    * Descrição: Nome da cidade ou região onde o aluno reside, fornecendo contexto geográfico para a análise.
+
+* Profission
+
+    * Nosso idioma: Profissão
+
+    * Tipo: String
+
+    * Descrição: Área de trabalho ou estudo do aluno, que pode oferecer insights sobre fatores de estresse ocupacional ou acadêmico.
+
+* Academic Pressure
+
+    * Nosso idioma: Pressão Acadêmica
+
+    * Tipo: Inteiro
+
+    * Escala: 0 a 5
+
+    * Descrição: Uma medida que indica o nível de pressão que o aluno enfrenta em ambientes acadêmicos. Isso pode incluir estresse causado por provas, trabalhos e expectativas acadêmicas gerais.
+
+* Work Pressure
+
+    * Nosso idioma: Pressão no trabalho
+
+    * Tipo: Inteiro
+
+    * Escala: 0 a 5
+
+    * Descrição: Uma medida da pressão relacionada ao trabalho ou às responsabilidades do cargo, relevante para estudantes que trabalham paralelamente aos estudos.
+
+* CGPA
+
+    * Tipo: Decimal
+
+    * Escala: 0 a 10
+
+    * Descrição: Média cumulativa de notas do aluno, refletindo o desempenho acadêmico geral.
+
+* Study Satisfaction
+
+    * Nosso idioma: Satisfação com os estudos
+
+    * Tipo: Inteiro
+
+    * Escala: 0 a 5
+
+    * Descrição: Um indicador de quão satisfeito o aluno está com seus estudos, o que pode estar relacionado ao bem-estar mental.
+
+* Job Satisfaction
+
+    * Nosso idioma: Satisfação no trabalho
+
+    * Tipo: Inteiro
+
+    * Escala: 0 a 5
+
+    * Descrição: Uma medida da satisfação do aluno com seu trabalho ou ambiente de trabalho, se aplicável.
+
+* Sleep Duration
+
+    * Nosso idioma: Duração do sono
+
+    * Tipo: String
+
+    * Formato: Intervalos de sono
+
+    * Descrição: Intervalo médio de horas que o aluno dorme por dia, o que é um fator importante para a saúde mental.
+
+* Dietary Habits
+
+    * Nosso idioma: Hábitos alimentares
+
+    * Tipo: String
+
+    * Formato: Intervalos de sono ex: 8 horas
+
+    * Descrição: Uma avaliação dos padrões alimentares e hábitos nutricionais do aluno, que podem impactar a saúde geral e o humor.
+
+* Degree
+
+    * Nosso idioma: Grau
+
+    * Tipo: String
+
+    * Formato: Classificação de escolaridade americana
+
+    * Descrição: O grau acadêmico ou programa que o aluno está cursando.
+
+* Have you ever had suicidal thoughts?
+
+    * Nosso idioma: Você já teve pensamentos suicidas?
+
+    * Tipo: String
+
+    * Formato: Sim ou Não
+
+    * Descrição: Um indicador binário (Sim/Não) que reflete se o aluno já teve ideação suicida.
+
+* Work/Study Hours
+
+    * Nosso idioma: Horas de Trabalho/Estudo
+
+    * Tipo: Inteiro
+
+    * Formato: Sim ou Não
+
+    * Descrição: Número médio de horas por dia que o aluno dedica ao trabalho ou estudo, o que pode influenciar os níveis de estresse.
+
+* Financial Stress
+
+    * Nosso idioma: Estresse financeiro
+
+    * Tipo: Inteiro
+
+    * Escala: 1 a 5
+
+    * Descrição: Uma medida do estresse experimentado devido a preocupações financeiras, que podem afetar a saúde mental.
+
+* Family History of Mental Illness
+
+    * Nosso idioma: Histórico familiar de doença mental
+
+    * Tipo: String
+
+    * Formato: Sim ou Não
+
+    * Descrição: Indica se há histórico familiar de doença mental (Sim/Não), o que pode ser um fator significativo nas predisposições à saúde mental.
+
+* Depression
+
+    * Nosso idioma: Depressão
+
+    * Tipo: Binario
+
+    * Descrição: Variável-alvo que indica se o aluno está sofrendo de depressão (Sim/Não). Este é o foco principal da análise.
 
 ---
 
