@@ -94,7 +94,7 @@ Arquivo de tabela no formato CSV contendo 18 colunas e 27.901 registros
 
 Tamanho do arquivo: 2,9MB
 
-Disponivel em: https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
+Disponível em: https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
 
 Este conjunto de dados contém informações abrangentes sobre a saúde mental dos estudantes e fatores relacionados. Ele foi desenvolvido para analisar tendências e preditores de depressão entre estudantes. Os dados incluem detalhes demográficos, pressões acadêmicas e profissionais, hábitos de vida e indicadores específicos de saúde mental. 
 
@@ -102,7 +102,7 @@ Este conjunto de dados contém informações abrangentes sobre a saúde mental d
 
 *  id
 
-    * Tipo: inteiro
+    * Tipo: Inteiro
 
     * Descrição: Um identificador em numero inteiro exclusivo atribuído a cada registro de aluno no conjunto de dados.
 
@@ -264,9 +264,13 @@ Este conjunto de dados contém informações abrangentes sobre a saúde mental d
 
     * Descrição: Variável-alvo que indica se o aluno está sofrendo de depressão (Sim/Não). Este é o foco principal da análise.
 
----
+# Vídeo de apresentação da Etapa 01
 
-## Referências
+A seguir link do video publicado no Youtbe
+
+https://youtu.be/C58-2ict588
+
+# Referências
 
 [1] Schaab, B. L., et al. (2024). *How do machine learning models perform in the detection and prediction of depression, anxiety, and stress among undergraduate university students?* Systematic Review. Disponível em: https://pmc.ncbi.nlm.nih.gov/articles/PMC11654111/
 
@@ -287,23 +291,6 @@ Este conjunto de dados contém informações abrangentes sobre a saúde mental d
 [9] Borelli, J. L., et al. (2025). *Detection of Depressive Symptoms in College Students Using Passive Sensing and LightGBM.* JMIR Formative Research. Disponível em: https://formative.jmir.org/2025/1/e67964
 
 **Dataset de interesse:** Kaggle — *Student Depression Dataset* (Adil Shamim). https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset
-
-# Canvas analítico
-
-Nesta seção, você deverá estruturar e preencher o seu Canvas Analítico, que tem como objetivo registrar a organização das ideias e apresentar o modelo de negócio do projeto.
-
-O Canvas deve ser preenchido integralmente, mesmo que algumas informações ainda não estejam totalmente definidas. Nessa etapa inicial, é aceitável trabalhar com hipóteses ou estimativas, desde que sejam coerentes com o problema e o contexto definidos.
-
-**Dica:** O Canvas Analítico serve como guia visual para alinhar expectativas e direcionar o desenvolvimento. Ele poderá (e deverá) ser revisitado e atualizado ao longo do projeto.
-
-> **Links Úteis**:
-> - [Modelo do Canvas Analítico](https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf)
-
-# Vídeo de apresentação da Etapa 01
-
-Nesta etapa, o grupo deverá produzir um vídeo de 5 a 8 minutos apresentando o trabalho realizado, no qual cada integrante deve dizer seu nome e apresentar uma parte do conteúdo desenvolvido, garantindo que todos participem ativamente da gravação. A ausência de participação de qualquer membro resultará em penalização na nota final desta etapa. Recomenda-se que o grupo elabore previamente um roteiro para organizar a ordem das falas, distribuir o tempo de forma equilibrada e assegurar que todos os tópicos relevantes sejam apresentados de maneira clara e objetiva.
-
-# Referências
 
 BABA, A.; et al. Prediction of mental health problem using annual student health survey data: machine learning approach. *JMIR Mental Health*, 2023. Disponível em: [https://mental.jmir.org/2023/1/e42420](https://mental.jmir.org/2023/1/e42420). Acesso em: 29 ago. 2025.
  
