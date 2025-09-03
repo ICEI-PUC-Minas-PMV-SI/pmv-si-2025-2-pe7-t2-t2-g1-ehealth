@@ -27,9 +27,9 @@ O projeto tem como objetivo investigar a depressão em estudantes universitário
 |  :----:   | ----------- |
 | ETAPA 1         |[Documentação de Contexto e levantamento dos dados](docs/contexto.md) <br> |
 | ETAPA 2         |[Conhecendo os dados](docs/conhecendo-dados.md) <br> |
-| ETAPA 3         |[Preparação dos dados, construção e avaliação dos modelos propostos](docs/construindo-modelos.md) |
-| ETAPA 4        |[Implantação e apresentação da solução](docs/implantação-apresentacao.md) <br>  |
-
+| ETAPA 3         |[Preparação dos dados, construção e avaliação do modelo proposto](docs/construindo-modelo.md) |
+| ETAPA 4         |[Preparação dos dados, construção e avaliação dos modelos propostos](docs/construindo-modelos.md) |
+| ETAPA 5         |[Implantação e apresentação da solução](docs/implantação-apresentacao.md) <br>  |
 ## Instruções de utilização
 
 Acesso em Produção (quando disponível)
