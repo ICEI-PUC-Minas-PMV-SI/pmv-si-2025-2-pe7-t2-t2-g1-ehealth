@@ -80,6 +80,11 @@ A aplicação de aprendizado de máquina (AM) à saúde mental de estudantes mos
 
 Em universidades de países em desenvolvimento, abordagens de ensemble stacking com variáveis acadêmicas, de estresse/pressão, sono e satisfação alcançaram desempenho competitivo para detecção da depressão em estágios iniciais [3]. Esses achados dialogam diretamente com os campos do dataset (p. ex., Academic Pressure, Financial Stress, Sleep Duration, Study Satisfaction).
 
+Além de fazer diagnósticos baseados em critérios de transtornos depressivos, o PHQ-9 ou Questionário de Saúde do Paciente, pode ser confiável na medição da gravidade da depressão. Essas características com a brevidade do método fazem o PHQ-9 uma ferramenta útil para aplicação clínica e como ferramentaa de 
+pesquisa[4].
+
+Modelos de IA que passaram por extensos testes clínicos e validação estão ganhando destaque. Esses modelos são baseados em práticas comprovadas e demonstraram eficácia na melhoria dos resultados de saúde mental. O desenvolvimento de modelos de IA que sejam interpretáveis e capazes de explicar suas recomendações é uma tendência crescente[5].
+
 Por fim, a literatura recente enfatiza viés e equidade. Modelos de aprendizado de máquina podem ser úteis para prever depressão, principalmente em estágios iniciais desta.  Portanto, recomenda-se refinar os modelos e a alimentá-los com o máximo de variáveis e dados possíveis, mantendo uma melhora constante nas pesquisas e uma mitigação de dados enviesados.
 
 **Resumo:** há base empírica para empregar aprendizado de máquina na previsão/detecção de depressão em estudantes, sobretudo com atributos acadêmicos e de estilo de vida.
