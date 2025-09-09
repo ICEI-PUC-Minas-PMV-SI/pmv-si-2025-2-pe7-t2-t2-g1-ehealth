@@ -268,6 +268,8 @@ Este conjunto de dados contém informações abrangentes sobre a saúde mental d
     * Tipo: Binario
 
     * Descrição: Variável-alvo que indica se o aluno está sofrendo de depressão (Sim/Não). Este é o foco principal da análise.
+    * 
+# Canvas Analítico
 
 <img width="599" height="414" alt="image" src="https://github.com/user-attachments/assets/a0cd5608-9237-4ce0-b24f-79a0fb69637b" />
 
