@@ -269,6 +269,9 @@ Este conjunto de dados contém informações abrangentes sobre a saúde mental d
 
     * Descrição: Variável-alvo que indica se o aluno está sofrendo de depressão (Sim/Não). Este é o foco principal da análise.
 
+<img width="996" height="657" alt="image" src="https://github.com/user-attachments/assets/e9992012-4c5c-4ab9-bc30-bb366908c83b" />
+
+
 # Vídeo de apresentação da Etapa 01
 
 A seguir link do video publicado no Youtbe
