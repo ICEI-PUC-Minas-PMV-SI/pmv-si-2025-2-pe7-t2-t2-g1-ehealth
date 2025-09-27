@@ -14,6 +14,8 @@ As bibliotecas escolhidas permitem: manipular dados (pandas, numpy), gerar visua
 
 O dataset utilizado neste trabalho foi obtido da plataforma Kaggle por meio da biblioteca kagglehub, que permite baixar e acessar datasets diretamente em ambientes como Google Colab.
 
+Tipo de Dados
+
 <img width="523" height="473" alt="image" src="https://github.com/user-attachments/assets/dea6034d-6e52-47bd-966c-d1d80efc4aa6" />
 
 1.4 Estatísticas Descritivas
