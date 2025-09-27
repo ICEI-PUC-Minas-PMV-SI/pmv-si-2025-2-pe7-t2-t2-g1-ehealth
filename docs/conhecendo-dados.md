@@ -1,24 +1,16 @@
 # Conhecendo os dados
 Nesta etapa, realizou-se uma análise detalhada para compreender a estrutura da base de dados, identificar outliers, e avaliar relações entre variáveis.
 
-1.1 Importação das Bibliotecas
+1. Importação das Bibliotecas
 
 <img width="563" height="180" alt="image" src="https://github.com/user-attachments/assets/9a6a1e02-fdfb-410b-973b-2cdbc9712a03" />
 
 
 As bibliotecas escolhidas permitem: manipular dados (pandas, numpy), gerar visualizações (matplotlib, seaborn) e preparar a base para modelos de machine learning (sklearn, shap).
 
-1.2 Coleta e Criação do DataFrame
+2. Coleta e Criação do DataFrame
 
-<img width="766" height="318" alt="image" src="https://github.com/user-attachments/assets/27163acb-b36b-42ff-80d0-d3788608aa8e" />
-
-Total de registros: 27.901
-
-1.3 Estrutura dos Dados
-<img width="339" height="36" alt="image" src="https://github.com/user-attachments/assets/9168f605-fea6-4a80-9317-69c04107b6d8" />
-<img width="646" height="402" alt="image" src="https://github.com/user-attachments/assets/957acce0-d08f-4181-9048-fe4c6723d809" />
-
-Observa-se que a maioria das variáveis numéricas estão no tipo float64 e várias informações categóricas (Gender, City, Dietary Habits, Degree, etc.) estão no tipo object.
+<img width="811" height="403" alt="image" src="https://github.com/user-attachments/assets/6ab53a4f-1436-49df-b523-1a0fa0550063" />
 
 1.4 Estatísticas Descritivas
 
