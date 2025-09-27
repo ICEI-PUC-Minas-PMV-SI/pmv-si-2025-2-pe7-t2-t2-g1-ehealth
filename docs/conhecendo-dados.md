@@ -177,21 +177,18 @@ Em histogramas, algumas distribuições exibiram assimetria, reforçando a neces
 
 4. Relações entre variáveis (correlações)
 
-A matriz de correlação de Pearson revelou, de modo geral, correlações fracas a moderadas entre os atributos.
+A matriz de correlação de Pearson revelou, de modo geral, correlações fracas a moderadas entre os atributos. Destacaram-se:
 
-Destacaram-se:
 
-Correlação moderada negativa entre qualidade do sono e nível de depressão: menor qualidade do sono associou-se a maiores índices de depressão.
+ - Correlação moderada negativa entre qualidade do sono e nível de depressão: menor qualidade do sono associou-se a maiores índices de depressão.
 
-Correlação moderada positiva entre pressão acadêmica e nível de depressão: estudantes com maior percepção de sobrecarga acadêmica tendem a relatar mais sintomas depressivos.
+- Correlação moderada positiva entre pressão acadêmica e nível de depressão: estudantes com maior percepção de sobrecarga acadêmica tendem a relatar mais sintomas depressivos.
 
-Outras variáveis, como hábitos alimentares e histórico familiar, apresentaram correlações fracas, mas consistentes, sugerindo contribuição secundária ao risco de depressão.
+- Outras variáveis, como hábitos alimentares e histórico familiar, apresentaram correlações fracas, mas consistentes, sugerindo contribuição secundária ao risco de depressão.
 
 5. Aspectos gerais
 
-O dataset apresentou boa qualidade: sem valores nulos ou duplicados, e com variáveis categóricas padronizadas.
-
-Apesar disso, a distribuição desigual da variável-alvo e a presença de alguns outliers demandam atenção em etapas futuras (balanceamento de classes, normalização e tratamento de valores extremos).
+O dataset apresentou boa qualidade: sem valores nulos ou duplicados, e com variáveis categóricas padronizadas. Apesar disso, a distribuição desigual da variável-alvo e a presença de alguns outliers demandam atenção em etapas futuras (balanceamento de classes, normalização e tratamento de valores extremos).
 
 
 ## Ferramentas utilizadas
