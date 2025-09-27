@@ -205,21 +205,21 @@ pandas: utilizada para leitura dos arquivos, estruturação dos dados em DataFra
 
 numpy: empregada para operações matemáticas e manipulação de arrays, auxiliando na vetorização e no desempenho computacional.
 
-🔹 Visualização Gráfica
+ - Visualização Gráfica
 
 matplotlib: responsável pela geração de gráficos básicos (histogramas, boxplots, gráficos de dispersão, barras, entre outros).
 
 seaborn: utilizada para visualizações estatísticas mais elaboradas, como mapas de calor (heatmaps), pairplots e gráficos estilizados com maior clareza interpretativa.
 
-🔹 Modelagem e Pré-processamento
+- Modelagem e Pré-processamento
 
 scikit-learn (sklearn): empregada na divisão dos dados em treino e teste, na normalização, no balanceamento de classes e na implementação de algoritmos de classificação e predição.
 
-🔹 Interpretação de Modelos
+- Interpretação de Modelos
 
 shap (SHapley Additive exPlanations): biblioteca utilizada para explicar as predições dos modelos de aprendizado de máquina, atribuindo pesos de importância às variáveis.
 
-🔹 Ambiente de Desenvolvimento
+- Ambiente de Desenvolvimento
 
 Google Colab: plataforma em nuvem utilizada para a execução dos notebooks Python, por oferecer praticidade, acesso a recursos de GPU e integração com bibliotecas como o KaggleHub, que foi utilizado para importar diretamente o dataset.
 
