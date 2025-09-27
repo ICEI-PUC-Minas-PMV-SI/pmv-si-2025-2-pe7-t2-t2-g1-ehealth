@@ -157,7 +157,7 @@ A análise descritiva e exploratória da base de dados evidenciou informações 
 
 ## Qualidade e estrutura dos dados
 O conjunto apresentou boa consistência, sem valores nulos ou duplicados, e com variáveis categóricas devidamente padronizadas.  
-Entretanto, observou-se desbalanceamento na variável-alvo: aproximadamente 58,6% dos estudantes apresentam sintomas de depressão, contra 41,4% sem depressão.  
+Entretanto, observou-se desbalanceamento na variável-alvo: aproximadamente 58,55% dos estudantes apresentam sintomas de depressão, contra 41,45% sem depressão.  
 Esse desequilíbrio deve ser considerado em etapas futuras de modelagem, pois pode impactar o desempenho de classificadores.  
 
 Além disso, algumas variáveis contínuas (como idade e duração do sono) apresentaram amplitude elevada entre valores mínimos e máximos, indicando a presença de outliers, que também merecem atenção.  
