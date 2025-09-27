@@ -20,75 +20,36 @@ Tipo de Dados
 
 1.4 Estatísticas Descritivas
 
-<img width="1332" height="415" alt="image" src="https://github.com/user-attachments/assets/42727576-84c1-4e7f-bec6-132a5434b218" />
+A análise descritiva foi aplicada ao dataset com o objetivo de resumir, organizar e compreender as principais características dos dados antes de prosseguir para análises mais complexas. Essa etapa é fundamental para verificar distribuições, dispersão, valores atípicos e proporção das classes.
+
+Principais medidas utilizadas:
+
+count: número de valores válidos (não nulos).
+
+mean: média aritmética dos valores.
+
+std: desvio-padrão, que expressa a variabilidade.
+
+min: menor valor observado.
+
+25% (Q1): primeiro quartil (25% dos dados estão abaixo desse valor).
+
+50% (Mediana/Q2): valor central da distribuição.
+
+75% (Q3): terceiro quartil (75% dos dados estão abaixo desse valor).
+
+max: maior valor observado.
+
+O método df_dataset.describe() foi utilizado para gerar essas estatísticas de forma automatizada para todas as variáveis numéricas do dataset.
+
+O dataset contém 27.901 registros, dos quais 58,55% apresentam sintomas de depressão, enquanto 41,45% não apresentam. Essa diferença indica um leve desbalanceamento das classes, aspecto relevante para as etapas posteriores de modelagem e aprendizado de máquina.
+
+<img width="779" height="586" alt="image" src="https://github.com/user-attachments/assets/2026c4ce-201e-41a8-ae92-b86c3ae2565e" />
+
+<img width="965" height="597" alt="image" src="https://github.com/user-attachments/assets/a0a336ca-a99a-495e-ad10-22e6721ff818" />
 
 
-Medidas de tendência central e dispersão foram calculadas: média, mediana, desvio padrão, quartis.
-Exemplo de insight:
 
-Age: distribuição concentrada entre 18 e 25 anos.
-
-CGPA: média próxima de 7, indicando nota acadêmica moderada.
-
-Academic Pressure e Work Pressure: dispersão significativa → diferentes níveis de pressão percebida.
-
-1.5 Distribuição da Variável Alvo
-
-<img width="663" height="264" alt="image" src="https://github.com/user-attachments/assets/1d0f7187-be99-4846-a87f-e6649fe8dd05" />
-
-<img width="851" height="144" alt="image" src="https://github.com/user-attachments/assets/5804114d-d635-4adf-b9b5-490e53f72d58" />
-
-1.6 Engenharia de Dados
-
-Não há valores nulos (df_dataset.isnull().sum())
-
-Nenhuma linha duplicada (df_dataset.duplicated().sum() = 0)
-
-Coluna Sleep Duration formatada: <7, >9, etc., para facilitar análise numérica/categórica
-
-<img width="964" height="234" alt="image" src="https://github.com/user-attachments/assets/953fd254-8046-4371-a5c7-ad14caad8400" />
-
-Histogramas mostram concentração, assimetria e possíveis outliers. Exemplo: Academic Pressure possui pico próximo de 5 (média de pressão percebida) e cauda à direita (valores extremos).
-
-
-1.7.2 Boxplots (Identificação de Outliers)
-
-<img width="960" height="182" alt="image" src="https://github.com/user-attachments/assets/3afc211c-b988-4eda-9598-e3f10b3769d1" />
-
-CGPA tende a ser levemente menor em alunos com depressão.
-Work/Study Hours apresenta outliers para ambas classes.
-
-1.7.3 Contagem de Variáveis Categóricas
-
-<img width="950" height="213" alt="image" src="https://github.com/user-attachments/assets/7b4661af-5a01-438a-b75f-544336ff5366" />
-
-Permite observar distribuição e possíveis associações entre categorias e depressão. Exemplo: maior proporção de depressão em estudantes com histórico familiar de doença mental.
-
-1.8 Matriz de Correlação
-
-<img width="686" height="170" alt="image" src="https://github.com/user-attachments/assets/7697fda0-530c-43ac-9ed9-535fbd9cd271" />
-
-Principais relações lineares:
-
-Academic Pressure ↔ Study Satisfaction: moderada negativa
-
-Age ↔ Work/Study Hours: pequena positiva
-
-
-1.9 Pares de Variáveis com Maior Correlação
-<img width="971" height="138" alt="image" src="https://github.com/user-attachments/assets/bb2708aa-7559-413b-b826-c7760d66901c" />
-
-1.10 Conclusões da Análise Exploratória
-
-Distribuição da variável alvo: ligeira predominância de casos com depressão.
-
-Variáveis numéricas: algumas apresentam outliers e dispersão significativa.
-
-Variáveis categóricas: histórico familiar, gênero e hábitos alimentares podem influenciar a depressão.
-
-Correlação entre variáveis: algumas relações lineares moderadas, mas a maior parte é fraca → interações não lineares podem ser relevantes para modelos.
-
-Próximo passo: preparação de dados para modelagem preditiva, incluindo codificação de variáveis categóricas e possíveis transformações de outliers.
 ## Descrição dos achados
 
 A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a atenção? Foi possível identificar correlação entre os atributos? Que tipo de correlação (forte, fraca, moderada)? 
