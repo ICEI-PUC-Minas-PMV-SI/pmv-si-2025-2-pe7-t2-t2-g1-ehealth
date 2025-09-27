@@ -153,10 +153,77 @@ Após os processos de estatística descritiva, limpeza e engenharia de dados, a 
 
 ## Descrição dos achados
 
-A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a atenção? Foi possível identificar correlação entre os atributos? Que tipo de correlação (forte, fraca, moderada)? 
+A análise descritiva e exploratória da base de dados trouxe informações importantes para compreender o perfil dos estudantes e os fatores associados à presença de sintomas depressivos.
+
+1. Distribuição da variável-alvo (Depression)
+
+Observou-se um desequilíbrio de classes: aproximadamente 58,6% dos estudantes apresentam sintomas de depressão, contra 41,4% sem depressão.
+
+Esse desbalanceamento deve ser considerado nas próximas etapas de modelagem, pois pode impactar o desempenho de classificadores.
+
+2. Medidas de tendência central e dispersão
+
+Em variáveis contínuas, como idade, notas acadêmicas e duração do sono, verificou-se que a média e a mediana estavam próximas, sugerindo distribuições relativamente simétricas.
+
+Entretanto, alguns atributos apresentaram amplitude elevada entre o mínimo e o máximo, indicando a presença de outliers.
+
+Em especial, a variável Sleep Duration mostrou concentrações nas faixas intermediárias (6–8 horas), mas também casos extremos (<5h ou >8h), que podem estar relacionados a padrões de saúde ou estilo de vida.
+
+3. Análise gráfica (histogramas e boxplots)
+
+Boxplots mostraram diferenças entre grupos com e sem depressão, especialmente em variáveis relacionadas a pressão acadêmica, qualidade do sono e hábitos alimentares.
+
+Em histogramas, algumas distribuições exibiram assimetria, reforçando a necessidade de padronização ou transformação para análises estatísticas mais robustas.
+
+4. Relações entre variáveis (correlações)
+
+A matriz de correlação de Pearson revelou, de modo geral, correlações fracas a moderadas entre os atributos.
+
+Destacaram-se:
+
+Correlação moderada negativa entre qualidade do sono e nível de depressão: menor qualidade do sono associou-se a maiores índices de depressão.
+
+Correlação moderada positiva entre pressão acadêmica e nível de depressão: estudantes com maior percepção de sobrecarga acadêmica tendem a relatar mais sintomas depressivos.
+
+Outras variáveis, como hábitos alimentares e histórico familiar, apresentaram correlações fracas, mas consistentes, sugerindo contribuição secundária ao risco de depressão.
+
+5. Aspectos gerais
+
+O dataset apresentou boa qualidade: sem valores nulos ou duplicados, e com variáveis categóricas padronizadas.
+
+Apesar disso, a distribuição desigual da variável-alvo e a presença de alguns outliers demandam atenção em etapas futuras (balanceamento de classes, normalização e tratamento de valores extremos).
+
 
 ## Ferramentas utilizadas
 
-Existem muitas ferramentas diferentes que podem ser utilizadas para fazer a análise dos dados. Nesta seção, descreva as ferramentas/tecnologias utilizadas e sua aplicação. Vale destacar que, preferencialmente, as análises deverão ser realizadas utilizando a linguagem de programação Python.
+A análise dos dados foi conduzida utilizando principalmente a linguagem de programação Python, escolhida por sua ampla adoção em ciência de dados, robustez e grande ecossistema de bibliotecas. As principais ferramentas e tecnologias empregadas foram:
+
+🔹 Linguagem de Programação
+
+Python: linguagem de código aberto, versátil e com bibliotecas especializadas para manipulação de dados, análise estatística e aprendizado de máquina.
+
+🔹 Bibliotecas de Manipulação e Análise de Dados
+
+pandas: utilizada para leitura dos arquivos, estruturação dos dados em DataFrames, limpeza, filtragem, cálculos estatísticos e agregações.
+
+numpy: empregada para operações matemáticas e manipulação de arrays, auxiliando na vetorização e no desempenho computacional.
+
+🔹 Visualização Gráfica
+
+matplotlib: responsável pela geração de gráficos básicos (histogramas, boxplots, gráficos de dispersão, barras, entre outros).
+
+seaborn: utilizada para visualizações estatísticas mais elaboradas, como mapas de calor (heatmaps), pairplots e gráficos estilizados com maior clareza interpretativa.
+
+🔹 Modelagem e Pré-processamento
+
+scikit-learn (sklearn): empregada na divisão dos dados em treino e teste, na normalização, no balanceamento de classes e na implementação de algoritmos de classificação e predição.
+
+🔹 Interpretação de Modelos
+
+shap (SHapley Additive exPlanations): biblioteca utilizada para explicar as predições dos modelos de aprendizado de máquina, atribuindo pesos de importância às variáveis.
+
+🔹 Ambiente de Desenvolvimento
+
+Google Colab: plataforma em nuvem utilizada para a execução dos notebooks Python, por oferecer praticidade, acesso a recursos de GPU e integração com bibliotecas como o KaggleHub, que foi utilizado para importar diretamente o dataset.
 
 
