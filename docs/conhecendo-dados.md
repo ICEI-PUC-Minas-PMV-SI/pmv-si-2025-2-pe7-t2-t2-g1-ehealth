@@ -3,7 +3,8 @@ Nesta etapa, realizou-se uma análise detalhada para compreender a estrutura da 
 
 1.1 Importação das Bibliotecas
 
-<img width="610" height="328" alt="image" src="https://github.com/user-attachments/assets/338b988f-bbd5-478d-8c29-60f9ee68f7bb" />
+<img width="563" height="180" alt="image" src="https://github.com/user-attachments/assets/9a6a1e02-fdfb-410b-973b-2cdbc9712a03" />
+
 
 As bibliotecas escolhidas permitem: manipular dados (pandas, numpy), gerar visualizações (matplotlib, seaborn) e preparar a base para modelos de machine learning (sklearn, shap).
 
