@@ -151,45 +151,41 @@ Countplots de variáveis categóricas (com vs. sem depressão):
 Após os processos de estatística descritiva, limpeza e engenharia de dados, a base está consistente, sem valores nulos ou duplicados, com variáveis padronizadas e pronta para análises mais avançadas e modelagem preditiva.
 
 
-## Descrição dos achados
+# Descrição dos Achados
 
-A análise descritiva e exploratória da base de dados trouxe informações importantes para compreender o perfil dos estudantes e os fatores associados à presença de sintomas depressivos.
+A análise descritiva e exploratória da base de dados evidenciou informações importantes tanto sobre a qualidade do dataset quanto sobre os fatores associados à presença de sintomas depressivos entre estudantes.
 
-1. Distribuição da variável-alvo (Depression)
+## Qualidade e estrutura dos dados
+O conjunto apresentou boa consistência, sem valores nulos ou duplicados, e com variáveis categóricas devidamente padronizadas.  
+Entretanto, observou-se desbalanceamento na variável-alvo: aproximadamente 58,6% dos estudantes apresentam sintomas de depressão, contra 41,4% sem depressão.  
+Esse desequilíbrio deve ser considerado em etapas futuras de modelagem, pois pode impactar o desempenho de classificadores.  
 
-Observou-se um desequilíbrio de classes: aproximadamente 58,6% dos estudantes apresentam sintomas de depressão, contra 41,4% sem depressão.
+Além disso, algumas variáveis contínuas (como idade e duração do sono) apresentaram amplitude elevada entre valores mínimos e máximos, indicando a presença de outliers, que também merecem atenção.  
 
-Esse desbalanceamento deve ser considerado nas próximas etapas de modelagem, pois pode impactar o desempenho de classificadores.
+## Perfil geral dos estudantes
+- Idade variou entre 18 e 59 anos, com maior concentração em jovens até 30 anos, faixa típica de universitários.  
+- Em termos de desempenho acadêmico, o CGPA médio foi de 7,7 e não se observaram diferenças significativas entre estudantes com e sem sintomas depressivos.  
 
-2. Medidas de tendência central e dispersão
+## Fatores acadêmicos
+- Pressão acadêmica apresentou valores medianos mais altos entre estudantes com depressão, sugerindo relação direta entre sobrecarga e sintomas.  
+- Satisfação com os estudos mostrou distribuição semelhante entre os grupos, não sendo um fator discriminante relevante.  
 
-Em variáveis contínuas, como idade, notas acadêmicas e duração do sono, verificou-se que a média e a mediana estavam próximas, sugerindo distribuições relativamente simétricas.
+## Hábitos de saúde
+- A duração do sono chamou atenção: grande parte dos estudantes relatou dormir menos de 6 horas por noite, e esse padrão esteve mais presente entre os que apresentaram depressão.  
+- Os hábitos alimentares apresentaram predominância de perfis moderados e não saudáveis, mas sem grandes diferenças entre os grupos.  
 
-Entretanto, alguns atributos apresentaram amplitude elevada entre o mínimo e o máximo, indicando a presença de outliers.
+## Fatores pessoais de risco
+- Estudantes com histórico familiar de doenças mentais apresentaram prevalência significativamente maior de sintomas depressivos.  
+- A variável ideação suicida foi um dos fatores mais marcantes: a maioria dos indivíduos que relataram pensamentos suicidas também apresentou depressão, confirmando sua relevância como indicador crítico de risco.  
 
-Em especial, a variável Sleep Duration mostrou concentrações nas faixas intermediárias (6–8 horas), mas também casos extremos (<5h ou >8h), que podem estar relacionados a padrões de saúde ou estilo de vida.
+## Relações entre variáveis
+A matriz de correlação de Pearson mostrou, de forma geral, correlações fracas a moderadas. Entre os destaques:  
+- Correlação negativa, ainda que fraca, entre satisfação com os estudos e pressão acadêmica.  
+- Correlação moderada positiva entre idade e pressão acadêmica.  
+- Demais variáveis, como desempenho e hábitos alimentares, apresentaram correlações lineares muito baixas.  
 
-3. Análise gráfica (histogramas e boxplots)
-
-Boxplots mostraram diferenças entre grupos com e sem depressão, especialmente em variáveis relacionadas a pressão acadêmica, qualidade do sono e hábitos alimentares.
-
-Em histogramas, algumas distribuições exibiram assimetria, reforçando a necessidade de padronização ou transformação para análises estatísticas mais robustas.
-
-4. Relações entre variáveis (correlações)
-
-A matriz de correlação de Pearson revelou, de modo geral, correlações fracas a moderadas entre os atributos. Destacaram-se:
-
-
- - Correlação moderada negativa entre qualidade do sono e nível de depressão: menor qualidade do sono associou-se a maiores índices de depressão.
-
-- Correlação moderada positiva entre pressão acadêmica e nível de depressão: estudantes com maior percepção de sobrecarga acadêmica tendem a relatar mais sintomas depressivos.
-
-- Outras variáveis, como hábitos alimentares e histórico familiar, apresentaram correlações fracas, mas consistentes, sugerindo contribuição secundária ao risco de depressão.
-
-5. Aspectos gerais
-
-O dataset apresentou boa qualidade: sem valores nulos ou duplicados, e com variáveis categóricas padronizadas. Apesar disso, a distribuição desigual da variável-alvo e a presença de alguns outliers demandam atenção em etapas futuras (balanceamento de classes, normalização e tratamento de valores extremos).
-
+## Síntese dos achados
+De modo geral, a análise sugere que a depressão entre estudantes está mais fortemente associada a fatores contextuais e subjetivos como pressão acadêmica, baixa duração do sono, histórico familiar e ideação suicida do que a fatores estritamente acadêmicos, como o desempenho escolar.
 
 ## Ferramentas utilizadas
 
