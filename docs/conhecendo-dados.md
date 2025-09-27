@@ -195,11 +195,11 @@ O dataset apresentou boa qualidade: sem valores nulos ou duplicados, e com vari�
 
 A análise dos dados foi conduzida utilizando principalmente a linguagem de programação Python, escolhida por sua ampla adoção em ciência de dados, robustez e grande ecossistema de bibliotecas. As principais ferramentas e tecnologias empregadas foram:
 
-🔹 Linguagem de Programação
+- Linguagem de Programação
 
 Python: linguagem de código aberto, versátil e com bibliotecas especializadas para manipulação de dados, análise estatística e aprendizado de máquina.
 
-🔹 Bibliotecas de Manipulação e Análise de Dados
+- Bibliotecas de Manipulação e Análise de Dados
 
 pandas: utilizada para leitura dos arquivos, estruturação dos dados em DataFrames, limpeza, filtragem, cálculos estatísticos e agregações.
 
