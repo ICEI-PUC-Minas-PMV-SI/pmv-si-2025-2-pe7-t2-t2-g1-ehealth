@@ -1,60 +1,94 @@
 # Conhecendo os dados
+Nesta etapa, realizou-se uma análise detalhada para compreender a estrutura da base de dados, identificar outliers, e avaliar relações entre variáveis.
 
-Nesta etapa, foi realizada uma análise descritiva e exploratória detalhada da base de dados student-depression-dataset, com o objetivo de compreender a estrutura dos dados, identificar outliers e explorar relações entre variáveis.
+1.1 Importação das Bibliotecas
 
-1. Importação e carregamento dos dados
+<img width="610" height="328" alt="image" src="https://github.com/user-attachments/assets/338b988f-bbd5-478d-8c29-60f9ee68f7bb" />
 
-Foram carregadas bibliotecas essenciais para manipulação de dados (pandas e numpy), visualização (matplotlib e seaborn) e modelagem (sklearn e shap). A base de dados foi baixada do Kaggle e importada para um DataFrame do pandas, permitindo inspeção inicial das colunas e seus tipos de dados. As variáveis incluíam informações demográficas, acadêmicas, hábitos de vida e o diagnóstico de depressão, sendo classificadas como numéricas ou categóricas.
+As bibliotecas escolhidas permitem: manipular dados (pandas, numpy), gerar visualizações (matplotlib, seaborn) e preparar a base para modelos de machine learning (sklearn, shap).
 
-<img width="742" height="186" alt="image" src="https://github.com/user-attachments/assets/c82d4147-7e1c-49a1-858e-ad5befc1e372" />
+1.2 Coleta e Criação do DataFrame
+
+<img width="766" height="318" alt="image" src="https://github.com/user-attachments/assets/27163acb-b36b-42ff-80d0-d3788608aa8e" />
+
+Total de registros: 27.901
+
+1.3 Estrutura dos Dados
+<img width="339" height="36" alt="image" src="https://github.com/user-attachments/assets/9168f605-fea6-4a80-9317-69c04107b6d8" />
+<img width="646" height="402" alt="image" src="https://github.com/user-attachments/assets/957acce0-d08f-4181-9048-fe4c6723d809" />
+
+Observa-se que a maioria das variáveis numéricas estão no tipo float64 e várias informações categóricas (Gender, City, Dietary Habits, Degree, etc.) estão no tipo object.
+
+1.4 Estatísticas Descritivas
+
+<img width="309" height="38" alt="image" src="https://github.com/user-attachments/assets/b60ca23d-b3d3-40c8-be22-9c31723beddb" />
+
+Medidas de tendência central e dispersão foram calculadas: média, mediana, desvio padrão, quartis.
+Exemplo de insight:
+
+Age: distribuição concentrada entre 18 e 25 anos.
+
+CGPA: média próxima de 7, indicando nota acadêmica moderada.
+
+Academic Pressure e Work Pressure: dispersão significativa → diferentes níveis de pressão percebida.
+
+1.5 Distribuição da Variável Alvo
+
+<img width="663" height="264" alt="image" src="https://github.com/user-attachments/assets/1d0f7187-be99-4846-a87f-e6649fe8dd05" />
+
+<img width="851" height="144" alt="image" src="https://github.com/user-attachments/assets/5804114d-d635-4adf-b9b5-490e53f72d58" />
+
+1.6 Engenharia de Dados
+
+Não há valores nulos (df_dataset.isnull().sum())
+
+Nenhuma linha duplicada (df_dataset.duplicated().sum() = 0)
+
+Coluna Sleep Duration formatada: <7, >9, etc., para facilitar análise numérica/categórica
+
+<img width="964" height="234" alt="image" src="https://github.com/user-attachments/assets/953fd254-8046-4371-a5c7-ad14caad8400" />
+
+Histogramas mostram concentração, assimetria e possíveis outliers. Exemplo: Academic Pressure possui pico próximo de 5 (média de pressão percebida) e cauda à direita (valores extremos).
 
 
-2. Análise descritiva
+1.7.2 Boxplots (Identificação de Outliers)
 
-Variáveis numéricas: Foram calculadas medidas de tendência central (média, mediana e moda) e dispersão (desvio padrão, intervalos interquartis, mínimo e máximo).
+<img width="960" height="182" alt="image" src="https://github.com/user-attachments/assets/3afc211c-b988-4eda-9598-e3f10b3769d1" />
 
-Variáveis categóricas: Foram avaliadas frequências absolutas e percentuais para identificar distribuição das categorias e verificar o equilíbrio da variável alvo “Depression”.
+CGPA tende a ser levemente menor em alunos com depressão.
+Work/Study Hours apresenta outliers para ambas classes.
 
-Observou-se que a base contém 27.901 registros, sendo que 58,55% correspondem a estudantes com depressão e 41,45% a estudantes sem depressão.
+1.7.3 Contagem de Variáveis Categóricas
 
-3. Engenharia de dados
+<img width="950" height="213" alt="image" src="https://github.com/user-attachments/assets/7b4661af-5a01-438a-b75f-544336ff5366" />
 
-Valores nulos: Nenhum valor nulo foi identificado.
+Permite observar distribuição e possíveis associações entre categorias e depressão. Exemplo: maior proporção de depressão em estudantes com histórico familiar de doença mental.
 
-Duplicatas: Não foram encontradas linhas duplicadas.
+1.8 Matriz de Correlação
 
-Formatação de colunas: A coluna Sleep Duration foi padronizada, removendo textos redundantes e substituindo termos descritivos por símbolos (< e >).
+<img width="686" height="170" alt="image" src="https://github.com/user-attachments/assets/7697fda0-530c-43ac-9ed9-535fbd9cd271" />
 
-4. Visualização dos dados
+Principais relações lineares:
 
-Histogramas: Foram gerados para variáveis numéricas, permitindo observar a distribuição dos dados, detectar assimetrias e identificar possíveis outliers.
+Academic Pressure ↔ Study Satisfaction: moderada negativa
 
-Boxplots: Compararam variáveis numéricas em função da depressão, evidenciando diferenças de distribuição entre os grupos e possíveis valores extremos.
+Age ↔ Work/Study Hours: pequena positiva
 
-Countplots: Foram aplicados em variáveis categóricas para examinar a distribuição de categorias entre estudantes com e sem depressão.
 
-Pairplots: Permitiram explorar visualmente relações entre variáveis numéricas e identificar agrupamentos ou padrões diferenciados entre os grupos.
+1.9 Pares de Variáveis com Maior Correlação
+<img width="971" height="138" alt="image" src="https://github.com/user-attachments/assets/bb2708aa-7559-413b-b826-c7760d66901c" />
 
-5. Análise de correlação
+1.10 Conclusões da Análise Exploratória
 
-Foi gerada uma matriz de correlação de Pearson entre as variáveis numéricas, revelando relações lineares entre pares de variáveis.
+Distribuição da variável alvo: ligeira predominância de casos com depressão.
 
-Um gráfico de barras horizontais destacou a correlação entre variáveis e a depressão, mostrando que algumas variáveis, como Academic Pressure e Study Satisfaction, apresentaram associações mais relevantes, enquanto outras apresentaram correlações baixas, sugerindo que relações não lineares podem ser exploradas por modelos preditivos.
+Variáveis numéricas: algumas apresentam outliers e dispersão significativa.
 
-6. Principais insights
+Variáveis categóricas: histórico familiar, gênero e hábitos alimentares podem influenciar a depressão.
 
-A variável alvo está desbalanceada, com maior número de estudantes diagnosticados com depressão.
+Correlação entre variáveis: algumas relações lineares moderadas, mas a maior parte é fraca → interações não lineares podem ser relevantes para modelos.
 
-Algumas variáveis numéricas mostraram diferenças significativas entre grupos, o que indica relevância potencial para modelagem preditiva.
-
-Outliers foram identificados em certas variáveis, justificando análises futuras de tratamento de dados.
-
-Correlações lineares foram em geral baixas, indicando que interações complexas entre variáveis podem ser importantes para capturar padrões associados à depressão.
-
-7. Organização do código
-
-Todo o código utilizado foi estruturado de forma reprodutível e será disponibilizado na pasta src, garantindo que toda a análise possa ser replicada.
-
+Próximo passo: preparação de dados para modelagem preditiva, incluindo codificação de variáveis categóricas e possíveis transformações de outliers.
 ## Descrição dos achados
 
 A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a atenção? Foi possível identificar correlação entre os atributos? Que tipo de correlação (forte, fraca, moderada)? 
