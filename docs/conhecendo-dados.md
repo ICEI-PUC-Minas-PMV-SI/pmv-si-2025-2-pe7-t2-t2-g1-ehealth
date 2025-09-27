@@ -8,13 +8,18 @@ Nesta etapa, realizou-se uma análise detalhada para compreender a estrutura da 
 
 As bibliotecas escolhidas permitem: manipular dados (pandas, numpy), gerar visualizações (matplotlib, seaborn) e preparar a base para modelos de machine learning (sklearn, shap).
 
-2. Coleta e Criação do DataFrame
+2. Coleta  de Dados e criação do dataframe
 
 <img width="811" height="403" alt="image" src="https://github.com/user-attachments/assets/6ab53a4f-1436-49df-b523-1a0fa0550063" />
 
+O dataset utilizado neste trabalho foi obtido da plataforma Kaggle por meio da biblioteca kagglehub, que permite baixar e acessar datasets diretamente em ambientes como Google Colab.
+
+<img width="523" height="473" alt="image" src="https://github.com/user-attachments/assets/dea6034d-6e52-47bd-966c-d1d80efc4aa6" />
+
 1.4 Estatísticas Descritivas
 
-<img width="309" height="38" alt="image" src="https://github.com/user-attachments/assets/b60ca23d-b3d3-40c8-be22-9c31723beddb" />
+<img width="1332" height="415" alt="image" src="https://github.com/user-attachments/assets/42727576-84c1-4e7f-bec6-132a5434b218" />
+
 
 Medidas de tendência central e dispersão foram calculadas: média, mediana, desvio padrão, quartis.
 Exemplo de insight:
