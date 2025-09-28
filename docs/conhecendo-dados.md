@@ -12,6 +12,7 @@ Foram carregadas as bibliotecas necessárias para manipulação dos dados, visua
 
 
 
+
 2. Coleta  de Dados e criação do dataframe
    
    
@@ -21,10 +22,12 @@ O dataset foi obtido diretamente do KaggleHub, utilizando o recurso de cache do 
 <img width="811" height="403" alt="image" src="https://github.com/user-attachments/assets/6ab53a4f-1436-49df-b523-1a0fa0550063" />
 
 
+
 Em seguida, os dados foram carregados em um DataFrame pandas:
 
 
 <img width="577" height="47" alt="image" src="https://github.com/user-attachments/assets/b575d89d-4440-4043-89ea-f75682cae521" />
+
 
 
 3. Estrutura dos Dados
@@ -33,6 +36,7 @@ A verificação inicial do tipo de cada variável mostrou que o dataset contém 
 
 
 <img width="523" height="473" alt="image" src="https://github.com/user-attachments/assets/dea6034d-6e52-47bd-966c-d1d80efc4aa6" />
+
 
 
 4. Estatística Descritiva
