@@ -68,14 +68,19 @@ A variável Depression indica a presença (1) ou ausência (0) de sintomas depre
 
 <img width="632" height="80" alt="image" src="https://github.com/user-attachments/assets/dd33b113-448c-4650-aa6b-4ff6e7d609d9" />
 
+
  Tabela de Frequências: 
  
 <img width="368" height="83" alt="image" src="https://github.com/user-attachments/assets/ce80e2a9-8135-4a9e-a746-9947ae503357" />
+
+
 
 Foi gerado um gráfico de barras para ilustrar a distribuição:
 
 
 <img width="914" height="573" alt="image" src="https://github.com/user-attachments/assets/b2f1a922-b48b-4800-a4a3-ef0a13b6184d" />
+
+
 
 
 Resultado:
@@ -86,15 +91,20 @@ Resultado:
 
 Total de registros: 27.901.
 
+
+
 5. Engenharia de Dados
 
 Nesta etapa, foram realizados procedimentos de limpeza, padronização e preparação dos dados para análises mais aprofundadas.
+
 
 5.1 Eliminação de Valores Nulos
 
 <img width="446" height="700" alt="image" src="https://github.com/user-attachments/assets/1db24df3-c97b-4ad1-b56f-61512b3eb39e" />
 
 Não há dados nulos. 
+
+
 
 5.2. Remoção de Duplicatas
 
@@ -111,6 +121,7 @@ Também foi retirado o sufixo "hours".
 
 
 
+
 | Sleep Duration Raw | Sleep Duration |
 | ------------------ | -------------- |
 | Less than 5 hours  | <5             |
@@ -127,6 +138,8 @@ Também foi retirado o sufixo "hours".
 | Less than 5 hours  | <5             |
 | 7 - 8 hours        | 7 - 8          |
 | 5 - 6 hours        | 5 - 6          |
+
+
 
 
 5.4. Análises Gráficas Iniciais
@@ -134,23 +147,31 @@ Também foi retirado o sufixo "hours".
 Distribuição por tipo de graduação (Degree):
 
 
+
 <img width="824" height="605" alt="image" src="https://github.com/user-attachments/assets/0cdc930d-0da9-4cee-aec9-444516f43bb3" />
+
+
 
 
 Histogramas de variáveis numéricas:
 
 
+
 <img width="960" height="486" alt="image" src="https://github.com/user-attachments/assets/43b2d6d7-1bb6-4894-9788-a78502699a8e" />
+
 
 
 <img width="897" height="514" alt="image" src="https://github.com/user-attachments/assets/e0f59121-1b13-40e4-b0db-bb18fb38bc8e" />
 
 
 
+
 Boxplots segmentados por Depressão (0/1):
 
 
+
 <img width="1059" height="587" alt="image" src="https://github.com/user-attachments/assets/e9be0ad1-0ce9-4a1b-a77f-d7b4e037b28c" />
+
 
 
 <img width="1059" height="584" alt="image" src="https://github.com/user-attachments/assets/fbff18b6-5f0b-4be3-813c-98bd922ca417" />
@@ -162,7 +183,10 @@ Countplots de variáveis categóricas (com vs. sem depressão):
 <img width="1065" height="610" alt="image" src="https://github.com/user-attachments/assets/3af3d372-7dd1-4963-a1a1-04fd5170a392" />
 
 
+
+
 Após os processos de estatística descritiva, limpeza e engenharia de dados, a base está consistente, sem valores nulos ou duplicados, com variáveis padronizadas e pronta para análises mais avançadas e modelagem preditiva.
+
 
 
 # Descrição dos Achados
