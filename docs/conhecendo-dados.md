@@ -153,48 +153,15 @@ Após os processos de estatística descritiva, limpeza e engenharia de dados, a 
 
 # Descrição dos Achados
 
-A análise descritiva e exploratória da base de dados evidenciou informações relevantes tanto sobre a qualidade do dataset quanto sobre os fatores associados à presença de sintomas depressivos entre estudantes.  
+A análise descritiva e exploratória da base de dados permitiu identificar alguns achados relevantes para o contexto da investigação sobre sintomas depressivos em estudantes. Em primeiro lugar, observou-se um desequilíbrio na variável-alvo, com maior proporção de alunos apresentando sintomas de depressão em comparação aos que não apresentam, aspecto que deve ser considerado nas etapas de modelagem por poder impactar a performance dos algoritmos classificadores.
 
-- Qualidade e estrutura dos dados
-  
-O conjunto apresentou boa consistência, sem valores nulos ou duplicados, e com variáveis categóricas devidamente padronizadas.  
-Foi identificado desbalanceamento na variável-alvo: aproximadamente 58,55% dos estudantes apresentam sintomas de depressão, contra 41,45% sem depressão.  
-Esse desequilíbrio deve ser considerado nas próximas etapas de modelagem, pois pode impactar o desempenho de classificadores.   Além disso, algumas variáveis contínuas, como idade e duração do sono, apresentaram amplitude elevada entre valores mínimos e máximos, evidenciando a presença de outliers.  
+No que se refere às medidas de centralidade, variáveis contínuas como idade, notas acadêmicas e duração do sono apresentaram médias e medianas próximas, sugerindo distribuições relativamente simétricas. Ainda assim, algumas variáveis mostraram amplitude elevada entre valores mínimos e máximos, caracterizando a presença de outliers que podem distorcer análises subsequentes. A variável referente à duração do sono destacou-se por concentrar-se majoritariamente entre 6 e 8 horas, mas com casos extremos (<5h ou >8h), possivelmente associados a diferenças no estilo de vida ou condições de saúde dos estudantes.
 
-- Perfil geral dos estudantes
-  
-- Idade variou entre 18 e 59 anos, com maior concentração em jovens até 30 anos, faixa típica de universitários.  
-- CGPA (desempenho acadêmico) teve média de 7,7 sem diferenças relevantes entre estudantes com e sem sintomas depressivos.  
-- Cidade e grau acadêmico (Degree) mostraram ampla diversidade, mas não se destacaram como fatores diretamente relacionados à variável depressão.  
+As análises gráficas reforçaram essas tendências: boxplots revelaram diferenças entre os grupos com e sem depressão em atributos como pressão acadêmica, hábitos alimentares e duração do sono, enquanto histogramas indicaram assimetria em algumas distribuições, o que sugere a necessidade de normalização ou transformação para análises estatísticas mais robustas.
 
-- Fatores acadêmicos
-  
-- Pressão acadêmica apresentou valores medianos mais altos entre estudantes com depressão, sugerindo relação direta entre sobrecarga e sintomas.  
-- Satisfação com os estudos mostrou distribuição semelhante entre os grupos, não sendo um fator discriminante relevante.  
-- Horas de estudo/trabalho tiveram média em torno de 7 horas diárias, mas estudantes com rotinas mais intensas mostraram maior associação com sintomas depressivos.  
+Quanto às relações entre variáveis, a matriz de correlação de Pearson mostrou, de forma geral, correlações fracas a moderadas. Entre os achados mais relevantes, destacam-se: correlação negativa moderada entre qualidade/duração do sono e sintomas de depressão, sugerindo que menos horas de sono se associam a maior prevalência de sintomas; e correlação positiva moderada entre pressão acadêmica e depressão, indicando que estudantes sob maior sobrecarga acadêmica relatam mais sintomas. Outras variáveis, como hábitos alimentares, desempenho acadêmico (CGPA) e histórico familiar, apresentaram correlações lineares fracas, mas consistentes, o que aponta para sua contribuição secundária no risco de depressão.
 
--  Hábitos de saúde
-  
-- A duração do sono foi um ponto crítico: parte significativa dos estudantes relatou dormir menos de 6 horas por noite, padrão mais frequente entre aqueles com depressão.  
-- Os hábitos alimentares apresentaram predominância de perfis moderados e não saudáveis, distribuídos de forma relativamente semelhante entre os grupos.  
-
-- Fatores pessoais de risco
-  
-- Estresse financeiro se mostrou relevante: estudantes que relataram dificuldades financeiras apresentaram maior prevalência de sintomas depressivos.  
-- Histórico familiar de doenças mentais também esteve associado a maiores índices de depressão.  
-- A variável ideação suicida foi o fator mais marcante: a maioria dos indivíduos que reportaram pensamentos suicidas também apresentou sintomas de depressão, confirmando sua relevância como indicador crítico de risco.  
-
--  Relações entre variáveis
-  
-A matriz de correlação de Pearson mostrou, em geral, correlações fracas a moderadas. Entre os principais achados:  
-- Correlação negativa, ainda que fraca, entre satisfação com os estudos e pressão acadêmica.  
-- Correlação moderada positiva entre idade e pressão acadêmica.  
-- Variáveis como CGPA, hábitos alimentares e gênero apresentaram correlações lineares muito baixas.  
-
--  Síntese dos achados
--  
-De forma geral, a análise sugere que a depressão entre estudantes está mais fortemente associada a fatores contextuais e subjetivos como pressão acadêmica, baixa duração do sono, estresse financeiro, histórico familiar e ideação suicida do que a fatores estritamente acadêmicos, como desempenho escolar.  
- mostraram ampla diversidade, mas não se destacaram como fatores diretamente relacionados à variável depressão.  
+De forma geral, os resultados evidenciam que, além de características individuais, fatores contextuais como pressão acadêmica, condições de sono e suporte familiar desempenham papel importante na compreensão do quadro de sintomas depressivos. 
 
 ## Ferramentas utilizadas
 
