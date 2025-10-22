@@ -1,61 +1,65 @@
 # Preparação dos dados
 
-Nesta etapa, todos os dados foram cuidadosamente preparados para garantir a qualidade e eficácia da modelagem preditiva. As técnicas aplicadas incluíram:
+Pré-processamento e Tratamento de Dados
+
+O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. As etapas realizadas foram:
 
 1. Limpeza de Dados
 
-Valores ausentes: o dataset foi analisado quanto a valores nulos (df.isnull().sum()). Não foram encontrados dados faltantes, dispensando imputação.
+Valores ausentes: O dataset foi verificado com isnull().sum(). Não foram identificados valores faltantes, portanto não foi necessária imputação.
 
-Outliers: foram avaliados outliers em variáveis numéricas usando boxplots. Casos extremos foram considerados para normalização, mas não removidos, preservando a variabilidade real do conjunto de dados.
+Duplicatas: Foram verificadas com duplicated() e removidas com drop_duplicates(). Nenhuma duplicata foi encontrada.
 
-Duplicatas: verificadas com df.duplicated() e eliminadas quando presentes.
+Outliers: Identificados visualmente por meio de boxplots das variáveis numéricas, mas não houve remoção ou transformação, preservando a distribuição original.
 
 2. Transformação de Dados
 
-Normalização e padronização: variáveis numéricas (como Age, Academic Pressure, CGPA, Study Satisfaction) foram padronizadas com StandardScaler para garantir comparabilidade e estabilidade do modelo.
+Padronização de variáveis textuais: A coluna Sleep Duration foi padronizada, removendo caracteres desnecessários (hours) e substituindo prefixos textuais (Less than → <, More than → >).
 
-Codificação de variáveis categóricas: colunas como Gender, City, Degree, Family History of Mental Illness e Have you ever had suicidal thoughts ? foram convertidas para formato numérico usando One-Hot Encoding ou técnicas de codificação apropriadas.
+Codificação de variáveis categóricas: Até esta etapa, as variáveis categóricas foram mantidas em formato textual, sem conversão numérica (one-hot encoding ou label encoding), mas preparadas para codificação futura.
 
-3. Engenharia de Features
+Normalização/padronização numérica: Não aplicada nesta fase.
 
-Criação de novas variáveis: faixas de horas de sono foram categorizadas; outras features derivadas foram avaliadas conforme relevância para o modelo.
+3. Feature Engineering
 
-Seleção de características: análise de correlação e importância de features permitiu reduzir variáveis redundantes ou pouco informativas.
+Nenhuma nova feature foi criada neste estágio.
 
-4. Tratamento de Desbalanceamento
+Foi realizada seleção inicial de variáveis para análise exploratória, distinguindo variáveis numéricas (Age, Academic Pressure, CGPA, etc.) e categóricas (Gender, City, Dietary Habits, etc.).
 
-O target Depression apresentava desbalanceamento (58,5% casos com depressão vs. 41,5% sem depressão). Considerou-se:
+4. Tratamento de dados desbalanceados
 
-Oversampling para aumentar a representação da classe minoritária;
+A variável alvo Depression apresentou desbalanceamento (~58% com depressão, ~42% sem depressão).
 
-Uso de algoritmos robustos a desbalanceamento, como SVM com ajuste de peso por classe.
+Nenhuma técnica de oversampling, undersampling ou ajuste de peso foi aplicada nesta fase; a identificação do desbalanceamento serve para decisões futuras na modelagem.
 
-5. Separação de Dados
+5. Separação de dados
 
-Treino, validação e teste: divisão do conjunto em 80% treino e 20% teste, garantindo estratificação por classe para manter proporções originais de depressão.
+Até esta etapa, os dados ainda não foram divididos em conjuntos de treino, validação e teste.
 
-Random state definido para reprodutibilidade.
+6. Manuseio de Dados Temporais
 
-6. Redução de Dimensionalidade (opcional)
+Não aplicável ao dataset atual, pois não há variáveis temporais.
 
-Para cenários com muitas features numéricas, técnicas como PCA podem ser aplicadas para reduzir dimensionalidade sem perda significativa de informação.
+7. Redução de Dimensionalidade
 
-7. Validação Cruzada
+Não foi realizada, pois a dimensionalidade do dataset não apresenta alta complexidade.
 
-Utilizada para avaliar a robustez do modelo, evitando overfitting e garantindo generalização.
+8. Validação Cruzada
 
-8. Monitoramento Contínuo
+Ainda não aplicada nesta etapa de pré-processamento; será implementada na fase de modelagem para avaliar a robustez do modelo e evitar overfitting.
 
-O pré-processamento foi estruturado em pipeline replicável, permitindo atualizações futuras caso novos dados ou alterações no problema sejam introduzidos.
+9. Monitoramento Contínuo
 
- 
- A preparação dos dados incluiu limpeza, transformação, engenharia de features, tratamento de desbalanceamento e separação em conjuntos de treino e teste, garantindo um pipeline robusto e reprodutível para a modelagem de aprendizado de máquina.
+Não aplicável neste estágio, mas recomenda-se atualização do pré-processamento caso novas versões do dataset sejam utilizadas ou alterações no contexto do problema ocorram.
+
 
 # Descrição do modelo
 
-Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever o algoritmo de aprendizado de máquina selecionado para a construção do primeiro modelo proposto. Inclua informações abrangentes sobre o algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha do algoritmo.
+O algoritmo selecionado para classificação binária da variável Depression foi o Support Vector Classifier (SVC), baseado em Support Vector Machines. O SVC busca encontrar o hiperplano ótimo que separa as classes com máxima margem, utilizando vetores de suporte. Para dados não linearmente separáveis, o algoritmo aplica o kernel trick, projetando as features em espaços de maior dimensão.
 
-Explore aspectos específicos, como o ajuste dos parâmetros livres. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas e registrar todos os experimentos realizados.
+As principais vantagens do SVC incluem capacidade de lidar com alta dimensionalidade, modelagem de fronteiras complexas e robustez frente a pequenos outliers. Suas limitações envolvem sensibilidade à escolha de kernel e parâmetros (C, gamma) e maior custo computacional em grandes volumes de dados.
+
+No contexto deste projeto, o SVC foi selecionado devido à sua adequação a problemas de classificação binária, à presença de variáveis numéricas e categóricas e à necessidade de capturar relações possivelmente não lineares. A configuração padrão do modelo (kernel='rbf', C=1.0, gamma='scale') foi utilizada para treino inicial, sendo planejada a exploração de hiperparâmetros em etapas subsequentes para otimização da performance.
 
 # Avaliação do modelo criado
 
