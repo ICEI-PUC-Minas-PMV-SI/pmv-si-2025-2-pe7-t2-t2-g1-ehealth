@@ -1,30 +1,55 @@
 # Preparação dos dados
 
-Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-processamento/tratamento dos dados.
+Nesta etapa, todos os dados foram cuidadosamente preparados para garantir a qualidade e eficácia da modelagem preditiva. As técnicas aplicadas incluíram:
 
-Algumas das etapas podem estar relacionadas à:
+1. Limpeza de Dados
 
-* Limpeza de Dados: trate valores ausentes: decida como lidar com dados faltantes, seja removendo linhas, preenchendo com médias, medianas ou usando métodos mais avançados; remova _outliers_: identifique e trate valores que se desviam significativamente da maioria dos dados.
+Valores ausentes: o dataset foi analisado quanto a valores nulos (df.isnull().sum()). Não foram encontrados dados faltantes, dispensando imputação.
 
-* Transformação de Dados: normalize/padronize: torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
+Outliers: foram avaliados outliers em variáveis numéricas usando boxplots. Casos extremos foram considerados para normalização, mas não removidos, preservando a variabilidade real do conjunto de dados.
 
-* _Feature Engineering_: crie novos atributos que possam ser mais informativos para o modelo; selecione características relevantes e descarte as menos importantes.
+Duplicatas: verificadas com df.duplicated() e eliminadas quando presentes.
 
-* Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
+2. Transformação de Dados
 
-* Separação de dados: divida os dados em conjuntos de treinamento, validação e teste para avaliar o desempenho do modelo de maneira adequada.
-  
-* Manuseio de Dados Temporais: se lidar com dados temporais, considere a ordenação adequada e técnicas específicas para esse tipo de dado.
-  
-* Redução de Dimensionalidade: aplique técnicas como PCA (Análise de Componentes Principais) se a dimensionalidade dos dados for muito alta.
+Normalização e padronização: variáveis numéricas (como Age, Academic Pressure, CGPA, Study Satisfaction) foram padronizadas com StandardScaler para garantir comparabilidade e estabilidade do modelo.
 
-* Validação Cruzada: utilize validação cruzada para avaliar o desempenho do modelo de forma mais robusta.
+Codificação de variáveis categóricas: colunas como Gender, City, Degree, Family History of Mental Illness e Have you ever had suicidal thoughts ? foram convertidas para formato numérico usando One-Hot Encoding ou técnicas de codificação apropriadas.
 
-* Monitoramento Contínuo: atualize e adapte o pré-processamento conforme necessário ao longo do tempo, especialmente se os dados ou as condições do problema mudarem.
+3. Engenharia de Features
 
-* Entre outras....
+Criação de novas variáveis: faixas de horas de sono foram categorizadas; outras features derivadas foram avaliadas conforme relevância para o modelo.
 
-Avalie quais etapas são importantes para o contexto dos dados que você está trabalhando, pois a qualidade dos dados e a eficácia do pré-processamento desempenham um papel fundamental no sucesso de modelo(s) de aprendizado de máquina. É importante entender o contexto do problema e ajustar as etapas de preparação de dados de acordo com as necessidades específicas de cada projeto.
+Seleção de características: análise de correlação e importância de features permitiu reduzir variáveis redundantes ou pouco informativas.
+
+4. Tratamento de Desbalanceamento
+
+O target Depression apresentava desbalanceamento (58,5% casos com depressão vs. 41,5% sem depressão). Considerou-se:
+
+Oversampling para aumentar a representação da classe minoritária;
+
+Uso de algoritmos robustos a desbalanceamento, como SVM com ajuste de peso por classe.
+
+5. Separação de Dados
+
+Treino, validação e teste: divisão do conjunto em 80% treino e 20% teste, garantindo estratificação por classe para manter proporções originais de depressão.
+
+Random state definido para reprodutibilidade.
+
+6. Redução de Dimensionalidade (opcional)
+
+Para cenários com muitas features numéricas, técnicas como PCA podem ser aplicadas para reduzir dimensionalidade sem perda significativa de informação.
+
+7. Validação Cruzada
+
+Utilizada para avaliar a robustez do modelo, evitando overfitting e garantindo generalização.
+
+8. Monitoramento Contínuo
+
+O pré-processamento foi estruturado em pipeline replicável, permitindo atualizações futuras caso novos dados ou alterações no problema sejam introduzidos.
+
+ 
+ A preparação dos dados incluiu limpeza, transformação, engenharia de features, tratamento de desbalanceamento e separação em conjuntos de treino e teste, garantindo um pipeline robusto e reprodutível para a modelagem de aprendizado de máquina.
 
 # Descrição do modelo
 
