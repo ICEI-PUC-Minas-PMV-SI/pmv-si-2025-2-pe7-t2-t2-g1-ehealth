@@ -165,7 +165,6 @@ As principais métricas utilizadas e sua justificativa em um problema de classif
 
 Os modelos Random Forest e LightGBM apresentaram alto poder preditivo, com Acurácia e F1-Score superiores a 0,84 e AUC acima de 0,85. Esse desempenho demonstra a capacidade dos modelos em identificar padrões significativos no dataset, alinhando-se aos objetivos de detectar estudantes com risco de depressão.
 
-
 1. Relação com o Problema e Objetivos
 
 Alcance da meta: O elevado F1-Score e AUC indicam que o modelo distingue eficazmente alunos com e sem depressão.
@@ -196,17 +195,48 @@ Conclusão: Os resultados indicam que os modelos são consistentes, robustos e d
 
 # Pipeline de pesquisa e análise de dados
 
-Etapa	Foco Principal	Ações Realizadas
-1. Coleta e Aquisição de Dados	Obtenção do dataset base.	Download do dataset student-depression-dataset (via KaggleHub) e carregamento em um DataFrame Pandas.
-2. Análise Exploratória de Dados (AED)	Conhecer a estrutura, qualidade e distribuição inicial dos dados.	Verificação de tipos de dados, estatística descritiva, análise do desbalanceamento do target e visualização inicial (histogramas, gráficos de barras).
-3. Limpeza de Dados	Garantir a integridade e consistência do dataset.	Remoção de linhas com valores inválidos (?) na coluna Financial Stress. Verificação e confirmação da ausência de duplicatas e valores faltantes.
-4. Engenharia de Variáveis e Pré-processamento	Transformar variáveis para o formato adequado à modelagem.	Codificação: Mapeamento de Sleep Duration, Dietary Habits (Ordinal), Gender e variáveis de histórico/pensamentos (Binária) para valores numéricos.
-5. Seleção de Características (Feature Selection)	Reduzir a dimensionalidade e focar nas features mais relevantes.	Descarte de Colunas: Remoção de variáveis de baixa relevância (ex: Job Satisfaction, Work Pressure). Análise de Relevância: Uso do Mutual Information para ranquear e selecionar as 9 features finais.
-6. Divisão dos Dados	Preparar os conjuntos para treinamento e teste.	Separação do dataset final em Treinamento (80%) e Teste (20%) de forma Estratificada.
-7. Treinamento e Otimização do Modelo	Construir o modelo preditivo e tratar o desbalanceamento.	Treinamento dos modelos Random Forest (com class_weight="balanced") e LightGBM. Balanceamento: Aplicação do SMOTE no conjunto de treinamento para versões aprimoradas.
-8. Avaliação do Desempenho e Calibração	Medir a qualidade preditiva e a confiabilidade das probabilidades.	Métricas de Desempenho: Cálculo de Accuracy, F1-Score (Macro), Balanced Accuracy e AUC. Métricas de Probabilidade: Análise de Log Loss, Brier Score Loss e ECE, incluindo o uso de CalibratedClassifierCV (Sigmoid e Isotonic) para calibração.
-9. Discussão e Conclusão	Interpretar os resultados no contexto do problema.	Comparação do desempenho (LightGBM com o melhor AUC), discussão do impacto das features mais relevantes (ex: Suicidal Thoughts) e validação do modelo para triagem de risco de depressão.
+Com base em todas as etapas de coleta, pré-processamento, análise e modelagem descritas, o Pipeline de Pesquisa e Análise de Dados do projeto pode ser estruturado e resumido da seguinte forma:
 
-## Observações importantes
 
-Todas as tarefas realizadas nesta etapa deverão ser registradas em formato de texto junto com suas explicações de forma a apresentar os códigos desenvolvidos e também, o código deverá ser incluído, na íntegra, na pasta "src".
+<img width="1172" height="697" alt="image" src="https://github.com/user-attachments/assets/67ac5898-64c4-484d-8ef5-21d1ad57af18" />
+
+
+
+## Métricas utilizadas
+
+O modelo de Machine Learning construído para classificar a presença de depressão (Depression) foi avaliado utilizando um conjunto abrangente de métricas, cobrindo aspectos de desempenho global, balanceamento de classes e qualidade das probabilidades.
+
+As principais métricas utilizadas e sua justificativa em um problema de classificação binária (Depressão = 1, Sem Depressão = 0) com classes moderadamente desbalanceadas são:
+
+1. Métricas Baseadas em Desempenho (Threshold-Dependent)
+   
+1.1 Acurácia (Accuracy) : Proporção de previsões corretas (verdadeiros positivos + verdadeiros negativos) sobre o total de observações. Fornece uma visão rápida do desempenho geral. É útil, mas insuficiente sozinha, dada a distribuição das classes (58% vs. 42%).
+
+1.2  Precisão (Precision): De todas as vezes que o modelo previu a classe positiva (Depressão), quantas vezes ele acertou (Verdadeiros Positivos / (Verdadeiros Positivos + Falsos Positivos)).Importante para avaliar o custo de um Falso Positivo (dizer que há depressão quando não há). Garante que o modelo não está apenas superestimando a classe positiva.
+
+1.3  Recall (Sensibilidade) : De todos os casos positivos reais (Depressão), quantos o modelo identificou corretamente (Verdadeiros Positivos / (Verdadeiros Positivos + Falsos Negativos)). Crucial em problemas de saúde. Avalia o custo de um Falso Negativo (não detectar a depressão em um caso real). Um recall alto na classe 1 é vital.
+
+1.4  Acurácia Balanceada (Balanced Accuracy): Essencial para avaliar se o modelo está performando bem em ambas as classes. Corrige o viés que a Acurácia simples teria em um dataset desbalanceado.
+
+## Discussão dos resultados obtidos
+
+Os modelos Random Forest e LightGBM apresentaram alto poder preditivo, com Acurácia e F1-Score superiores a 0,84 e AUC acima de 0,85. Esse desempenho demonstra a capacidade dos modelos em identificar padrões significativos no dataset, alinhando-se aos objetivos de detectar estudantes com risco de depressão.
+
+
+1. Relação com o Problema e Objetivos
+
+Alcance da meta: O elevado F1-Score e AUC indicam que o modelo distingue eficazmente alunos com e sem depressão.
+
+Aplicação prática: Um F1-Score de 0,84 sugere que o modelo pode ser utilizado como ferramenta de triagem inicial, identificando rapidamente alunos que necessitam de avaliação profissional.
+
+2. Métricas e Impacto do Desbalanceamento
+
+O dataset apresenta desbalanceamento moderado (58% positivos), tornando métricas como F1-Score e Balanced Accuracy mais relevantes que Acurácia simples.
+
+Recall elevado (~0,86 no Random Forest): Minimiza falsos negativos, crucial para problemas de saúde.
+
+F1-Score Macro: Confirma bom equilíbrio entre Precisão e Recall, evitando viés para a classe majoritária.
+
+
+
+
