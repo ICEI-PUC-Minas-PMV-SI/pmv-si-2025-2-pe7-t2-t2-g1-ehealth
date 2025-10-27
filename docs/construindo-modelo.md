@@ -4,8 +4,43 @@
 
 Pré-processamento e Tratamento de Dados
 
-O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. As etapas realizadas foram:
+O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. Antes das etapas de limpeza e transformação, foi realizado um teste inicial do modelo (baseline), com o propósito de estabelecer uma referência de desempenho, avaliar rapidamente padrões nos dados e identificar possíveis ajustes necessários no pré-processamento.
 
+```python3
+# 1. Carregar o dataset
+#df = pd.read_csv("student_depression.csv")
+
+import kagglehub
+
+path = kagglehub.dataset_download("adilshamim8/student-depression-dataset")
+
+print("Path to dataset files:", path)
+
+dataset_name = os.listdir(path)[0]
+
+df = pd.read_csv(os.path.join(path, dataset_name))
+```
+# 2. Pré-processamento
+# Remover colunas irrelevantes se houver (ex: IDs)
+# Mapear "Sleep Duration" de texto para número
+sleep_map = {
+    "'Less than 5 hours'": 4,
+    "'5-6 hours'": 5.5,
+    "'7-8 hours'": 7.5,
+    "'More than 8 hours'": 9
+}
+if 'Sleep Duration' in df.columns:
+    df['Sleep Duration'] = df['Sleep Duration'].map(sleep_map)
+
+
+# Tratar valores ausentes
+df = df.dropna()
+
+# Codificar variáveis categóricas
+categorical = df.select_dtypes(include='object').columns
+le = LabelEncoder()
+for col in categorical:
+    df[col] = le.fit_transform(df[col])
 
 1. Limpeza de Dados
 
@@ -96,7 +131,19 @@ No contexto deste projeto, o SVC foi selecionado devido à sua adequação a pro
 
 ## Métricas utilizadas
 
-Nesta seção, as métricas utilizadas para avaliar o modelo desenvolvido deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
+O modelo de Machine Learning construído para classificar a presença de depressão (Depression) foi avaliado utilizando um conjunto abrangente de métricas, cobrindo aspectos de desempenho global, balanceamento de classes e qualidade das probabilidades.
+
+As principais métricas utilizadas e sua justificativa em um problema de classificação binária (Depressão = 1, Sem Depressão = 0) com classes moderadamente desbalanceadas são:
+
+1. Métricas Baseadas em Desempenho (Threshold-Dependent)
+   
+1.1 Acurácia (Accuracy) : Proporção de previsões corretas (verdadeiros positivos + verdadeiros negativos) sobre o total de observações. Fornece uma visão rápida do desempenho geral. É útil, mas insuficiente sozinha, dada a distribuição das classes (58% vs. 42%).
+
+1.2  Precisão (Precision): De todas as vezes que o modelo previu a classe positiva (Depressão), quantas vezes ele acertou (Verdadeiros Positivos / (Verdadeiros Positivos + Falsos Positivos)).Importante para avaliar o custo de um Falso Positivo (dizer que há depressão quando não há). Garante que o modelo não está apenas superestimando a classe positiva.
+
+1.3  Recall (Sensibilidade) : De todos os casos positivos reais (Depressão), quantos o modelo identificou corretamente (Verdadeiros Positivos / (Verdadeiros Positivos + Falsos Negativos)). Crucial em problemas de saúde. Avalia o custo de um Falso Negativo (não detectar a depressão em um caso real). Um recall alto na classe 1 é vital.
+
+1.4  
 
 ## Discussão dos resultados obtidos
 
