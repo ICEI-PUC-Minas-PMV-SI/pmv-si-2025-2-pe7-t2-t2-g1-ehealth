@@ -1,10 +1,13 @@
+# Testando modelos
 
+Antes realizamos um breve teste para ver qual modelo teria um melhor desempenho.
 
-- # Preparação dos dados
+Testamos os modelos
 
-Pré-processamento e Tratamento de Dados
-
-O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. Antes das etapas de limpeza e transformação, foi realizado um teste inicial do modelo (baseline), com o propósito de estabelecer uma referência de desempenho, avaliar rapidamente padrões nos dados e identificar possíveis ajustes necessários no pré-processamento.
+- Logistic Regression
+- Random Forest
+- XGBoost
+- LightGBM
 
 ```python3
 # 1. Carregar o dataset
@@ -20,6 +23,7 @@ dataset_name = os.listdir(path)[0]
 
 df = pd.read_csv(os.path.join(path, dataset_name))
 ```
+```python3
 # 2. Pré-processamento
 # Remover colunas irrelevantes se houver (ex: IDs)
 # Mapear "Sleep Duration" de texto para número
@@ -42,7 +46,19 @@ le = LabelEncoder()
 for col in categorical:
     df[col] = le.fit_transform(df[col])
 
+```
 
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 27 36_a7f51eb3](https://github.com/user-attachments/assets/1d0615a2-cc9f-465a-8be0-f0ea97d620a9)
+
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 22 54_d4c2526b](https://github.com/user-attachments/assets/f1676098-ff2a-4cfb-8da7-5d5823bc3c79)
+
+Apos algumas variações no teste escolhemos utilizar o Random Forest
+
+# Preparação dos dados
+
+Pré-processamento e Tratamento de Dados
+
+O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. Antes das etapas de limpeza e transformação, foi realizado um teste inicial do modelo (baseline), com o propósito de estabelecer uma referência de desempenho, avaliar rapidamente padrões nos dados e identificar possíveis ajustes necessários no pré-processamento.
 
 
 1. Limpeza de Dados
@@ -60,11 +76,11 @@ Padronização de variáveis textuais: A coluna Sleep Duration foi padronizada, 
 
 Codificação de variáveis categóricas:
 
-- ender: Male → 1, Female → 0
+- Gender: Male → 1, Female → 0
 
- - Dietary Habits: Healthy=3, Moderate=2, Unhealthy=1
+- Dietary Habits: Healthy=3, Moderate=2, Unhealthy=1
 
- - Variáveis binárias (Yes/No) → 1/0
+- Variáveis binárias (Yes/No) → 1/0
 
 Conversão de Sleep Duration em valores numéricos aproximados.
 
@@ -99,11 +115,8 @@ Técnicas como SMOTE serão aplicadas posteriormente na fase de modelagem para b
 
 Quatro modelos de Machine Learning foram testados para classificar a variável alvo (Depression): Regressão Logística, Random Forest, XGBoost e LightGBM. O desempenho de cada um foi avaliado usando métricas-chave: Accuracy (Acurácia), F1 Score e AUC (Area Under the Curve).
 
-![Imagem do WhatsApp de 2025-10-26 à(s) 20 22 54_d4c2526b](https://github.com/user-attachments/assets/f1676098-ff2a-4cfb-8da7-5d5823bc3c79)
-
 O gráfico demonstra que todos os modelos alcançaram um desempenho global alto e consistente, com as métricas Accuracy e F1 Score variando de aproximadamente $0.82$ a $0.86$, e o AUC sendo a métrica de maior valor, consistentemente acima de $0.85$ para todos os classificadores.
 
-![Imagem do WhatsApp de 2025-10-26 à(s) 20 27 36_a7f51eb3](https://github.com/user-attachments/assets/1d0615a2-cc9f-465a-8be0-f0ea97d620a9)
 
 6. Manuseio de Dados Temporais
 
