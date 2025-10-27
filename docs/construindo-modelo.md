@@ -42,6 +42,9 @@ le = LabelEncoder()
 for col in categorical:
     df[col] = le.fit_transform(df[col])
 
+
+
+
 1. Limpeza de Dados
 
 Tratamento de Valores Ausentes: 	Inicialmente, linhas que continham o valor de preenchimento ('?') na coluna Financial Stress foram removidas do dataset. Em uma verificação posterior com isnull().sum(), confirmou-se a ausência de valores faltantes residuais, dispensando a necessidade de imputação.
@@ -143,7 +146,7 @@ As principais métricas utilizadas e sua justificativa em um problema de classif
 
 1.3  Recall (Sensibilidade) : De todos os casos positivos reais (Depressão), quantos o modelo identificou corretamente (Verdadeiros Positivos / (Verdadeiros Positivos + Falsos Negativos)). Crucial em problemas de saúde. Avalia o custo de um Falso Negativo (não detectar a depressão em um caso real). Um recall alto na classe 1 é vital.
 
-1.4  
+1.4  Acurácia Balanceada (Balanced Accuracy): Essencial para avaliar se o modelo está performando bem em ambas as classes. Corrige o viés que a Acurácia simples teria em um dataset desbalanceado.
 
 ## Discussão dos resultados obtidos
 
