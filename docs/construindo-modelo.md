@@ -3,20 +3,22 @@
 Pré-processamento e Tratamento de Dados
 
 O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. As etapas realizadas foram:
+Pré-processamento e Tratamento de DadosO pré-processamento do dataset foi realizado para garantir a qualidade, consistência e adequação dos dados à análise exploratória e à modelagem preditiva. As etapas concluídas até o momento são detalhadas abaixo:
 
 1. Limpeza de Dados
 
-Valores ausentes: O dataset foi verificado com isnull().sum(). Não foram identificados valores faltantes, portanto não foi necessária imputação.
+Tratamento de Valores Ausentes: 	Inicialmente, linhas que continham o valor de preenchimento ('?') na coluna Financial Stress foram removidas do dataset. Em uma verificação posterior com isnull().sum(), confirmou-se a ausência de valores faltantes residuais, dispensando a necessidade de imputação.
 
-Duplicatas: Foram verificadas com duplicated() e removidas com drop_duplicates(). Nenhuma duplicata foi encontrada.
+2. Remoção de Duplicatas: 	O dataset foi inspecionado com duplicated(). Nenhuma linha duplicada foi identificada e, portanto, nenhuma remoção foi necessária.
 
-Outliers: Identificados visualmente por meio de boxplots das variáveis numéricas, mas não houve remoção ou transformação, preservando a distribuição original.
+3. Tratamento de Outliers: 	Os outliers foram identificados visualmente por meio de boxplots das variáveis numéricas. Contudo, não houve remoção ou transformação de outliers nesta fase, a fim de preservar a distribuição original dos dados.
+
 
 2. Transformação de Dados
 
 Padronização de variáveis textuais: A coluna Sleep Duration foi padronizada, removendo caracteres desnecessários (hours) e substituindo prefixos textuais (Less than → <, More than → >).
 
-Codificação de variáveis categóricas: Até esta etapa, as variáveis categóricas foram mantidas em formato textual, sem conversão numérica (one-hot encoding ou label encoding), mas preparadas para codificação futura.
+Codificação de variáveis categóricas: Na fase de preparação para a modelagem, as variáveis categóricas foram convertidas para o formato numérico:Dietary Habits: Mapeada de forma ordinal (ex: 'Healthy' $\rightarrow 3$, 'Moderate' $\rightarrow 2$, 'Unhealthy' $\rightarrow 1$, 'Others' $\rightarrow 0$).Gender: Mapeada de forma binária ('Male' $\rightarrow 1$, 'Female' $\rightarrow 0$).Have you ever had suicidal thoughts ? e Family History of Mental Illness: Mapeadas de forma binária ('Yes' $\rightarrow 1$, 'No' $\rightarrow 0$).
 
 Normalização/padronização numérica: Não aplicada nesta fase.
 
