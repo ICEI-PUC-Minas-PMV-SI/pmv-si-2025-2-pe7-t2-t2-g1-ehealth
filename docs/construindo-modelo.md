@@ -3,7 +3,7 @@
 Pré-processamento e Tratamento de Dados
 
 O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. As etapas realizadas foram:
-Pré-processamento e Tratamento de DadosO pré-processamento do dataset foi realizado para garantir a qualidade, consistência e adequação dos dados à análise exploratória e à modelagem preditiva. As etapas concluídas até o momento são detalhadas abaixo:
+
 
 1. Limpeza de Dados
 
@@ -18,25 +18,91 @@ Tratamento de Valores Ausentes: 	Inicialmente, linhas que continham o valor de p
 
 Padronização de variáveis textuais: A coluna Sleep Duration foi padronizada, removendo caracteres desnecessários (hours) e substituindo prefixos textuais (Less than → <, More than → >).
 
-Codificação de variáveis categóricas: Na fase de preparação para a modelagem, as variáveis categóricas foram convertidas para o formato numérico:Dietary Habits: Mapeada de forma ordinal (ex: 'Healthy' $\rightarrow 3$, 'Moderate' $\rightarrow 2$, 'Unhealthy' $\rightarrow 1$, 'Others' $\rightarrow 0$).Gender: Mapeada de forma binária ('Male' $\rightarrow 1$, 'Female' $\rightarrow 0$).Have you ever had suicidal thoughts ? e Family History of Mental Illness: Mapeadas de forma binária ('Yes' $\rightarrow 1$, 'No' $\rightarrow 0$).
+Codificação de variáveis categóricas:
 
-Normalização/padronização numérica: Não aplicada nesta fase.
+- ender: Male → 1, Female → 0
+
+ - Dietary Habits: Healthy=3, Moderate=2, Unhealthy=1
+
+ - Variáveis binárias (Yes/No) → 1/0
+
+Conversão de Sleep Duration em valores numéricos aproximados.
+
 
 3. Feature Engineering
 
-Nenhuma nova feature foi criada neste estágio.
+3.1 Variáveis selecionadas como features:
 
-Foi realizada seleção inicial de variáveis para análise exploratória, distinguindo variáveis numéricas (Age, Academic Pressure, CGPA, etc.) e categóricas (Gender, City, Dietary Habits, etc.).
+- Age, Academic Pressure, Study Satisfaction, Sleep Duration, Dietary Habits, Have you ever had suicidal thoughts?, Work/Study Hours, Financial Stress, Family History of Mental Illness.
+
+- Variável alvo: Depression.
+
+- # Preparação dos dados
+
+Pré-processamento e Tratamento de Dados
+
+O pré-processamento do dataset student_depression foi conduzido com o objetivo de garantir a qualidade, integridade e consistência dos dados, preparando-os para análise exploratória e modelagem preditiva. As etapas realizadas foram:
+
+
+1. Limpeza de Dados
+
+Tratamento de Valores Ausentes: 	Inicialmente, linhas que continham o valor de preenchimento ('?') na coluna Financial Stress foram removidas do dataset. Em uma verificação posterior com isnull().sum(), confirmou-se a ausência de valores faltantes residuais, dispensando a necessidade de imputação.
+
+2. Remoção de Duplicatas: 	O dataset foi inspecionado com duplicated(). Nenhuma linha duplicada foi identificada e, portanto, nenhuma remoção foi necessária.
+
+3. Tratamento de Outliers: 	Os outliers foram identificados visualmente por meio de boxplots das variáveis numéricas. Contudo, não houve remoção ou transformação de outliers nesta fase, a fim de preservar a distribuição original dos dados.
+
+
+2. Transformação de Dados
+
+Padronização de variáveis textuais: A coluna Sleep Duration foi padronizada, removendo caracteres desnecessários (hours) e substituindo prefixos textuais (Less than → <, More than → >).
+
+Codificação de variáveis categóricas:
+
+- ender: Male → 1, Female → 0
+
+ - Dietary Habits: Healthy=3, Moderate=2, Unhealthy=1
+
+ - Variáveis binárias (Yes/No) → 1/0
+
+Conversão de Sleep Duration em valores numéricos aproximados.
+
+
+3. Feature Engineering
+
+Variáveis selecionadas como features:
+
+Age, Academic Pressure, Study Satisfaction, Sleep Duration, Dietary Habits, Have you ever had suicidal thoughts?, Work/Study Hours, Financial Stress, Family History of Mental Illness.
+
+Variável alvo: Depression.
+
+3.2 Análise de Relevância de Features
+
+- Cálculo de Mutual Information para verificar importância de cada feature em relação à classe alvo. O ojetivo é garantir que os dados estejam limpos, consistentes e adequados para modelagem, além de priorizar variáveis mais relevantes.
+
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 45 56_83f96c5f](https://github.com/user-attachments/assets/2d9855e2-e472-4991-99aa-c3cd306bf78c)
+
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 46 48_af607313](https://github.com/user-attachments/assets/75b9eec6-8489-4de1-9c97-7b86994c5d8c)
+
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 47 33_80507d50](https://github.com/user-attachments/assets/596ef468-dcf9-4421-88d3-18192e3ddcfa)
+
+
 
 4. Tratamento de dados desbalanceados
 
 A variável alvo Depression apresentou desbalanceamento (~58% com depressão, ~42% sem depressão).
 
-Nenhuma técnica de oversampling, undersampling ou ajuste de peso foi aplicada nesta fase; a identificação do desbalanceamento serve para decisões futuras na modelagem.
+Técnicas como SMOTE serão aplicadas posteriormente na fase de modelagem para balancear as classes.
 
 5. Separação de dados
 
-Até esta etapa, os dados ainda não foram divididos em conjuntos de treino, validação e teste.
+Quatro modelos de Machine Learning foram testados para classificar a variável alvo (Depression): Regressão Logística, Random Forest, XGBoost e LightGBM. O desempenho de cada um foi avaliado usando métricas-chave: Accuracy (Acurácia), F1 Score e AUC (Area Under the Curve).
+
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 22 54_d4c2526b](https://github.com/user-attachments/assets/f1676098-ff2a-4cfb-8da7-5d5823bc3c79)
+
+O gráfico demonstra que todos os modelos alcançaram um desempenho global alto e consistente, com as métricas Accuracy e F1 Score variando de aproximadamente $0.82$ a $0.86$, e o AUC sendo a métrica de maior valor, consistentemente acima de $0.85$ para todos os classificadores.
+
+![Imagem do WhatsApp de 2025-10-26 à(s) 20 27 36_a7f51eb3](https://github.com/user-attachments/assets/1d0615a2-cc9f-465a-8be0-f0ea97d620a9)
 
 6. Manuseio de Dados Temporais
 
