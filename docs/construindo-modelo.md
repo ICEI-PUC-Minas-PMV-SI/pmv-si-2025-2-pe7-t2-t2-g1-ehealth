@@ -150,7 +150,36 @@ As principais métricas utilizadas e sua justificativa em um problema de classif
 
 ## Discussão dos resultados obtidos
 
-Nesta seção, discuta os resultados obtidos pelo modelo construído, no contexto prático em que os dados se inserem, promovendo uma compreensão abrangente e aprofundada da qualidade dele. Lembre-se de relacionar os resultados obtidos ao problema identificado, a questão de pesquisa levantada e estabelecer relação com os objetivos previamente propostos. 
+Os modelos Random Forest e LightGBM apresentaram alto poder preditivo, com Acurácia e F1-Score superiores a 0,84 e AUC acima de 0,85. Esse desempenho demonstra a capacidade dos modelos em identificar padrões significativos no dataset, alinhando-se aos objetivos de detectar estudantes com risco de depressão.
+
+
+1. Relação com o Problema e Objetivos
+
+Alcance da meta: O elevado F1-Score e AUC indicam que o modelo distingue eficazmente alunos com e sem depressão.
+
+Aplicação prática: Um F1-Score de 0,84 sugere que o modelo pode ser utilizado como ferramenta de triagem inicial, identificando rapidamente alunos que necessitam de avaliação profissional.
+
+2. Métricas e Impacto do Desbalanceamento
+
+O dataset apresenta desbalanceamento moderado (58% positivos), tornando métricas como F1-Score e Balanced Accuracy mais relevantes que Acurácia simples.
+
+Recall elevado (~0,86 no Random Forest): Minimiza falsos negativos, crucial para problemas de saúde.
+
+F1-Score Macro: Confirma bom equilíbrio entre Precisão e Recall, evitando viés para a classe majoritária.
+
+3. Insights das Variáveis Relevantes
+
+“Have you ever had suicidal thoughts?”: variável mais informativa, essencial para alta performance e priorização de risco.
+
+“Academic Pressure” e “Financial Stress”: destacam fatores externos associados à depressão em estudantes, reforçando a validade prática do modelo.
+
+4. Avaliação da Calibração
+
+Log Loss e Brier Score: utilizados para verificar a confiabilidade das probabilidades previstas.
+
+Probabilidades bem calibradas permitem priorizar intervenções, por exemplo, atribuindo alta prioridade a alunos com probabilidade prevista ≥90%.
+
+Conclusão: Os resultados indicam que os modelos são consistentes, robustos e diretamente aplicáveis para identificar fatores de risco de depressão em estudantes, oferecendo suporte confiável para intervenções em ambientes educacionais.
 
 # Pipeline de pesquisa e análise de dados
 
