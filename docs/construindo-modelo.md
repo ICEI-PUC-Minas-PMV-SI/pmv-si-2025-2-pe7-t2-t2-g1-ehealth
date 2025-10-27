@@ -183,7 +183,16 @@ Conclusão: Os resultados indicam que os modelos são consistentes, robustos e d
 
 # Pipeline de pesquisa e análise de dados
 
-Em pesquisa e experimentação em sistemas de informação, um pipeline de pesquisa e análise de dados refere-se a um conjunto organizado de processos e etapas que um profissional segue para realizar a coleta, preparação, análise e interpretação de dados durante a fase de pesquisa e desenvolvimento de modelos. Esse pipeline é essencial para extrair _insights_ significativos, entender a natureza dos dados e, construir modelos de aprendizado de máquina eficazes. 
+Etapa	Foco Principal	Ações Realizadas
+1. Coleta e Aquisição de Dados	Obtenção do dataset base.	Download do dataset student-depression-dataset (via KaggleHub) e carregamento em um DataFrame Pandas.
+2. Análise Exploratória de Dados (AED)	Conhecer a estrutura, qualidade e distribuição inicial dos dados.	Verificação de tipos de dados, estatística descritiva, análise do desbalanceamento do target e visualização inicial (histogramas, gráficos de barras).
+3. Limpeza de Dados	Garantir a integridade e consistência do dataset.	Remoção de linhas com valores inválidos (?) na coluna Financial Stress. Verificação e confirmação da ausência de duplicatas e valores faltantes.
+4. Engenharia de Variáveis e Pré-processamento	Transformar variáveis para o formato adequado à modelagem.	Codificação: Mapeamento de Sleep Duration, Dietary Habits (Ordinal), Gender e variáveis de histórico/pensamentos (Binária) para valores numéricos.
+5. Seleção de Características (Feature Selection)	Reduzir a dimensionalidade e focar nas features mais relevantes.	Descarte de Colunas: Remoção de variáveis de baixa relevância (ex: Job Satisfaction, Work Pressure). Análise de Relevância: Uso do Mutual Information para ranquear e selecionar as 9 features finais.
+6. Divisão dos Dados	Preparar os conjuntos para treinamento e teste.	Separação do dataset final em Treinamento (80%) e Teste (20%) de forma Estratificada.
+7. Treinamento e Otimização do Modelo	Construir o modelo preditivo e tratar o desbalanceamento.	Treinamento dos modelos Random Forest (com class_weight="balanced") e LightGBM. Balanceamento: Aplicação do SMOTE no conjunto de treinamento para versões aprimoradas.
+8. Avaliação do Desempenho e Calibração	Medir a qualidade preditiva e a confiabilidade das probabilidades.	Métricas de Desempenho: Cálculo de Accuracy, F1-Score (Macro), Balanced Accuracy e AUC. Métricas de Probabilidade: Análise de Log Loss, Brier Score Loss e ECE, incluindo o uso de CalibratedClassifierCV (Sigmoid e Isotonic) para calibração.
+9. Discussão e Conclusão	Interpretar os resultados no contexto do problema.	Comparação do desempenho (LightGBM com o melhor AUC), discussão do impacto das features mais relevantes (ex: Suicidal Thoughts) e validação do modelo para triagem de risco de depressão.
 
 ## Observações importantes
 
