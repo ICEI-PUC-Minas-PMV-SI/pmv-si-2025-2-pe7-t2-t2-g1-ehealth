@@ -1,0 +1,12 @@
+Fitting 5 folds for each of 729 candidates, totalling 3645 fits
+[LightGBM] [Warning] Found whitespace in feature_names, replace with underlines
+[LightGBM] [Info] Number of positive: 13068, number of negative: 9250
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000839 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 314
+[LightGBM] [Info] Number of data points in the train set: 22318, number of used features: 11
+[LightGBM] [Info] [binary:BoostFromScore]: pavg=0.585536 -> initscore=0.345543
+[LightGBM] [Info] Start training from score 0.345543
+Melhores parâmetros: {'colsample_bytree': 0.8, 'learning_rate': 0.05, 'max_depth': 10, 'n_estimators': 100, 'num_leaves': 31, 'subsample': 0.7}
+Acurácia no teste: 0.8440860215053764
