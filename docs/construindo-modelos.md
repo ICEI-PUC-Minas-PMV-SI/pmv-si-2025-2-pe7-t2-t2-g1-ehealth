@@ -70,7 +70,7 @@ A média ponderada das métricas manteve-se estável (F1-Score = 0.841), mesmo d
 
 c. Desempenho do CatBoostClassifier
 
-
+O modelo demonstra um bom desempenho geral, com a acurácia de 84.71%. A Classe 1 (support=3267) tem métricas ligeiramente superiores (f1-score $\approx 0.87) em comparação com a Classe 0 (support=2313, f1-score $\approx 0.81).O f1-score ponderado de 0.84646 é uma métrica robusta para a performance geral do classificador.
 
 
 <img width="449" height="195" alt="image" src="https://github.com/user-attachments/assets/223d1add-649b-4f70-b676-7da09b322c0e" />
