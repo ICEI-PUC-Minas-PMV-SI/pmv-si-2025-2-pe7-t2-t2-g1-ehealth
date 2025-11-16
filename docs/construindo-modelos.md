@@ -138,9 +138,20 @@ A análise a seguir consolida a comparação entre os dois modelos de ensemble p
 
 
 Análise Crítica:
-•	O LGBMClassifier demonstrou um excelente desempenho (F1-Score de 0.865 para a Classe 1), indicando um equilíbrio entre a correta identificação dos casos positivos (Recall = 0.870) e a confiança nessas identificações (Precisão = 0.861).  Contudo, o RandomForestClassifier ( modelo que atingiu F1-Score de 0.871) deve ser priorizado para deployment devido à sua melhor performance na métrica principal e o Recall mais alto. O LGBM (F1-Score 0.865) atua como uma alternativa altamente robusta com a vantagem de ter uma calibração excelente e comprovada.
 
-•	As visualizações de Importância de Features (LGBM e Relevância de Variáveis (Permutation Importance e Mutual Information ) concordam que as variáveis de maior impacto são: CGPA, Idade (Age), Horas de Estudo/Trabalho (Work/Study Hours), Estresse Financeiro, Pressão Acadêmica e Pensamentos Suicidas.
+•	A análise comparativa entre o LGBMClassifier e o RandomForestClassifier foi realizada tendo como foco principal o F1-Score da Classe 1. Os resultados mostram que ambos os modelos apresentam desempenho robusto, porém com características distintas que favorecem diferentes objetivos de deployment. O LGBMClassifier obteve um F1-Score de 0.865, apresentando um equilíbrio consistente entre Recall (0.870) e Precisão (0.861). Sua principal vantagem é o menor número de Falsos Negativos (394), característica crucial em cenários onde o risco de negligência — ou seja, deixar de identificar corretamente um caso positivo — é especialmente grave. Essa propriedade, combinada com sua excelente calibração, torna o LGBM particularmente adequado para aplicações sensíveis em que a confiança nas probabilidades preditas é essencial.
+
+Por outro lado, o RandomForestClassifier alcançou o melhor desempenho global na métrica principal, com um F1-Score de 0.871 e o maior Recall entre os modelos comparados (0.888). Além disso, destaca-se por apresentar o menor número de Falsos Positivos (370), o que o torna uma opção forte quando o objetivo é reduzir alarmes falsos e aumentar a estabilidade operacional do sistema. No entanto, seu número de Falsos Negativos (497) é bem superior ao do LGBM, o que pode representar uma limitação em cenários de alto custo de negligência.
+
+Ambos os modelos apresentaram consistência notável quanto à importância das variáveis, convergindo em torno de fatores centrais como “Have you ever had suicidal thoughts?”, “Academic Pressure” e “Financial Stress”. O LGBM também atribuiu alta relevância ao CGPA, reforçando o impacto de aspectos socioemocionais e acadêmicos na predição.
+
+Em síntese, a escolha entre os modelos depende diretamente da prioridade do sistema final. Quando a necessidade maior é reduzir Falsos Negativos, o LGBMClassifier se apresenta como a alternativa mais segura e calibrada. Já se o objetivo é maximizar o desempenho geral e garantir maior robustez com menos alarmes falsos, o RandomForestClassifier é a opção mais indicada.
+
+A análise consolidada da importância das features na Etapa 4 utilizou três metodologias complementares — Feature Importance do LGBMClassifier, Permutation Importance e Mutual Information — permitindo avaliar a relevância das variáveis sob diferentes perspectivas estatísticas e modelagens. Apesar das diferenças internas de cada técnica, todos os métodos convergiram para o mesmo conjunto de variáveis de maior impacto, reforçando a consistência, a interpretabilidade e a robustez dos modelos de ensemble utilizados.
+
+As três variáveis mais influentes apareceram de forma consistente em todas as visualizações: “Have you ever had suicidal thoughts?” foi identificada como a variável dominante em todos os métodos; “Academic Pressure” ocupou posição igualmente central, sendo a segunda mais relevante na maior parte das análises; e “Financial Stress” surgiu como terceiro fator de maior peso, evidenciando a influência de aspectos emocionais e estressores sociais sobre o desfecho modelado. Variáveis como idade, horas de estudo/trabalho e hábitos alimentares também mostraram relevância secundária, contribuindo de forma complementar para a predição.
+
+A convergência desses métodos é um indicativo importante de validade e robustez: mesmo abordagens distintas — baseadas no ganho das árvores, na queda de desempenho após permutação ou na dependência estatística entre variáveis — apontaram na mesma direção. Isso confirma que o modelo não está distorcido por um único critério matemático e que sua estrutura interna é estável. Embora a importância do LGBM tenha destacado variáveis como CGPA e Age, métodos mais agnósticos como Permutation Importance e Mutual Information mostraram que fatores socioemocionais e comportamentais são, de fato, os pilares preditivos mais fortes. Essa coerência reforça a credibilidade do modelo e sua aderência ao contexto clínico e social do problema estudado.
 
 <img width="886" height="385" alt="image" src="https://github.com/user-attachments/assets/7e6e0c23-54b7-4856-893b-5b6b807a7cc4" />
 
@@ -151,6 +162,7 @@ Análise Crítica:
 
 <img width="936" height="398" alt="image" src="https://github.com/user-attachments/assets/2047bd8e-47e1-4ea1-bf7a-58109aeeb313" />
 
+<img width="685" height="558" alt="image" src="https://github.com/user-attachments/assets/a94138f3-0555-4013-9834-8dd919002395" />
 
 ## 5. Refinamento e Generalização do Pipeline 
 
