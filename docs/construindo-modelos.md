@@ -116,20 +116,17 @@ A matriz do Random Forest mostra sua distribuição de acertos e erros no conjun
 
 
 
- a. Calibração do LGBMClassifier
+ a. Calibração 
 
  <img width="886" height="392" alt="image" src="https://github.com/user-attachments/assets/dec72692-6d16-485e-8398-ce5a8086e3da" />
  
 
 •	A Curva de Calibração (Base ou Classe 1) mostra que o modelo Base (sem calibração adicional) está bem calibrado para a Classe 1, seguindo de perto a linha pontilhada (Perfeita y=x). Isso indica que as probabilidades previstas são confiáveis (e.g., uma previsão de 0.80 corresponde a uma taxa observada de 0.80). A calibração isotônica aprimora ligeiramente a performance.
 
-b. Calibração do  Random Forest 
 
-
-
- <img width="794" height="392" alt="image" src="https://github.com/user-attachments/assets/d08571c2-756e-4126-8aa4-df229f1f1944" />
 
 ## 4. Comparação de Desempenho e Análise Crítica 
+
 A comparação se concentra na métrica principal: F1-Score.
 
 A análise crítica será baseada nos resultados fornecidos para o LGBMClassifier e no conhecimento teórico de ambos os modelos no contexto do problema.
@@ -137,7 +134,7 @@ A análise crítica será baseada nos resultados fornecidos para o LGBMClassifie
 | Modelo                | F1-Score (Classe 1) | Vantagens Percebidas                                                                                      | Limitações Percebidas                                                                                                          |
 |-----------------------|----------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **LGBMClassifier**    | 0.865                | Alta precisão (0.861) e recall (0.870) para a classe positiva. Velocidade de treinamento. Lida bem com desbalanceamento através da métrica de *boosting*. | Maior propensão a *overfitting* se não for bem parametrizado (necessitando de *early stopping* e regularização).               |
-| **RandomForestClassifier** | *(Não disponível)* | Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
+| **RandomForestClassifier** |  | Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
 
 
 Análise Crítica:
