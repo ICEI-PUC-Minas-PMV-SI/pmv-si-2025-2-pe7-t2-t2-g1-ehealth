@@ -20,10 +20,9 @@ a. Light Gradient Boosting Machine (LGBMClassifier)
  
 •	Justificativa da Escolha:
 
-o	Performance e Velocidade: LGBM é um algoritmo de gradient boosting conhecido por sua alta eficiência e velocidade de treinamento, especialmente em grandes conjuntos de dados, devido ao uso de técnicas como o Histogram-based Algorithm.
-
-o	Precisão: Ferequentemente alcança o estado da arte em problemas tabulares, superando outros algoritmos de boosting como o XGBoost em muitas situações.
-o	Tratamento de Features: Por ser baseado em árvores, naturalmente lida com a não-linearidade e as interações complexas entre as variáveis, características comuns em dados de saúde mental.
+- 	Performance e Velocidade: LGBM é um algoritmo de gradient boosting conhecido por sua alta eficiência e velocidade de treinamento, especialmente em grandes conjuntos de dados, devido ao uso de técnicas como o Histogram-based Algorithm.
+- 	Precisão: Ferequentemente alcança o estado da arte em problemas tabulares, superando outros algoritmos de boosting como o XGBoost em muitas situações.
+-  ratamento de Features: Por ser baseado em árvores, naturalmente lida com a não-linearidade e as interações complexas entre as variáveis, características comuns em dados de saúde mental.
 
 
 b. Random Forest (RandomForestClassifier)
