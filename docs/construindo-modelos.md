@@ -1,14 +1,14 @@
- ### Etapa 4 — Construção de Modelos  (parte 2)
+ # Etapa 4 — Construção de Modelos  (parte 2)
 
 A quarta etapa do projeto consistiu na implementação e avaliação de novos algoritmos de aprendizado de máquina, visando melhorar a capacidade preditiva em relação à Etapa 3 e promover a generalização do pipeline de análise.
 
-# 1. Ajustes e Pré-Processamento de Dados 
+## 1. Ajustes e Pré-Processamento de Dados 
 
 Não foram necessários ajustes adicionais significativos ou novo pré-processamento dos dados em função da implementação dos novos algoritmos. Os modelos escolhidos, nomeadamente LGBMClassifier e RandomForestClassifier, são algoritmos de ensemble baseados em árvores de decisão. Esses modelos são robustos a diferentes distribuições de dados, não requerem normalização ou padronização de features e lidam bem com dados categóricos (One-Hot Encoding) e desbalanceamento, conforme já tratado na etapa de pré-processamento.
 
 •	Diferença em Relação à Etapa Anterior: O pré-processamento se manteve, utilizando codificação One-Hot para variáveis nominais e mantendo a escala original das variáveis numéricas, o que foi adequado para a natureza dos novos modelos.
 
-# 2. Implementação e Justificativa dos Algoritmos 
+## 2. Implementação e Justificativa dos Algoritmos 
 
 Foram implementados dois novos algoritmos de aprendizado de máquina: o Light Gradient Boosting Machine (LGBMClassifier) e o Random Forest (RandomForestClassifier).
 a. Light Gradient Boosting Machine (LGBMClassifier)
@@ -36,7 +36,7 @@ o	Robustez e Estabilidade: É um modelo extremamente robusto e menos propenso ao
 o	Interpretabilidade: Embora menos interpretável que uma única árvore, oferece uma medida de importância de features confiável.
 o	Linha de Base Sólida: Serve como um modelo de referência forte e estável para comparação com algoritmos mais complexos (boosting).
 
-# 3. Avaliação de Desempenho dos Modelos
+## 3. Avaliação de Desempenho dos Modelos
    
 O problema em questão é de classificação binária, onde o objetivo é prever a ocorrência de um determinado desfecho (Classe 1) ou sua ausência (Classe 0).
 a. Escolha e Justificativa da Métrica Principal: F1-Score
@@ -80,7 +80,7 @@ Calibração:
 •	A Curva de Calibração (Base ou Classe 1) mostra que o modelo Base (sem calibração adicional) está bem calibrado para a Classe 1, seguindo de perto a linha pontilhada (Perfeita y=x). Isso indica que as probabilidades previstas são confiáveis (e.g., uma previsão de 0.80 corresponde a uma taxa observada de 0.80). A calibração isotônica aprimora ligeiramente a performance.
 
 
-# 4. Comparação de Desempenho e Análise Crítica 
+## 4. Comparação de Desempenho e Análise Crítica 
 A comparação se concentra na métrica principal: F1-Score.
 
 A análise crítica será baseada nos resultados fornecidos para o LGBMClassifier e no conhecimento teórico de ambos os modelos no contexto do problema.
@@ -102,7 +102,7 @@ Análise Crítica:
 
 •	Teoricamente, o Random Forest seria crucial para confirmar a robustez do desempenho do LGBM e como uma opção de deployment mais segura em cenários de alta sensibilidade ao overfitting. A alta performance do LGBM, no entanto, sugere que as interações complexas entre as features foram capturadas de maneira eficaz pelo gradient boosting.
 
-# 5. Refinamento e Generalização do Pipeline 
+## 5. Refinamento e Generalização do Pipeline 
 
 O pipeline de pesquisa e análise de dados foi refinado para se tornar modular e reutilizável, seguindo os princípios de boas práticas de machine learning.
 
