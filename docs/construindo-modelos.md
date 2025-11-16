@@ -11,14 +11,16 @@ Não foram necessários ajustes adicionais significativos ou novo pré-processam
 ## 2. Implementação e Justificativa dos Algoritmos 
 
 Foram implementados dois novos algoritmos de aprendizado de máquina: o Light Gradient Boosting Machine (LGBMClassifier) e o Random Forest (RandomForestClassifier).
+
 a. Light Gradient Boosting Machine (LGBMClassifier)
-•	Implementação: O modelo LGBMClassifier foi instanciado, treinado e avaliado. 
+
+- Implementação: O modelo LGBMClassifier foi instanciado, treinado e avaliado. 
 
 
 <img width="886" height="248" alt="image" src="https://github.com/user-attachments/assets/af7b5bd2-e6d5-4b9b-81cc-766ccb27667f" />
 
  
-•	Justificativa da Escolha:
+- Justificativa da Escolha:
 
 - 	Performance e Velocidade: LGBM é um algoritmo de gradient boosting conhecido por sua alta eficiência e velocidade de treinamento, especialmente em grandes conjuntos de dados, devido ao uso de técnicas como o Histogram-based Algorithm.
 - 	Precisão: Ferequentemente alcança o estado da arte em problemas tabulares, superando outros algoritmos de boosting como o XGBoost em muitas situações.
