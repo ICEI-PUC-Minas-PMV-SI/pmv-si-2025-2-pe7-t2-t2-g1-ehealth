@@ -24,7 +24,7 @@ a. Light Gradient Boosting Machine (LGBMClassifier)
 
 - 	Performance e Velocidade: LGBM é um algoritmo de gradient boosting conhecido por sua alta eficiência e velocidade de treinamento, especialmente em grandes conjuntos de dados, devido ao uso de técnicas como o Histogram-based Algorithm.
 - 	Precisão: Ferequentemente alcança o estado da arte em problemas tabulares, superando outros algoritmos de boosting como o XGBoost em muitas situações.
--  ratamento de Features: Por ser baseado em árvores, naturalmente lida com a não-linearidade e as interações complexas entre as variáveis, características comuns em dados de saúde mental.
+-  Tratamento de Features: Por ser baseado em árvores, naturalmente lida com a não-linearidade e as interações complexas entre as variáveis, características comuns em dados de saúde mental.
 
 
 b. Random Forest (RandomForestClassifier)
@@ -35,10 +35,10 @@ b. Random Forest (RandomForestClassifier)
 
 - 	Robustez e Estabilidade: É um modelo extremamente robusto e menos propenso ao overfitting do que uma única árvore de decisão ou modelos de boosting não regularizados, pois a variância é reduzida ao agregar as previsões de diversas árvores treinadas em subconjuntos aleatórios dos dados.
   
-- 	 nterpretabilidade: Embora menos interpretável que uma única árvore, oferece uma medida de importância de features confiável.
-  
-- 	   Linha de Base Sólida: Serve como um modelo de referência forte e estável para comparação com algoritmos mais complexos (boosting).
+- 	 Interpretabilidade: Embora menos interpretável que uma única árvore, oferece uma medida de importância de features confiável.
 
+-   Linha de Base Sólida: Serve como um modelo de referência forte e estável para comparação com algoritmos mais complexos (boosting).
+  
 ## 3. Avaliação de Desempenho dos Modelos
    
 O problema em questão é de classificação binária, onde o objetivo é prever a ocorrência de um determinado desfecho (Classe 1) ou sua ausência (Classe 0).
@@ -93,7 +93,11 @@ A comparação se concentra na métrica principal: F1-Score.
 
 A análise crítica será baseada nos resultados fornecidos para o LGBMClassifier e no conhecimento teórico de ambos os modelos no contexto do problema.
 
-<img width="756" height="370" alt="image" src="https://github.com/user-attachments/assets/2631f621-8e4a-4d93-a1d3-367d1ecb8093" />
+| Modelo                | F1-Score (Classe 1) | Vantagens Percebidas                                                                                      | Limitações Percebidas                                                                                                          |
+|-----------------------|----------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| **LGBMClassifier**    | 0.865                | Alta precisão (0.861) e recall (0.870) para a classe positiva. Velocidade de treinamento. Lida bem com desbalanceamento através da métrica de *boosting*. | Maior propensão a *overfitting* se não for bem parametrizado (necessitando de *early stopping* e regularização).               |
+| **RandomForestClassifier** | *(Não disponível)* | Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
+
 
 Análise Crítica:
 •	O LGBMClassifier demonstrou um excelente desempenho (F1-Score de 0.865 para a Classe 1), indicando um equilíbrio entre a correta identificação dos casos positivos (Recall = 0.870) e a confiança nessas identificações (Precisão = 0.861).
