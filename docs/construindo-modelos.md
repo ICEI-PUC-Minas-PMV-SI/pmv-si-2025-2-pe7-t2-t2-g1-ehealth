@@ -43,6 +43,7 @@ c. CatBoostClassifier
 
 Justificativa: Introduzido como um terceiro ensemble (também baseado em Gradient Boosting) conhecido por seu tratamento eficiente de variáveis categóricas e sua robustez, buscando refinar a performance. Otimizado com auto_class_weights="Balanced" para lidar com o desbalanceamento de classes.
 
+<img width="303" height="42" alt="image" src="https://github.com/user-attachments/assets/046e81ad-6a94-4bcb-81c4-7b6b1c4e5615" />
 
   
 ## 3. Avaliação de Desempenho dos Modelos
