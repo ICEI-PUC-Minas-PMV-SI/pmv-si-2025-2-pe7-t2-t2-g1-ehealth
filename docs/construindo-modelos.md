@@ -61,8 +61,13 @@ b. Desempenho do LGBMClassifier
 
 Os resultados a seguir foram extraídos das imagens fornecidas: 
 
-<img width="613" height="266" alt="image" src="https://github.com/user-attachments/assets/7e09c62f-d726-4b59-9975-3fb4d1b251d5" />
-
+| Métrica          | Classe 0 (Negativo) | Classe 1 (Positivo) | Média Ponderada |
+|------------------|---------------------|-----------------------|------------------|
+| Precisão         | 0.814               | 0.861                 | 0.841            |
+| Recall           | 0.801               | 0.870                 | 0.842            |
+| F1-Score         | 0.807               | 0.865                 | 0.841            |
+| Acurácia Geral   | \multicolumn{3}{c}{0.842} |
+| Support          | 2313                | 3267                  | 5580             |
 
 
 Matriz de Confusão (Dados Brutos) :
