@@ -78,8 +78,10 @@ Calibração:
  
 
 •	A Curva de Calibração (Base ou Classe 1) mostra que o modelo Base (sem calibração adicional) está bem calibrado para a Classe 1, seguindo de perto a linha pontilhada (Perfeita y=x). Isso indica que as probabilidades previstas são confiáveis (e.g., uma previsão de 0.80 corresponde a uma taxa observada de 0.80). A calibração isotônica aprimora ligeiramente a performance.
-________________________________________
-4. Comparação de Desempenho e Análise Crítica 
+
+
+
+## 4. Comparação de Desempenho e Análise Crítica 
 A comparação se concentra na métrica principal: F1-Score.
 
 A análise crítica será baseada nos resultados fornecidos para o LGBMClassifier e no conhecimento teórico de ambos os modelos no contexto do problema.
@@ -101,7 +103,8 @@ Análise Crítica:
 
 •	Teoricamente, o Random Forest seria crucial para confirmar a robustez do desempenho do LGBM e como uma opção de deployment mais segura em cenários de alta sensibilidade ao overfitting. A alta performance do LGBM, no entanto, sugere que as interações complexas entre as features foram capturadas de maneira eficaz pelo gradient boosting.
 
-5. Refinamento e Generalização do Pipeline 
+## 5. Refinamento e Generalização do Pipeline 
+
 O pipeline de pesquisa e análise de dados foi refinado para se tornar modular e reutilizável, seguindo os princípios de boas práticas de machine learning.
 
 a. Estrutura Modular
