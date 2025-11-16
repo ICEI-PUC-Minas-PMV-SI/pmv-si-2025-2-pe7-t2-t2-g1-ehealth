@@ -116,12 +116,14 @@ A matriz do Random Forest mostra sua distribuição de acertos e erros no conjun
 
 
 
-Calibração:
+ a. Calibração do LGBMClassifier
 
  <img width="886" height="392" alt="image" src="https://github.com/user-attachments/assets/dec72692-6d16-485e-8398-ce5a8086e3da" />
  
 
 •	A Curva de Calibração (Base ou Classe 1) mostra que o modelo Base (sem calibração adicional) está bem calibrado para a Classe 1, seguindo de perto a linha pontilhada (Perfeita y=x). Isso indica que as probabilidades previstas são confiáveis (e.g., uma previsão de 0.80 corresponde a uma taxa observada de 0.80). A calibração isotônica aprimora ligeiramente a performance.
+
+b. Calibração do  Random Forest 
 
 
 ## 4. Comparação de Desempenho e Análise Crítica 
