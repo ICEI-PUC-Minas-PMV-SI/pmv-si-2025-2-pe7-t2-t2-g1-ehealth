@@ -38,12 +38,12 @@ o	Linha de Base Sólida: Serve como um modelo de referência forte e estável pa
 ## 3. Avaliação de Desempenho dos Modelos
    
 O problema em questão é de classificação binária, onde o objetivo é prever a ocorrência de um determinado desfecho (Classe 1) ou sua ausência (Classe 0).
-a. Escolha e Justificativa da Métrica Principal: F1-Score
 
-•	Métrica Principal: F1-Score.
+a. Escolha e Justificativa da Métrica Principal
 
+-	Métrica Principal: F1-Score.
 
-•	Justificativa: O F1-Score é a média harmônica entre a Precisão (Proporção de positivos corretos dentre todas as previsões positivas) e o Recall (Proporção de positivos corretos dentre todos os positivos reais).
+- Justificativa: O F1-Score é a média harmônica entre a Precisão (Proporção de positivos corretos dentre todas as previsões positivas) e o Recall (Proporção de positivos corretos dentre todos os positivos reais).
 
 F1 = 2 .Precisão.Recall
              Precisão + Recall  
