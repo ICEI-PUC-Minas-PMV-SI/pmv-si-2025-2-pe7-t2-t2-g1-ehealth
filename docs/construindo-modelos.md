@@ -134,7 +134,7 @@ A análise crítica será baseada nos resultados fornecidos para o LGBMClassifie
 | Modelo                | F1-Score (Classe 1) | Vantagens Percebidas                                                                                      | Limitações Percebidas                                                                                                          |
 |-----------------------|----------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **LGBMClassifier**    | 0.865                | Alta precisão (0.861) e recall (0.870) para a classe positiva. Velocidade de treinamento. Lida bem com desbalanceamento através da métrica de *boosting*. | Maior propensão a *overfitting* se não for bem parametrizado (necessitando de *early stopping* e regularização).               |
-| **RandomForestClassifier** |  | Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
+| **RandomForestClassifier** | 0.871 | Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
 
 
 Análise Crítica:
