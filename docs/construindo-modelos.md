@@ -126,6 +126,9 @@ A matriz do Random Forest mostra sua distribuição de acertos e erros no conjun
 b. Calibração do  Random Forest 
 
 
+
+ <img width="794" height="392" alt="image" src="https://github.com/user-attachments/assets/d08571c2-756e-4126-8aa4-df229f1f1944" />
+
 ## 4. Comparação de Desempenho e Análise Crítica 
 A comparação se concentra na métrica principal: F1-Score.
 
