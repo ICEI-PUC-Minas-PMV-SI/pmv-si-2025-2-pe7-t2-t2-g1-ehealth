@@ -4,7 +4,7 @@ A quarta etapa do projeto consistiu na implementação e avaliação de novos al
 
 ## 1. Ajustes e Pré-Processamento de Dados 
 
-Não foram necessários ajustes adicionais significativos ou novo pré-processamento dos dados em função da implementação dos novos algoritmos. Os modelos escolhidos, nomeadamente LGBMClassifier, RandomForestClassifier e CatBoostClassifier, são algoritmos de ensemble baseados em árvores de decisão. Esses modelos são robustos a diferentes distribuições de dados, não requerem normalização ou padronização de features e lidam bem com dados categóricos (One-Hot Encoding) e desbalanceamento, conforme já tratado na etapa de pré-processamento.
+Não foram necessários ajustes adicionais significativos ou novo pré-processamento dos dados em função da implementação dos novos algoritmos. Os modelos escolhidos, nomeadamente LGBMClassifier e CatBoostClassifier, são algoritmos de ensemble baseados em árvores de decisão. Esses modelos são robustos a diferentes distribuições de dados, não requerem normalização ou padronização de features e lidam bem com dados categóricos (One-Hot Encoding) e desbalanceamento, conforme já tratado na etapa de pré-processamento.
 
 •	Diferença em Relação à Etapa Anterior: O pré-processamento se manteve, utilizando codificação One-Hot para variáveis nominais e mantendo a escala original das variáveis numéricas, o que foi adequado para a natureza dos novos modelos.
 
@@ -27,22 +27,9 @@ a. Light Gradient Boosting Machine (LGBMClassifier)
 - 	Precisão: Ferequentemente alcança o estado da arte em problemas tabulares, superando outros algoritmos de boosting como o XGBoost em muitas situações.
 -  Tratamento de Features: Por ser baseado em árvores, naturalmente lida com a não-linearidade e as interações complexas entre as variáveis, características comuns em dados de saúde mental. Algoritmo de Gradient Boosting conhecido por sua velocidade e precisão superior em grandes conjuntos de dados tabulares. 
 
-b. Random Forest (RandomForestClassifier)
+b.  CatBoostClassifier 
 
-•	Implementação: O RandomForestClassifier é um modelo de ensemble que utiliza Bagging (Bootstrap Aggregating) de múltiplas árvores de decisão.
-
-•	Justificativa da Escolha:
-
-- 	Robustez e Estabilidade: É um modelo extremamente robusto e menos propenso ao overfitting do que uma única árvore de decisão ou modelos de boosting não regularizados, pois a variância é reduzida ao agregar as previsões de diversas árvores treinadas em subconjuntos aleatórios dos dados.
-  
-- 	 Interpretabilidade: Embora menos interpretável que uma única árvore, oferece uma medida de importância de features confiável.
-
--   Linha de Base Sólida: Serve como um modelo de referência forte e estável para comparação com algoritmos mais complexos (boosting).
-
-
-c. CatBoostClassifier 
-
-Justificativa: Introduzido como um terceiro ensemble (também baseado em Gradient Boosting) conhecido por seu tratamento eficiente de variáveis categóricas e sua robustez, buscando refinar a performance. Otimizado com auto_class_weights="Balanced" para lidar com o desbalanceamento de classes.
+Justificativa: Introduzido como um segundo ensemble (também baseado em Gradient Boosting) conhecido por seu tratamento eficiente de variáveis categóricas e sua robustez, buscando refinar a performance. Otimizado com auto_class_weights="Balanced" para lidar com o desbalanceamento de classes.
 
 <img width="303" height="42" alt="image" src="https://github.com/user-attachments/assets/046e81ad-6a94-4bcb-81c4-7b6b1c4e5615" />
 
@@ -67,7 +54,9 @@ F1 = 2 .Precisão.Recall
 
 b. Desempenho do LGBMClassifier
 
-Os resultados a seguir foram extraídos das imagens fornecidas: 
+Os resultados extraídos das imagens indicam que o LGBMClassifier apresentou desempenho consistente nas duas classes. A Classe 1, foco principal do problema, obteve Precisão = 0.861, Recall = 0.870 e F1-Score = 0.865, demonstrando excelente capacidade de identificar corretamente os casos positivos e manter baixo o número de falsos alarmes. Para a Classe 0, o modelo também apresentou bom desempenho (F1-Score = 0.807), reforçando equilíbrio entre as classes.
+
+A média ponderada das métricas manteve-se estável (F1-Score = 0.841), mesmo diante do leve desbalanceamento entre as classes. A acurácia geral foi de 0.842, indicando que 84,2% das previsões totais foram corretas. O support foi de 2313 amostras para a Classe 0 e 3267 para a Classe 1 (total = 5580), garantindo representatividade adequada para o cálculo das métricas.
 
 | Métrica          | Classe 0 (Negativo) | Classe 1 (Positivo) | Média Ponderada |
 |------------------|---------------------|-----------------------|------------------|
