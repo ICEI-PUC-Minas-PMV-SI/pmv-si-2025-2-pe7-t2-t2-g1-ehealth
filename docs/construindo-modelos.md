@@ -1,4 +1,4 @@
-Etapa 4 — Construção de Modelos  (parte 2)
+ ### Etapa 4 — Construção de Modelos  (parte 2)
 
 A quarta etapa do projeto consistiu na implementação e avaliação de novos algoritmos de aprendizado de máquina, visando melhorar a capacidade preditiva em relação à Etapa 3 e promover a generalização do pipeline de análise.
 
