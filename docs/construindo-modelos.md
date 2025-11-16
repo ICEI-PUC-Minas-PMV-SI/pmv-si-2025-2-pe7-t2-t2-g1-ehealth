@@ -149,6 +149,7 @@ Análise Crítica:
 <img width="886" height="735" alt="image" src="https://github.com/user-attachments/assets/5abc2779-83a7-4e4d-afd1-a392d709a01b" />
 
 
+<img width="936" height="398" alt="image" src="https://github.com/user-attachments/assets/2047bd8e-47e1-4ea1-bf7a-58109aeeb313" />
 
 
 ## 5. Refinamento e Generalização do Pipeline 
