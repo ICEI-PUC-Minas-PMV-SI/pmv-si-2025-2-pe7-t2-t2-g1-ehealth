@@ -33,9 +33,11 @@ b. Random Forest (RandomForestClassifier)
 
 •	Justificativa da Escolha:
 
-o	Robustez e Estabilidade: É um modelo extremamente robusto e menos propenso ao overfitting do que uma única árvore de decisão ou modelos de boosting não regularizados, pois a variância é reduzida ao agregar as previsões de diversas árvores treinadas em subconjuntos aleatórios dos dados.
-o	Interpretabilidade: Embora menos interpretável que uma única árvore, oferece uma medida de importância de features confiável.
-o	Linha de Base Sólida: Serve como um modelo de referência forte e estável para comparação com algoritmos mais complexos (boosting).
+- 	Robustez e Estabilidade: É um modelo extremamente robusto e menos propenso ao overfitting do que uma única árvore de decisão ou modelos de boosting não regularizados, pois a variância é reduzida ao agregar as previsões de diversas árvores treinadas em subconjuntos aleatórios dos dados.
+  
+- 	 nterpretabilidade: Embora menos interpretável que uma única árvore, oferece uma medida de importância de features confiável.
+  
+- 	   Linha de Base Sólida: Serve como um modelo de referência forte e estável para comparação com algoritmos mais complexos (boosting).
 
 ## 3. Avaliação de Desempenho dos Modelos
    
@@ -114,15 +116,20 @@ o	Benefício: Isola as transformações de dados, garantindo que o mesmo tratame
 
 
 2.	Módulo de Modelagem (modeling.py):
-o	Contém as classes ou funções para instanciar diferentes modelos (LGBMClassifier, RandomForestClassifier etc.), treiná-los e realizar ajuste de hiperparâmetros (como GridSearchCV mencionado na imagem a seguir): 
+   
+- Contém as classes ou funções para instanciar diferentes modelos (LGBMClassifier, RandomForestClassifier etc.), treiná-los e realizar ajuste de hiperparâmetros (como GridSearchCV mencionado na imagem a seguir): 
  
-o	Benefício: Permite a rápida substituição e comparação de algoritmos.
+- 	Benefício: Permite a rápida substituição e comparação de algoritmos.
+  
 3.	Módulo de Avaliação (evaluation.py):
-o	Contém funções padronizadas para cálculo de métricas (Precisão, Recall, F1-Score, etc.), geração de Matriz de Confusão e Curvas de Calibração.
-o	Benefício: Assegura que todos os modelos sejam avaliados com as mesmas métricas e procedimentos, facilitando a comparação justa.
+   
+- 	Contém funções padronizadas para cálculo de métricas (Precisão, Recall, F1-Score, etc.), geração de Matriz de Confusão e Curvas de Calibração.
+- Benefício: Assegura que todos os modelos sejam avaliados com as mesmas métricas e procedimentos, facilitando a comparação justa.
+  
 b. Reutilização e Documentação
-•	Estrutura de Repositório: A organização do código em pastas (e.g., src/, data/, notebooks/) garante que a lógica esteja separada da execução (notebooks).
-•	Flexibilidade: O uso de funções e classes no Python permite que o pipeline aceite qualquer modelo que siga a API do Scikit-learn (.fit(), .predict(), .predict_proba()), suportando o desenvolvimento de múltiplos modelos de forma estruturada.
-•	Documentação: Cada módulo contém docstrings claras, detalhando as entradas, saídas e a lógica das funções, tornando o pipeline replicável em contextos distintos com mínima adaptação.
+
+- 	Estrutura de Repositório: A organização do código em pastas (e.g., src/, data/, notebooks/) garante que a lógica esteja separada da execução (notebooks).
+- Flexibilidade: O uso de funções e classes no Python permite que o pipeline aceite qualquer modelo que siga a API do Scikit-learn (.fit(), .predict(), .predict_proba()), suportando o desenvolvimento de múltiplos modelos de forma estruturada.
+- Documentação: Cada módulo contém docstrings claras, detalhando as entradas, saídas e a lógica das funções, tornando o pipeline replicável em contextos distintos com mínima adaptação.
 
 
