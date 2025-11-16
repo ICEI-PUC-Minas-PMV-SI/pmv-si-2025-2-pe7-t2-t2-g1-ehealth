@@ -78,7 +78,11 @@ O modelo demonstra um bom desempenho geral, com a acurácia de 84.71%. A Classe 
 
 
 
+
+
 Matriz de Confusão (Dados Brutos) :
+
+
 
 
  
