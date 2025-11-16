@@ -66,7 +66,8 @@ A média ponderada das métricas manteve-se estável (F1-Score = 0.841), mesmo d
 | Acurácia Geral   | \multicolumn{3}{c}{0.842} |
 | Support          | 2313                | 3267                  | 5580             |
 
-c. Desempenho do 
+c. Desempenho do CatBoostClassifier
+
 
 <img width="449" height="195" alt="image" src="https://github.com/user-attachments/assets/223d1add-649b-4f70-b676-7da09b322c0e" />
 
