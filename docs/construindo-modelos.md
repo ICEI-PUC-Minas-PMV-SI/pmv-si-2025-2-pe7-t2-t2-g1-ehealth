@@ -2,14 +2,21 @@ Etapa 4 — Construção de Modelos  (parte 2)
 
 A quarta etapa do projeto consistiu na implementação e avaliação de novos algoritmos de aprendizado de máquina, visando melhorar a capacidade preditiva em relação à Etapa 3 e promover a generalização do pipeline de análise.
 
-1. Ajustes e Pré-Processamento de Dados 
+## 1. Ajustes e Pré-Processamento de Dados 
+
 Não foram necessários ajustes adicionais significativos ou novo pré-processamento dos dados em função da implementação dos novos algoritmos. Os modelos escolhidos, nomeadamente LGBMClassifier e RandomForestClassifier, são algoritmos de ensemble baseados em árvores de decisão. Esses modelos são robustos a diferentes distribuições de dados, não requerem normalização ou padronização de features e lidam bem com dados categóricos (One-Hot Encoding) e desbalanceamento, conforme já tratado na etapa de pré-processamento.
+
 •	Diferença em Relação à Etapa Anterior: O pré-processamento se manteve, utilizando codificação One-Hot para variáveis nominais e mantendo a escala original das variáveis numéricas, o que foi adequado para a natureza dos novos modelos.
 
-2. Implementação e Justificativa dos Algoritmos 
+## 2. Implementação e Justificativa dos Algoritmos 
+
 Foram implementados dois novos algoritmos de aprendizado de máquina: o Light Gradient Boosting Machine (LGBMClassifier) e o Random Forest (RandomForestClassifier).
 a. Light Gradient Boosting Machine (LGBMClassifier)
 •	Implementação: O modelo LGBMClassifier foi instanciado, treinado e avaliado. 
+
+
+<img width="886" height="248" alt="image" src="https://github.com/user-attachments/assets/af7b5bd2-e6d5-4b9b-81cc-766ccb27667f" />
+
  
 •	Justificativa da Escolha:
 o	Performance e Velocidade: LGBM é um algoritmo de gradient boosting conhecido por sua alta eficiência e velocidade de treinamento, especialmente em grandes conjuntos de dados, devido ao uso de técnicas como o Histogram-based Algorithm.
