@@ -17,6 +17,7 @@ a. Light Gradient Boosting Machine (LGBMClassifier)
 - Implementação: O modelo LGBMClassifier foi instanciado, treinado e avaliado. Utilizado com GridSearchCV para otimizar seus hiperparâmetros:
 
 
+<img width="944" height="220" alt="image" src="https://github.com/user-attachments/assets/29355cd6-ed3f-4e5d-bd79-dfeaaab49923" />
 
 
  
