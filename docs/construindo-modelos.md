@@ -129,16 +129,16 @@ A matriz do Random Forest mostra sua distribuição de acertos e erros no conjun
 
 A comparação se concentra na métrica principal: F1-Score.
 
-A análise crítica será baseada nos resultados fornecidos para o LGBMClassifier e no conhecimento teórico de ambos os modelos no contexto do problema.
+A análise a seguir consolida a comparação entre os dois modelos de ensemble principais (LGBMClassifier e RandomForestClassifier), utilizando o F1-Score para a Classe 1 como métrica principal, conforme detalhado na tabela e nos resultados fornecidos.
 
 | Modelo                | F1-Score (Classe 1) | Vantagens Percebidas                                                                                      | Limitações Percebidas                                                                                                          |
 |-----------------------|----------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | **LGBMClassifier**    | 0.865                | Alta precisão (0.861) e recall (0.870) para a classe positiva. Velocidade de treinamento. Lida bem com desbalanceamento através da métrica de *boosting*. | Maior propensão a *overfitting* se não for bem parametrizado (necessitando de *early stopping* e regularização).               |
-| **RandomForestClassifier** | 0.871 | Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
+| **RandomForestClassifier** | 0.871 |  precisão (0.856) e recall (0.888) para a classe positiva.  Mais estável, robusto e menos propenso a *overfitting*. Paralelizável. Fornece uma boa linha de base de interpretabilidade de *features*. | Geralmente alcança performance ligeiramente inferior a modelos de *boosting* finamente ajustados.                               |
 
 
 Análise Crítica:
-•	O LGBMClassifier demonstrou um excelente desempenho (F1-Score de 0.865 para a Classe 1), indicando um equilíbrio entre a correta identificação dos casos positivos (Recall = 0.870) e a confiança nessas identificações (Precisão = 0.861).
+•	O LGBMClassifier demonstrou um excelente desempenho (F1-Score de 0.865 para a Classe 1), indicando um equilíbrio entre a correta identificação dos casos positivos (Recall = 0.870) e a confiança nessas identificações (Precisão = 0.861).  Contudo, o RandomForestClassifier ( modelo que atingiu F1-Score de 0.871) deve ser priorizado para deployment devido à sua melhor performance na métrica principal e o Recall mais alto. O LGBM (F1-Score 0.865) atua como uma alternativa altamente robusta com a vantagem de ter uma calibração excelente e comprovada.
 
 •	As visualizações de Importância de Features (LGBM e Relevância de Variáveis (Permutation Importance e Mutual Information ) concordam que as variáveis de maior impacto são: CGPA, Idade (Age), Horas de Estudo/Trabalho (Work/Study Hours), Estresse Financeiro, Pressão Acadêmica e Pensamentos Suicidas.
 
@@ -150,7 +150,6 @@ Análise Crítica:
 
 
 
-•	Teoricamente, o Random Forest seria crucial para confirmar a robustez do desempenho do LGBM e como uma opção de deployment mais segura em cenários de alta sensibilidade ao overfitting. A alta performance do LGBM, no entanto, sugere que as interações complexas entre as features foram capturadas de maneira eficaz pelo gradient boosting.
 
 ## 5. Refinamento e Generalização do Pipeline 
 
