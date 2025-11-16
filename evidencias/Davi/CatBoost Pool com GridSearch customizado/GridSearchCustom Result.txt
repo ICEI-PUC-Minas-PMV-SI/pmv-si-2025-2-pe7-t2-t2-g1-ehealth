@@ -1,0 +1,18 @@
+===== MELHOR COMBINAÇÃO ENCONTRADA =====
+depth        : 5
+learning_rate: 0.05
+iterations   : 200
+loss_function: Logloss
+custom_metric: ['AUC', 'Accuracy', 'F1', 'Recall']
+AUC (teste)  : 0.91885
+
+Relatório de Classificação da melhor combinação:
+
+              precision    recall  f1-score   support
+
+           0    0.79631   0.84003   0.81759      2313
+           1    0.88217   0.84787   0.86468      3267
+
+    accuracy                        0.84462      5580
+   macro avg    0.83924   0.84395   0.84113      5580
+weighted avg    0.84658   0.84462   0.84516      5580
