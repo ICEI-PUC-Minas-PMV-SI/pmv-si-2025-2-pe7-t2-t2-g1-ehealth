@@ -100,19 +100,19 @@ Análise do LGBM:
  <img width="886" height="628" alt="image" src="https://github.com/user-attachments/assets/87695c2d-ddf2-4cad-a6b1-74667a462cbc" />
  
 
--   Matriz de Confusão do Random Forest 
+-   Matriz de Confusão do CatBoost 
 
 
-A matriz do Random Forest mostra sua distribuição de acertos e erros no conjunto de teste.
+A matriz do CatBoost mostra sua distribuição de acertos e erros no conjunto de teste.
 
  - Verdadeiros Positivos (VP): 2770. Acertou um número ligeiramente menor de positivos que o LGBM.
  - Falsos Negativos (FN): 497. O modelo deixou de identificar 497 casos positivos reais (risco de negligência). Este valor representa $15.21\%$ da Classe 1 real ($\frac{497}{3267}$).
  - Falsos Positivos (FP): 370. O modelo classificou 370 casos como positivos quando eram negativos (intervenção desnecessária). Este valor representa $16.00\%$ da Classe 0 real ($\frac{370}{2313}$).
- - O Random Forest é um modelo mais conservador, obtendo um número maior de Falsos Negativos, mas um número significativamente menor de Falsos Positivos.
+ - O CatBoost é um modelo mais conservador, obtendo um número maior de Falsos Negativos, mas um número significativamente menor de Falsos Positivos.
 
 
 
-<img width="522" height="397" alt="image" src="https://github.com/user-attachments/assets/43c5ae01-9d2d-4b01-bc2b-e53bcef38d49" />
+<img width="522" height="397" alt="image" src="../evidencias/Davi/CatBoost Pool com GridSearch customizado/Matriz Confusao.png" />
 
 
 
