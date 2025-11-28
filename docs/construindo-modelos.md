@@ -1,6 +1,6 @@
  # Etapa 4 — Construção de Modelos  (parte 2)
 
-A quarta etapa do projeto consistiu na implementação e avaliação de novos algoritmos de aprendizado de máquina, visando melhorar a capacidade preditiva em relação à Etapa 3 e promover a generalização do pipeline de análise.
+A quarta etapa teve como objetivo aprimorar a capacidade preditiva alcançada na Etapa 3 e promover maior generalização do pipeline de análise, por meio da implementação, comparação e avaliação crítica de algoritmos de ensemble amplamente utilizados em dados tabulares.
 
 ## 1. Ajustes e Pré-Processamento de Dados 
 
