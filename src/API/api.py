@@ -48,6 +48,8 @@ def api():
             return {'error': f"Field {key} must be a number"}, 400
         if key == 'workstudy_hours' and input[key] > 24:
             return {'error': f"Field {key} exceeded 24 hours"}, 400
+        if key == 'age' and input[key] < 18:
+            return {'error': "Jovem ainda, você é. Muito a aprender, tem."}, 400
         if key == 'suicidal_thoughts' and input[key] not in [0, 1]:
             return {'error': f"Field {key} must be 0 or 1"}, 400
         
