@@ -18,7 +18,7 @@
 <!-- NAVBAR -->
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow-sm">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="#">
+        <a class="navbar-brand fw-bold" href="/">
             <i class="bi bi-heart-pulse-fill me-1"></i>eHealth+
         </a>
 
@@ -28,19 +28,19 @@
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="#">Ferramentas</a></li>
+                <li class="nav-item"><a class="nav-link active" href="/sobre">Sobre</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
 <!-- HEADER -->
-<header class="text-center">
+<header class="text-center mb-4">
     <div class="shape shape-1"></div>
     <div class="shape shape-2"></div>
 
     <div class="container position-relative">
-        <h1><span><i class="bi bi-mortarboard-fill"></i></span></h1>
+        <h1><i class="bi bi-mortarboard-fill"></i></h1>
         <h1 class="fw-bold display-5">Saúde Mental nos Estudos</h1>
         <h4 class="mt-3 mb-0 ">
             Por meio do formulário a seguir, é possível verificar a presença de possíveis sinais de depressão* associados aos estudos. Preencha os campos indicados e clique em Consultar.
@@ -51,14 +51,19 @@
     </div>
 </header>
 
-<!-- FEEDBACK (Acima do Formulário) -->
-<div id="feedbackArea" class="text-center mt-4 d-none">
-    <i id="feedbackIcon" class=""></i>
-    <p id="feedbackMsg" class="mt-3 fs-5"></p>
+<!-- FEEDBACK -->
+
+<div class="row text-center d-flex justify-content-center">
+    <div id="feedbackArea" class="alert text-center mt-4 d-none" role="alert">
+        <i id="feedbackIcon" class=""></i>
+        <h4 id="feedbackHeader" class="alert-heading"></h4>
+        <hr>
+        <p id="feedbackMsg"></p>
+    </div>
 </div>
 
 <!-- FORMULÁRIO -->
-<div class="mx-4 my-5">
+<div class="mx-1 my-5">
     <div class="card card-form p-4 p-md-5 mx-auto" style="max-width: 900px;">
         <h3 class="fw-semibold mb-4 text-center text-secondary">Dados do Aluno</h3>
 

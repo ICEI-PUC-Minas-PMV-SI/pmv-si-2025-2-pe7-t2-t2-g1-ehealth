@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eHealth+ | Sobre</title>
+
+  <!-- CSS -->
+  <link href="/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="/css/app.css" rel="stylesheet">
+
+      <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">
+        <i class="bi bi-heart-pulse-fill me-1"></i>eHealth+
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="/sobre">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="text-center">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <div class="container position-relative">
+      <h1 class="fw-bold display-5">Saúde Mental nos Estudos</h1>
+      <h4 class="mt-3 mb-0 ">
+        O que é essa ferramenta que identifica sinais de depressão* em estudantes?
+      </h4>
+      <p class="mt-1 mb-0">
+        *Este é um experimento para fins acadêmicos e não deve incorporar e/ou substituir a avaliação de um profissional
+        qualificado.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="row g-5 mt-4">
+      <div class="col-md-8">
+        <article class="blog-post">
+          <h2 class="blog-post-title text-secondary">Resumo da Proposta</h2>
+          <p class="blog-post-meta">Dezembro 6, 2025 by <a href="https://github.com/valdeirmendes">Mendes, Valdeir</a></p>
+
+          <p>Essa é uma solução que utiliza técnicas de machine learning para treinar um modelo a partir de uma base de
+            dados pública, que pode ser consultada logo abaixo. Após o treinamento, o modelo passa a 'aprender' padrões
+            presentes nos dados e se torna capaz de identificar novas ocorrências por meio de predições estatísticas,
+            correlacionando os inputs selecionados.</p>
+          <hr>
+          <p>This solution uses machine learning techniques to train a model from a public database, which can be
+            consulted below. After training, the model 'learns' the patterns presented in the data and becomes capable
+            of identifying new occurrences through predictive statistics, correlating the selected inputs.</p>
+          <h2 class="text-secondary">Os Dados</h2>
+          <p>Procurávamos por algo que fosse possível produzir algo útil mas que não fosse necessário algo muito
+            elaborado como processamento de imagens, coleta de tipos variados de dados, então após algumas buscas
+            encontramos uma base de dados de depressão estudantil.</p>
+          <p>Titulo: <strong>Student Depression Dataset</strong></p>
+          <p>Formato: <strong>CSV</strong> com <strong>18</strong> colunas, contendo <strong> 27.901</strong> registros,
+            nome original do arquivo <strong>student_depression_dataset.csv</strong> com aproximadamente
+            <strong>2.9MB</strong>. O conteúdo esta predominantemente formatado na língua estrangeira: <strong>Inglês
+              Americano</strong>.
+          </p>
+          <p>Disponível em: <a
+              href="https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset">https://www.kaggle.com/datasets/adilshamim8/student-depression-dataset</a>.
+          </p>
+          <h4>Campos/Colunas</h4>
+          <ul>
+            <li>id</li>
+            <li>Gender</li>
+            <li>Age</li>
+            <li>City</li>
+            <li>Profession</li>
+            <li>Academic Pressure</li>
+            <li>Work Pressure</li>
+            <li>CGPA</li>
+            <li>Study Satisfaction</li>
+            <li>Job Satisfaction</li>
+            <li>Sleep Duration</li>
+            <li>Dietary Habits</li>
+            <li>Degree</li>
+            <li>Have you ever had suicidal thoughts ?</li>
+            <li>Work/Study Hours </li>
+            <li>Financial Stress</li>
+            <li>Family History of Mental Illness</li>
+            <li>Depression</li>
+          </ul>
+
+          <h4>Estatística Descritiva do valores numéricos</h4>
+
+          <ul>
+            <li>count: Número de valores não nulos (não NaN)</li>
+            <li>mean: Média aritmética dos valores</li>
+            <li>std: Desvio padrão (medida de dispersão)</li>
+            <li>min: Valor mínimo</li>
+            <li>25%: Primeiro quartil (Q1) – 25% dos dados estão abaixo desse valor</li>
+            <li>50%: Mediana (Q2) – metade dos dados estão abaixo desse valor</li>
+            <li>75%: Terceiro quartil (Q3) – 75% dos dados estão abaixo desse valor</li>
+            <li>max: Valor máximo</li>
+          </ul>
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Age</th>
+                <th>Academic Pressure</th>
+                <th>Work Pressure</th>
+                <th>CGPA</th>
+                <th>Study Satisfaction</th>
+                <th>Job Satisfaction</th>
+                <th>Work/Study Hours</th>
+                <th>Depression</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>count</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+                <td>27901.00</td>
+              </tr>
+              <tr>
+                <td>mean</td>
+                <td>25.82</td>
+                <td>3.14</td>
+                <td>0.00</td>
+                <td>7.66</td>
+                <td>2.94</td>
+                <td>0.00</td>
+                <td>7.16</td>
+                <td>0.59</td>
+              </tr>
+              <tr>
+                <td>std</td>
+                <td>4.91</td>
+                <td>1.38</td>
+                <td>0.04</td>
+                <td>1.47</td>
+                <td>1.36</td>
+                <td>0.04</td>
+                <td>3.71</td>
+                <td>0.49</td>
+              </tr>
+              <tr>
+                <td>min</td>
+                <td>18.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>25%</td>
+                <td>21.00</td>
+                <td>2.00</td>
+                <td>0.00</td>
+                <td>6.29</td>
+                <td>2.00</td>
+                <td>0.00</td>
+                <td>4.00</td>
+                <td>0.00</td>
+              </tr>
+              <tr>
+                <td>50%</td>
+                <td>25.00</td>
+                <td>3.00</td>
+                <td>0.00</td>
+                <td>7.77</td>
+                <td>3.00</td>
+                <td>0.00</td>
+                <td>8.00</td>
+                <td>1.00</td>
+              </tr>
+              <tr>
+                <td>75%</td>
+                <td>30.00</td>
+                <td>4.00</td>
+                <td>0.00</td>
+                <td>8.92</td>
+                <td>4.00</td>
+                <td>0.00</td>
+                <td>10.00</td>
+                <td>1.00</td>
+              </tr>
+              <tr>
+                <td>max</td>
+                <td>59.00</td>
+                <td>5.00</td>
+                <td>5.00</td>
+                <td>10.00</td>
+                <td>5.00</td>
+                <td>4.00</td>
+                <td>12.00</td>
+                <td>1.00</td>
+              </tr>
+            </tbody>
+          </table>
+          <h4 class="mt-4">Total Com Depressão x Sem Depressão</h4>
+          <p>
+            <strong>Total de registros.:</strong> 27901<br>
+            <strong>Total de sem depressao:</strong> 11565 ou 41.45% do total<br>
+            <strong>Total de depressao....:</strong> 16336 ou 58.55% do total
+          </p>
+
+          <h2 class="text-secondary">Tratando Os Dados</h2>
+          <p>Iniciamos pela tentativa de remover registros duplicados, ao passar pela função não foram encontradas
+            linhas duplicadas, logo após iniciamos os processos dos seguintes tópicos.</p>
+          <h4>Limpeza</h4>
+          <p>Identificamos que campos chaves continham valores fora dos padrões, com o conteúdo original substituídos
+            pelos textos: &lsquo;Others&rsquo; ou &lsquo;?&rsquo;, ao verificar que a quantidade desses itens não era
+            tão expressiva optamos por excluir tais registros. Após a exclusão os números foram atualizados.</p>
+          <p>
+            <strong>Total de registros.:</strong> 27833<br>
+            <strong>Total de sem depressao:</strong> 11536 ou 41.45% do total<br>
+            <strong>Total de depressao....:</strong> 16297 ou 58.55% do total
+          </p>
+          <h4>Categorização</h4>
+          <p>
+            Alguns dos campos mais relevantes que selecionamos — e sobre os quais falaremos mais adiante — não estão no
+            formato inteiro ou decimal, e sim como <em>strings</em> de texto.
+            Antes de realizar o treinamento do modelo, precisamos convertê-los para um formato numérico mais adequado.
+            Faremos isso com os seguintes campos:
+            <strong>“Have you ever had suicidal thoughts?”, “Dietary Habits” e “Degree”</strong>.
+          </p>
+
+          <div class="field">
+            <h5>Have you ever had suicidal thoughts?</h5>
+            <p>
+              A conversão é simples, pois esse campo possui apenas duas variações: <code>Yes</code> e <code>No</code>.
+              Podemos substituí-las por valores binários:
+            </p>
+            <ul>
+              <li><code>No</code> = <strong>0</strong></li>
+              <li><code>Yes</code> = <strong>1</strong></li>
+            </ul>
+          </div>
+
+          <div class="field">
+            <h5>Dietary Habits</h5>
+            <p>
+              Esse campo apresenta três categorias: <code>Healthy</code>, <code>Unhealthy</code> e
+              <code>Moderate</code>.
+              Ao traduzirmos para o português (<em>Saudável</em>, <em>Não saudável</em> e <em>Moderada</em>), podemos
+              atribuir valores ordinais de 1 a 3, representando um ranking:
+            </p>
+            <ul>
+              <li><code>Unhealthy</code> (Não saudável) = <strong>1</strong></li>
+              <li><code>Moderate</code> (Moderada) = <strong>2</strong></li>
+              <li><code>Healthy</code> (Saudável) = <strong>3</strong></li>
+            </ul>
+          </div>
+
+          <div class="field">
+            <h5>Degree</h5>
+            <p>
+              O campo <code>Degree</code> possui 27 variações. Após traduzirmos os valores, verificamos que se referem a
+              graus acadêmicos. Podemos agrupar e mapear esses graus em cinco níveis:
+            </p>
+            <ol>
+              <li><strong>Ensino Médio</strong></li>
+              <li><strong>Bacharelado</strong></li>
+              <li><strong>Pós-graduação</strong></li>
+              <li><strong>Mestrado</strong></li>
+              <li><strong>Doutorado</strong></li>
+            </ol>
+            <p class="note">A categorização acima permite reduzir a granularidade das 27 variações a cinco níveis
+              comparáveis localmente para uso em modelos.</p>
+          </div>
+
+          <p>
+            Com essas transformações, concluímos a categorização dos campos selecionados. Se desejar, posso:
+          </p>
+          <h4>Normalização</h4>
+          <p>Para facilitar o desenvolvimento normalizamos os textos dos campos, assim foram convertidos para <strong>snake_case</strong> e textos maiores como o do campo <code>Have you ever had suicidal thoughts?</code> abreviamos para apenas <code>suicidal_thoughts</code>.</p>
+
+          <h4>Escolha dos campos</h4>
+          <p>Utilizamos o método Mutual Information da biblioteca Scikit-Learn para classificar a relevância das variáveis. A partir dessa análise, identificamos quais contribuíam menos para o modelo e as removemos. Confira o gráfico a seguir para visualizar o resultado após essa filtragem.</p>
+          <div class="chart-container">
+            <h4 class="text-center mb-4 text-secondary">Relevância das Variáveis</h4>
+              <canvas id="miChart"></canvas>
+          </div>
+
+          <h2 class="text-secondary">Treinamento</h2>
+          <h4>Escolha do modelo</h4>
+          <p>
+            Após preparar o dataset, realizar a seleção de variáveis e normalizar os campos categóricos, conduzimos uma etapa de experimentação com diferentes algoritmos de Machine Learning para prever a variável-alvo(depression). Foram avaliados 4 modelos: Random Forest, XGBoost, LightGBM e CatBoostClassifier, utilizando métricas como Accuracy, F1-Score, AUC e matriz de confusão.
+          </p>
+          <p>
+            Todos os modelos apresentaram desempenho semelhante, indicando consistência no dataset. Com uma leve vantagem para os modelos  LightGBM e CatBoostClassifier. Confira o resultado a seguir.
+          </p>
+          <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Accuracy</th>
+                                <th>F1 Score</th>
+                                <th>AUC</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Random Forest</td>
+                                <td>0.849829</td>
+                                <td>0.874210</td>
+                                <td>0.921674</td>
+                            </tr>
+                            <tr>
+                                <td>XGBoost</td>
+                                <td>0.848033</td>
+                                <td>0.872398</td>
+                                <td>0.917431</td>
+                            </tr>
+                            <tr>
+                                <td>LightGBM</td>
+                                <td>0.856116</td>
+                                <td>0.879495</td>
+                                <td>0.926996</td>
+                            </tr>
+                            <tr>
+                                <td>CatBoost</td>
+                                <td>0.857194</td>
+                                <td>0.879928</td>
+                                <td>0.926316</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+            <div class="chart-container">
+                <h5 class="card-title mb-3">Comparativo dos modelos</h5>
+                <canvas id="modelChart"></canvas>
+            </div>
+            
+          <h4>Aprimoramentos</h4>
+          <p>Durante o processo de otimização do modelo, aplicamos a técnica GridSearchCV com o objetivo de encontrar a melhor combinação de hiperparâmetros para o LightGBM. Diversas configurações foram avaliadas de forma automática e não automatica, porém as melhorias de desempenho não foram significativas.<br>
+            Mesmo após a busca pelos melhores parâmetros, a acurácia permaneceu em aproximadamente 85%, indicando que o modelo já estava próximo de sua performance ideal com a configuração inicial.
+</p>
+
+
+          <h2 class="text-secondary">O Resultado</h2>
+          <p>Após concluir o treinamento, o modelo foi serializado e implantado em uma API responsável por responder às requisições desta solução.</p>
+<p>Utilizamos o modelo LightGBM, que alcançou uma acurácia de aproximadamente 85%. Isso significa que, ao avaliar novos dados, o modelo tende a acertar cerca de 85 a cada 100 previsões, errando em torno de 15 a cada 100.
+Por esse motivo, ao realizar o teste, o usuário recebe um aviso informando que existe uma margem de erro estimada de cerca de 15% no resultado apresentado.</p>
+        </article>
+
+      </div>
+
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-4 mb-3 bg-light rounded">
+            <h4 class="fst-italic">Sobre</h4>
+            <p class="mb-0">Um projeto desenvolvido pelos alunos do 7&ordm; período do Curso de Sistemas de Informação - PUC Minas Virtual - 2025/2</p>
+
+          </div>
+
+          <div class="p-4">
+            <h4 class="fst-italic">Alunos</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="https://github.com/Davicpls">Davi Coelho Peixoto</a></li>
+              <li><a href="https://github.com/nandabri">Fernanda Belmont Rivlis</a></li>
+              <li><a href="https://github.com/marciadelmare">Márcia Delmare de Oliveira Peixoto</a></li>
+              <li><a href="https://github.com/PedroMi1999">Pedro Miranda Cardoso Neto</a></li>
+              <li><a href="https://github.com/valdeirmendes">Valdeir Carlos Mendes</a></li>
+            </ol>
+          </div>
+
+          <div class="p-4">
+            <h4 class="fst-italic">Professor</h4>
+            <ol class="list-unstyled">
+              <li>Neil Paiva Tizzo</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container">
+      <p class="opacity-50">Esta ferramenta não coleta ou armazena quaisquer dados pessoais. Como não são coletados
+        dados do usuário, não é necessária uma política de privacidade.</p>
+      <p class="mb-0">© 2025-2 Eixo-7 T2 Grupo 1. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+const miChart = document.getElementById('miChart').getContext('2d');
+
+const modelChart = document.getElementById('modelChart').getContext('2d');
+
+new Chart(miChart, {
+    type: 'bar',
+    data: {
+        labels: [
+            "suicidal_thoughts", 
+            "academic_pressure", 
+            "financial_stress",
+            "age",
+            "dietary_habits",
+            "workstudy_hours",
+            "study_satisfaction",
+            "degree"
+        ],
+        datasets: [{
+            label: "Score",
+            data: [
+                0.159, 
+                0.123, 
+                0.072,
+                0.033,
+                0.023,
+                0.019,
+                0.017,
+                0.003
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: { display: false }
+        },
+        scales: {
+            x: {
+                ticks: { maxRotation: 45, minRotation: 45 }
+            },
+            y: {
+                beginAtZero: true,
+                title: { display: true, text: 'Score' }
+            }
+        }
+    }
+});
+
+        
+
+        new Chart(modelChart, {
+            type: 'bar',
+            data: {
+                labels: ['Random Forest', 'XGBoost', 'LightGBM', 'CatBoost'],
+                datasets: [
+                    {
+                        label: 'Accuracy',
+                        data: [0.849829, 0.848033, 0.856116, 0.857194],
+                        backgroundColor: 'rgba(75, 192, 192, 0.7)'
+                    },
+                    {
+                        label: 'F1 Score',
+                        data: [0.874210, 0.872398, 0.879495, 0.879928],
+                        backgroundColor: 'rgba(54, 162, 235, 0.7)'
+                    },
+                    {
+                        label: 'AUC',
+                        data: [0.921674, 0.917431, 0.926996, 0.926316],
+                        backgroundColor: 'rgba(255, 159, 64, 0.7)'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: false, min: 0.80, max: 0.95 }
+                }
+            }
+        });
+
+</script>
+
+</body>
+
+</html>

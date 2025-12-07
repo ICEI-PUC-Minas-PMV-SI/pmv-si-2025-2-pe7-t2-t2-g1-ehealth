@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("formSaude");
   const feedbackArea = document.getElementById("feedbackArea");
   const feedbackIcon = document.getElementById("feedbackIcon");
+  const feedbackHeader = document.getElementById("feedbackHeader");
   const feedbackMsg = document.getElementById("feedbackMsg");
 
   if (!form) return;
@@ -59,25 +60,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   function mostrarFeedback(sucesso, result) {
-    if (!feedbackArea || !feedbackIcon || !feedbackMsg) return;
+    if (!feedbackArea || !feedbackIcon || !feedbackHeader || !feedbackMsg) return;
 
     feedbackArea.classList.remove("d-none");
 
     const depression = result?.depression;
 
-    const depressionResult = depression ? 'positivo' : 'negativo';
+    const depressionResult = depression ? 'Foram identificados possíveis sinais de depressão*' : 'O resultado indica ausência de sinais de depressão*';
 
     if (sucesso) {
         if (depression) {
-            feedbackIcon.className = "bi bi-exclamation-triangle-fill text-warning fs-1";
+          feedbackArea.classList.add('alert-secondary');
+          feedbackIcon.className = "bi bi-exclamation-circle feedback-icon";
+          feedbackMsg.textContent = '*Considerando uma margem de erro de 15%. Recomendamos que você procure um profissional qualificado para uma avaliação adequada e acompanhamento, caso necessário.';
         } else {
-            feedbackIcon.className = "bi bi-check-circle-fill text-success fs-1";
+          feedbackArea.classList.add('alert-primary');
+          feedbackIcon.className = "bi bi-exclamation-circle feedback-icon";
+          feedbackMsg.textContent = '*Considerando uma margem de erro de 15%. Lembre-se: esta ferramenta não substitui a avaliação de um profissional de qualificado.';
         }
-      feedbackMsg.textContent =
-        (result && (result.message || result.msg)) ||
-        `O resultado foi ${depressionResult} para depressão, com uma margem de 15% de erro. Esta ferramenta não substitui um profissional da saúde.`
+        feedbackHeader.textContent =
+        (result && (result.message || result.msg)) || `${depressionResult}`;
+    
     } else {
-      feedbackIcon.className = "bi bi-exclamation-triangle-fill text-danger fs-1";
+      feedbackArea.classList.add('alert-danger');
+      feedbackIcon.className = "bi bi-dash-circle feedback-icon";
+      feedbackHeader.textContent = "Erro!";
       feedbackMsg.textContent =
         (result && (result.error || result.message || result.msg)) ||
         "Ocorreu um erro ao enviar os dados. Tente novamente mais tarde.";
