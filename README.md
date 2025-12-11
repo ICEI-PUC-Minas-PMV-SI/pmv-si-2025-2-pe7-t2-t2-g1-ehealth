@@ -32,9 +32,9 @@ O projeto tem como objetivo investigar a depressão em estudantes universitário
 | ETAPA 5         |[Implantação e apresentação da solução](docs/implantação-apresentacao.md) <br>  |
 ## Instruções de utilização
 
-Acesso em Produção (quando disponível)
-* URL: https://<seu-dominio>/...
-* Status: online/homologação
+Acesso em Produção
+* URL: https://ehealth.dpy.me
+* Status: online
 
 # Código
 

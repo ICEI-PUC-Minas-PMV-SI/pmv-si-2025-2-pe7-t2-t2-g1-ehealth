@@ -2,28 +2,34 @@ cff-version: 1.0.1
 message: Please cite this software using these metadata.
 title:
 authors:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - family-names:
-    given-names:
-  - name-suffix: Professor XXXX
+  - family-names: Coelho Peixoto
+    given-names: Davi
+  - family-names: Belmont Rivlis
+    given-names: Fernanda
+  - family-names: Delmare de Oliveira Peixoto
+    given-names: Márcia
+  - family-names: Miranda Cardoso Neto
+    given-names: Pedro
+  - family-names: Mendes
+    given-names: Valdeir Carlos
+  - name-suffix: Professor
     affiliation: PUC Minas
-    family-names:
-    given-names:
+    family-names: Paiva Tizzo
+    given-names: Neil
 keywords:
-  -
-  -
-repository-code:
+  - Machine Learning
+  - Modelo preditivo
+  - LightGBM
+  - CatBoost
+  - Dataset
+  - Depression
+  - Student 
+  - Kaggle
+  - Depressão estudantil
+  - Predições estatísticas
+  - API
+  - GridSearchCV
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-SI/pmv-si-2025-2-pe7-t2-t2-g1-ehealth
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2023-06-30
