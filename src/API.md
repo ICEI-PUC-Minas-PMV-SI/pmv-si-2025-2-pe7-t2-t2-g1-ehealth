@@ -3,7 +3,7 @@
 ### Analisar depressão
 
 - Método: POST
-- URL: https://ehealth.dpy.me/
+- URL: https://api.dpy.me/
 - Parâmetros:
 
   - body:
