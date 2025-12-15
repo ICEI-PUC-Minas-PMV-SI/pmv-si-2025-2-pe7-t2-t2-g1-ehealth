@@ -9,7 +9,7 @@
   - body:
     ``` json
     {
-        "age": 17,
+        "age": 25,
         "academic_pressure": 2,
         "study_satisfaction": 1,
         "dietary_habits": 1,
